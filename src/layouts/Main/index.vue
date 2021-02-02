@@ -1,22 +1,26 @@
 <template>
-  <div :class="{
-    'cui__layout__grayBackground': settings.isGrayBackground,
-  }">
+  <div
+    :class="{
+      cui__layout__grayBackground: settings.isGrayBackground,
+    }"
+  >
     <a-layout
       :class="{
-      'cui__layout__contentMaxWidth': settings.isContentMaxWidth,
-      'cui__layout__appMaxWidth': settings.isAppMaxWidth,
-      'cui__layout__grayBackground': settings.isGrayBackground,
-      'cui__layout__squaredBorders': settings.isSquaredBorders,
-      'cui__layout__cardsShadow': settings.isCardShadow,
-      'cui__layout__borderless': settings.isBorderless,
-    }"
+        cui__layout__contentMaxWidth: settings.isContentMaxWidth,
+        cui__layout__appMaxWidth: settings.isAppMaxWidth,
+        cui__layout__grayBackground: settings.isGrayBackground,
+        cui__layout__squaredBorders: settings.isSquaredBorders,
+        cui__layout__cardsShadow: settings.isCardShadow,
+        cui__layout__borderless: settings.isBorderless,
+      }"
     >
       <cui-sidebar />
       <cui-support-chat />
 
       <!-- left menu -->
-      <cui-menu-left v-if="settings.menuLayoutType === 'left' && !settings.isMobileView" />
+      <cui-menu-left
+        v-if="settings.menuLayoutType === 'left' && !settings.isMobileView"
+      />
 
       <!-- left menu mobile -->
       <div v-if="settings.isMobileView">
@@ -35,20 +39,22 @@
       </div>
 
       <!-- top menu -->
-      <cui-menu-top v-if="settings.menuLayoutType === 'top' && !settings.isMobileView" />
+      <cui-menu-top
+        v-if="settings.menuLayoutType === 'top' && !settings.isMobileView"
+      />
 
       <a-layout>
         <a-layout-header
           :class="{
-          'cui__layout__header': true,
-          'cui__layout__fixedHeader': settings.isTopbarFixed,
-          'cui__layout__headerGray': settings.isGrayTopbar,
-        }"
+            cui__layout__header: true,
+            cui__layout__fixedHeader: settings.isTopbarFixed,
+            cui__layout__headerGray: settings.isGrayTopbar,
+          }"
         >
           <cui-topbar />
         </a-layout-header>
         <cui-breadcrumbs />
-        <a-layout-content style="height: '100%';  position: 'relative'">
+        <a-layout-content style="height: '100%'; position: 'relative'">
           <div class="cui__utils__content">
             <transition :name="settings.routerAnimation" mode="out-in">
               <router-view />
@@ -65,13 +71,13 @@
 
 <script>
 import { mapState } from 'vuex'
-import CuiTopbar from '@/components/cleanui/layout/Topbar'
-import CuiBreadcrumbs from '@/components/cleanui/layout/Breadcrumbs'
-import CuiFooter from '@/components/cleanui/layout/Footer'
-import CuiSidebar from '@/components/cleanui/layout/Sidebar'
-import CuiSupportChat from '@/components/cleanui/layout/SupportChat'
-import CuiMenuLeft from '@/components/cleanui/layout/Menu/MenuLeft'
-import CuiMenuTop from '@/components/cleanui/layout/Menu/MenuTop'
+import CuiTopbar from '@/@vb/components/Topbar'
+import CuiBreadcrumbs from '@/@vb/components/Breadcrumbs'
+import CuiFooter from '@/@vb/components/Footer'
+import CuiSidebar from '@/@vb/components/Sidebar'
+import CuiSupportChat from '@/@vb/components/SupportChat'
+import CuiMenuLeft from '@/@vb/components/Menu/MenuLeft'
+import CuiMenuTop from '@/@vb/components/Menu/MenuTop'
 
 export default {
   name: 'MainLayout',

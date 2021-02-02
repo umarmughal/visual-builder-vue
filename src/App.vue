@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <localization></localization>
+    <styleLoader>
+      <localization></localization>
+    </styleLoader>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Localization from '@/localization'
+import StyleLoader from '@/styleLoader'
 
 export default {
   name: 'app',
-  components: { Localization },
+  components: { Localization, StyleLoader },
   computed: {
     ...mapState(['settings']),
     ...mapState('user', ['authorized']),

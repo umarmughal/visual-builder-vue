@@ -12,24 +12,42 @@
           [$style.white]: settings.authPagesColor === 'white',
           [$style.gray]: settings.authPagesColor === 'gray',
         }"
-        :style="{backgroundImage: settings.authPagesColor === 'image' ? `url(resources/images/content/photos/7.jpg)` : 'none'}"
+        :style="{
+          backgroundImage:
+            settings.authPagesColor === 'image'
+              ? `url(resources/images/content/photos/7.jpg)`
+              : 'none',
+        }"
       >
         <div
           :class="{
-          [$style.topbar]: true,
-          [$style.topbarGray]: settings.isGrayTopbar,
-        }"
+            [$style.topbar]: true,
+            [$style.topbarGray]: settings.isGrayTopbar,
+          }"
         >
           <div :class="$style.logoContainer">
             <div :class="$style.logo">
-              <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+              <img
+                src="resources/images/logo.svg"
+                class="mr-2"
+                alt="Clean UI"
+              />
               <div :class="$style.name">{{ settings.logo }}</div>
-              <div v-if="settings.logo === 'Clean UI Pro'" :class="$style.descr">Vue</div>
+              <div
+                v-if="settings.logo === 'Clean UI Pro'"
+                :class="$style.descr"
+              >
+                Vue
+              </div>
             </div>
           </div>
           <div class="d-none d-sm-block">
             <span class="mr-2">Don't have an account?</span>
-            <router-link to="/auth/register" class="font-size-16 kit__utils__link">Sign up</router-link>
+            <router-link
+              to="/auth/register"
+              class="font-size-16 kit__utils__link"
+              >Sign up</router-link
+            >
           </div>
         </div>
         <div :class="$style.containerInner">
@@ -64,7 +82,8 @@
               href="https://www.mediatec.org/privacy"
               target="_blank"
               rel="noopener noreferrer"
-            >Privacy Policy</a>
+              >Privacy Policy</a
+            >
           </div>
         </div>
       </div>
@@ -74,8 +93,8 @@
 
 <script>
 import { mapState } from 'vuex'
-import CuiSidebar from '@/components/cleanui/layout/Sidebar'
-import CuiSupportChat from '@/components/cleanui/layout/SupportChat'
+import CuiSidebar from '@/@vb/components/Sidebar'
+import CuiSupportChat from '@/@vb/components/SupportChat'
 
 export default {
   name: 'AuthLayout',
