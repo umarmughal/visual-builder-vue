@@ -1,29 +1,50 @@
 <template>
   <div>
-    <div class="mb-2" :class="$style.textDivider">
-      <h4 class="font-size-24 font-weight-bold" :class="$style.textDividerContent">Waiting actions</h4>
+    <div
+      class="mb-2"
+      :class="$style.textDivider"
+    >
+      <h4
+        class="font-size-24 font-weight-bold"
+        :class="$style.textDividerContent"
+      >
+        Waiting actions
+      </h4>
     </div>
     <div class="mb-4">
       <a-table
         :columns="columns"
-        :dataSource="tableData"
+        :data-source="tableData"
         :pagination="false"
-        :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
+        :row-selection="{
+          selectedRowKeys: selectedRowKeys,
+          onChange: onSelectChange,
+        }"
       >
-        <template slot="userName" slot-scope="user">
+        <template #userName="user">
           <div>
-            <div>{{user.name}}</div>
-            <div class="text-gray-4">{{user.position}}</div>
+            <div>{{ user.name }}</div>
+            <div class="text-gray-4">
+              {{ user.position }}
+            </div>
           </div>
         </template>
-        <template slot="location" slot-scope="text">
-          <a href="javascript: void(0);" class="text-blue">{{text}}</a>
+        <template #location="text">
+          <a
+            href="javascript: void(0);"
+            class="text-blue"
+          >{{ text }}</a>
         </template>
-        <template slot="value" slot-scope="text">
-          <span class="font-weight-bold">{{text}}</span>
+        <template #value="text">
+          <span class="font-weight-bold">{{ text }}</span>
         </template>
-        <template slot="chart" slot-scope="chartData">
-          <vue-chartist class="ct-hidden-points" type="Line" :data="chartData" :options="options" />
+        <template #chart="chartData">
+          <vue-chartist
+            class="ct-hidden-points"
+            type="Line"
+            :data="chartData"
+            :options="options"
+          />
         </template>
       </a-table>
     </div>
@@ -59,7 +80,7 @@ const columns = [
   },
 ]
 export default {
-  name: 'KitChart8',
+  name: 'VbChart8',
   components: {
     'vue-chartist': VueChartist,
   },

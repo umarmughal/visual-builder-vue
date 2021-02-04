@@ -1,27 +1,37 @@
 <template>
   <div>
     <div>
-      <div class="text-dark font-size-18 font-weight-bold mb-1">Profit Change</div>
-      <div class="text-gray-6 mb-2">Revenue by location and date</div>
+      <div class="text-dark font-size-18 font-weight-bold mb-1">
+        Profit Change
+      </div>
+      <div class="text-gray-6 mb-2">
+        Revenue by location and date
+      </div>
       <div class="d-flex flex-wrap align-items-center">
         <div class="mr-3 mt-3 mb-3 position-relative">
           <doughnut-chart
+            ref="doughnut"
             :chartdata="data"
             :options="options"
             :height="140"
             :width="140"
-            ref="doughnut"
           />
           <div
+            ref="tooltip"
             class="text-gray-5 font-size-28 text-center"
             :class="$style.tooltip"
-            ref="tooltip"
           >
-            <div class="font-size-14 font-weight-bold text-dark" ref="tooltipLabel"></div>
-            <div class="font-size-14 text-dark" ref="tooltipValue"></div>
+            <div
+              ref="tooltipLabel"
+              class="font-size-14 font-weight-bold text-dark"
+            />
+            <div
+              ref="tooltipValue"
+              class="font-size-14 text-dark"
+            />
           </div>
         </div>
-        <div v-html="customLegend"></div>
+        <div v-html="customLegend" />
       </div>
     </div>
   </div>
@@ -30,7 +40,7 @@
 import DoughnutChart from './DoughnutChart.vue'
 import data from './data.json'
 export default {
-  name: 'KitChart10',
+  name: 'VbChart10',
   components: {
     DoughnutChart,
   },
@@ -89,5 +99,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

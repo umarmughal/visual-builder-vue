@@ -1,6 +1,6 @@
 <template>
   <div v-if="this.show">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { mapGetters } from 'vuex'
 import router from '@/router'
 
 export default {
-  name: 'CuiACL',
+  name: 'VbACL',
   props: {
     redirect: Boolean,
     roles: Array,

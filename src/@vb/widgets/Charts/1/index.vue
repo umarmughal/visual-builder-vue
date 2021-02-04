@@ -3,15 +3,21 @@
     <div class="d-flex flex-wrap mb-3">
       <div :class="$style.item">
         <div class="font-size-18 text-dark font-weight-bold">
-          +$12,367.36 <span class="text-success font-size-12 align-text-top">+25%</span>
+          +$12,367.36
+          <span class="text-success font-size-12 align-text-top">+25%</span>
         </div>
-        <div class="text-uppercase text-gray-4">Total sales</div>
+        <div class="text-uppercase text-gray-4">
+          Total sales
+        </div>
       </div>
       <div :class="$style.item">
         <div class="font-size-18 text-dark font-weight-bold">
-          +$5,367.36 <span class="text-danger font-size-12 align-text-top">-76%</span>
+          +$5,367.36
+          <span class="text-danger font-size-12 align-text-top">-76%</span>
         </div>
-        <div class="text-uppercase text-gray-4">Avg. Per Day</div>
+        <div class="text-uppercase text-gray-4">
+          Avg. Per Day
+        </div>
       </div>
     </div>
     <vue-chartist
@@ -27,11 +33,11 @@ import data from './data.json'
 import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 export default {
-  name: 'KitChart1',
+  name: 'VbChart1',
   components: {
     'vue-chartist': VueChartist,
   },
-  data: function() {
+  data: function () {
     const options = {
       seriesBarDistance: 10,
       horizontalBars: true,
@@ -50,5 +56,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

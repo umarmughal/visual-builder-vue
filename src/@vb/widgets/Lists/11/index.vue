@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="mb-3">
-      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">Today - 7 may 2019</div>
+      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">
+        Today - 7 may 2019
+      </div>
       <div class="table-responsive">
         <table class="table table-borderless text-gray-6 mb-0">
           <tbody>
@@ -40,7 +42,9 @@
       </div>
     </div>
     <div>
-      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">6 may 2019</div>
+      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">
+        6 may 2019
+      </div>
       <div class="table-responsive">
         <table class="table table-borderless text-muted mb-0">
           <tbody>
@@ -55,6 +59,6 @@
 </template>
 <script>
 export default {
-  name: 'KitList11',
+  name: 'VbList11',
 }
 </script>

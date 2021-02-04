@@ -8,9 +8,9 @@
         :class="$style.logo"
       >
         SELLPIXELS
-        <span></span>
+        <span />
       </a>
-      <br />
+      <br>
       <p class="mb-0">
         Copyright © 2017-2020 Mdtk Soft |
         <a

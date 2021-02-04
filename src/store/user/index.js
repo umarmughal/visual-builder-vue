@@ -1,5 +1,3 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 import router from '@/router'
 
 import * as firebase from '@/services/firebase'
@@ -19,8 +17,6 @@ const mapAuthProviders = {
     logout: jwt.logout,
   },
 }
-
-Vue.use(Vuex)
 
 export default {
   namespaced: true,
@@ -51,10 +47,10 @@ export default {
       login(email, password).then(success => {
         if (success) {
           dispatch('LOAD_CURRENT_ACCOUNT')
-          Vue.prototype.$notification.success({
-            message: 'Logged In',
-            description: 'You have successfully logged in!',
-          })
+          // Vue.prototype.$notification.success({
+          //   message: 'Logged In',
+          //   description: 'You have successfully logged in!',
+          // })
         }
         if (!success) {
           commit('SET_STATE', {
@@ -73,10 +69,10 @@ export default {
       register(email, password, name).then(success => {
         if (success) {
           dispatch('LOAD_CURRENT_ACCOUNT')
-          Vue.prototype.$notification.success({
-            message: 'Succesful Registered',
-            description: 'You have successfully registered!',
-          })
+          // Vue.prototype.$notification.success({
+          //   message: 'Succesful Registered',
+          //   description: 'You have successfully registered!',
+          // })
         }
         if (!success) {
           commit('SET_STATE', {

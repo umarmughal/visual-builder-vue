@@ -1,13 +1,13 @@
 <template>
   <div>
-    <cui-register />
+    <vb-register />
   </div>
 </template>
 <script>
-import CuiRegister from '@/@vb/components/Auth/Register'
+import VbRegister from '@/@vb/components/Auth/Register'
 export default {
   components: {
-    CuiRegister,
+    VbRegister,
   },
 }
 </script>

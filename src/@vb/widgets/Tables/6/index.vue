@@ -1,31 +1,52 @@
 <template>
   <div>
-    <div class="mb-2" :class="$style.textDivider">
-      <h4 class="font-size-24 font-weight-bold" :class="$style.textDividerContent">Waiting actions</h4>
+    <div
+      class="mb-2"
+      :class="$style.textDivider"
+    >
+      <h4
+        class="font-size-24 font-weight-bold"
+        :class="$style.textDividerContent"
+      >
+        Waiting actions
+      </h4>
     </div>
     <div class="mb-4">
       <a-table
         :columns="columns"
-        :dataSource="data"
+        :data-source="data"
         :pagination="false"
-        :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
+        :row-selection="{
+          selectedRowKeys: selectedRowKeys,
+          onChange: onSelectChange,
+        }"
         :class="$style.table"
       >
-        <template slot="userName" slot-scope="user">
+        <template #userName="user">
           <div>
-            <div>{{user.name}}</div>
-            <div class="text-gray-4">{{user.position}}</div>
+            <div>{{ user.name }}</div>
+            <div class="text-gray-4">
+              {{ user.position }}
+            </div>
           </div>
         </template>
-        <template slot="location" slot-scope="text">
-          <a href="javascript: void(0);" class="text-blue">{{text}}</a>
+        <template #location="text">
+          <a
+            href="javascript: void(0);"
+            class="text-blue"
+          >{{ text }}</a>
         </template>
-        <template slot="value" slot-scope="text">
-          <span class="font-weight-bold">{{text}}</span>
+        <template #value="text">
+          <span class="font-weight-bold">{{ text }}</span>
         </template>
-        <template slot="action">
+        <template #action>
           <div class="text-nowrap">
-            <button type="button" class="btn btn-outline-danger mr-2 mb-2">Decline</button>
+            <button
+              type="button"
+              class="btn btn-outline-danger mr-2 mb-2"
+            >
+              Decline
+            </button>
           </div>
         </template>
       </a-table>
@@ -62,7 +83,7 @@ const columns = [
 ]
 
 export default {
-  name: 'KitTable6',
+  name: 'VbTable6',
   data: function () {
     return {
       columns,

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <cui-error-404 />
+    <vb-error-404 />
   </div>
 </template>
 <script>
-import CuiError404 from '@/@vb/components/Errors/404'
+import VbError404 from '@/@vb/components/Errors/404'
 export default {
   components: {
-    CuiError404,
+    VbError404,
   },
 }
 </script>

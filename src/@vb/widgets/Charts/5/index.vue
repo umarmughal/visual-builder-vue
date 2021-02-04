@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="text-dark font-size-18 font-weight-bold mb-1">Year Profit</div>
-    <div class="text-gray-6 mb-2">Revenue by location and date</div>
+    <div class="text-dark font-size-18 font-weight-bold mb-1">
+      Year Profit
+    </div>
+    <div class="text-gray-6 mb-2">
+      Revenue by location and date
+    </div>
     <vue-chartist
       class="height-200"
       :class="$style.chart"
@@ -16,7 +20,7 @@ import data from './data.json'
 import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 export default {
-  name: 'KitChart5',
+  name: 'VbChart5',
   components: {
     'vue-chartist': VueChartist,
   },
@@ -53,5 +57,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

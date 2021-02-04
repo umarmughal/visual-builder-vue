@@ -15,6 +15,6 @@
 </template>
 <script>
 export default {
-  name: 'KitGeneral2v4',
+  name: 'VbGeneral2v4',
 }
 </script>

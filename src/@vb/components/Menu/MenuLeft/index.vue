@@ -3,7 +3,6 @@
     :width="settings.leftMenuWidth"
     :collapsible="settings.isMobileView ? false : true"
     :collapsed="settings.isMenuCollapsed && !settings.isMobileView"
-    @collapse="onCollapse"
     :class="{
       [$style.menu]: true,
       [$style.white]: settings.menuColor === 'white',
@@ -12,49 +11,72 @@
       [$style.unfixed]: settings.isMenuUnfixed,
       [$style.shadow]: settings.isMenuShadow,
     }"
+    @collapse="onCollapse"
   >
     <div
       :class="$style.menuOuter"
       :style="{
-        width: settings.isMenuCollapsed && !settings.isMobileView ? '80px' : settings.leftMenuWidth + 'px',
-        height: settings.isMobileView || settings.isMenuUnfixed ? 'calc(100% - 64px)' : 'calc(100% - 110px)',
+        width:
+          settings.isMenuCollapsed && !settings.isMobileView
+            ? '80px'
+            : settings.leftMenuWidth + 'px',
+        height:
+          settings.isMobileView || settings.isMenuUnfixed
+            ? 'calc(100% - 64px)'
+            : 'calc(100% - 110px)',
       }"
     >
       <div :class="$style.logoContainer">
         <div :class="$style.logo">
           <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
-          <div :class="$style.name">{{ settings.logo }}</div>
-          <div v-if="settings.logo === 'Clean UI Pro'" :class="$style.descr">Vue</div>
+          <div :class="$style.name">
+            {{ settings.logo }}
+          </div>
+          <div v-if="settings.logo === 'Clean UI Pro'" :class="$style.descr">
+            Vue
+          </div>
         </div>
       </div>
       <vue-custom-scrollbar
         :style="{
-          height: settings.isMobileView || settings.isMenuUnfixed ? 'calc(100vh - 64px)' : 'calc(100vh - 110px)',
+          height:
+            settings.isMobileView || settings.isMenuUnfixed
+              ? 'calc(100vh - 64px)'
+              : 'calc(100vh - 110px)',
         }"
       >
         <a-menu
-          forceSubMenuRender
-          :inlineCollapsed="settings.isMobileView ? false : settings.isMenuCollapsed"
+          v-model:open-keys="openKeys"
+          force-sub-menu-render
+          :inline-collapsed="
+            settings.isMobileView ? false : settings.isMenuCollapsed
+          "
           :mode="'inline'"
-          :selectedKeys="selectedKeys"
-          :openKeys.sync="openKeys"
+          :selected-keys="selectedKeys"
+          :inline-indent="15"
+          :class="$style.navigation"
           @click="handleClick"
           @openChange="handleOpenChange"
-          :inlineIndent="15"
-          :class="$style.navigation"
         >
           <template v-for="(item, index) in menuData">
             <template v-if="!item.roles || item.roles.includes(user.role)">
-              <a-menu-item-group :key="index" v-if="item.category">
-                <template slot="title">{{ item.title }}</template>
+              <a-menu-item-group v-if="item.category" :key="index">
+                <template #title>
+                  {{ item.title }}
+                </template>
               </a-menu-item-group>
               <item
                 v-if="!item.children && !item.category"
+                :key="item.key"
                 :menu-info="item"
                 :styles="$style"
-                :key="item.key"
               />
-              <sub-menu v-if="item.children" :menu-info="item" :styles="$style" :key="item.key" />
+              <sub-menu
+                v-if="item.children"
+                :key="item.key"
+                :menu-info="item"
+                :styles="$style"
+              />
             </template>
           </template>
         </a-menu>
@@ -65,7 +87,8 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-sm btn-success btn-rounded px-3"
-          >Buy Bundle</a>
+            >Buy Bundle</a
+          >
         </div>
       </vue-custom-scrollbar>
     </div>
@@ -82,23 +105,18 @@ import SubMenu from './partials/submenu'
 import Item from './partials/item'
 
 export default {
-  name: 'menu-left',
+  name: 'MenuLeft',
   components: { vueCustomScrollbar, SubMenu, Item },
-  computed: {
-    ...mapState(['settings']),
-    ...mapGetters('user', ['user']),
-  },
-  mounted() {
-    this.openKeys = store.get('app.menu.openedKeys') || []
-    this.selectedKeys = store.get('app.menu.selectedKeys') || []
-    this.setSelectedKeys()
-  },
   data() {
     return {
       menuData: getMenuData,
       selectedKeys: [],
       openKeys: [],
     }
+  },
+  computed: {
+    ...mapState(['settings']),
+    ...mapGetters('user', ['user']),
   },
   watch: {
     'settings.isMenuCollapsed'() {
@@ -107,6 +125,11 @@ export default {
     '$route'() {
       this.setSelectedKeys()
     },
+  },
+  mounted() {
+    this.openKeys = store.get('app.menu.openedKeys') || []
+    this.selectedKeys = store.get('app.menu.selectedKeys') || []
+    this.setSelectedKeys()
   },
   methods: {
     onCollapse: function (collapsed, type) {

@@ -1,13 +1,19 @@
 <template>
   <div>
     <div class="mb-3">
-      <div class="bg-success text-white text-uppercase px-3 py-1 mb-2">Today - 7 may 2019</div>
+      <div class="bg-success text-white text-uppercase px-3 py-1 mb-2">
+        Today - 7 may 2019
+      </div>
       <div class="table-responsive">
         <table class="table table-borderless text-gray-6 mb-0">
           <tbody>
             <tr>
               <td class="text-nowrap">
-                <div class="mr-3" :class="[$style.donut, $style.danger]" />California
+                <div
+                  class="mr-3"
+                  :class="[$style.donut, $style.danger]"
+                />
+                California
               </td>
               <td class="text-right">
                 <strong>+78,366,263.00$</strong>
@@ -15,7 +21,11 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div class="mr-3" :class="[$style.donut, $style.primary]" />Texas
+                <div
+                  class="mr-3"
+                  :class="[$style.donut, $style.primary]"
+                />
+                Texas
               </td>
               <td class="text-right">
                 <strong>+58,165,000.00$</strong>
@@ -23,7 +33,11 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div class="mr-3" :class="[$style.donut, $style.success]" />Wyoming
+                <div
+                  class="mr-3"
+                  :class="[$style.donut, $style.success]"
+                />
+                Wyoming
               </td>
               <td class="text-right">
                 <strong>+26,156,267.00$</strong>
@@ -31,7 +45,11 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div class="mr-3" :class="[$style.donut, $style.info]" />Florida
+                <div
+                  class="mr-3"
+                  :class="[$style.donut, $style.info]"
+                />
+                Florida
               </td>
               <td class="text-right">
                 <strong>+18,823,026.00$</strong>
@@ -39,7 +57,11 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div class="mr-3" :class="[$style.donut, $style.orange]" />New York
+                <div
+                  class="mr-3"
+                  :class="[$style.donut, $style.orange]"
+                />
+                New York
               </td>
               <td class="text-right">
                 <strong>+8,125,642.00$</strong>
@@ -50,7 +72,9 @@
       </div>
     </div>
     <div>
-      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">6 may 2019</div>
+      <div class="bg-light text-gray-6 text-uppercase px-3 py-1 mb-2">
+        6 may 2019
+      </div>
       <div class="table-responsive">
         <table class="table table-borderless text-muted mb-0">
           <tbody>
@@ -65,7 +89,7 @@
 </template>
 <script>
 export default {
-  name: 'KitList12',
+  name: 'VbList12',
 }
 </script>
 <style lang="scss" module>

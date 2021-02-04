@@ -1,7 +1,11 @@
 <template>
   <div class="card-body position-relative overflow-hidden">
-    <div class="font-size-36 font-weight-bold text-dark mb-n2">1240</div>
-    <div class="text-uppercase">Transactions</div>
+    <div class="font-size-36 font-weight-bold text-dark mb-n2">
+      1240
+    </div>
+    <div class="text-uppercase">
+      Transactions
+    </div>
     <div :class="$style.chartContainer">
       <vue-chartist
         :class="$style.chart"
@@ -18,7 +22,7 @@ import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 
 export default {
-  name: 'KitChart11',
+  name: 'VbChart11',
   components: {
     'vue-chartist': VueChartist,
   },

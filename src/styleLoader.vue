@@ -10,10 +10,10 @@ import '@/@vb/css/vendors/antd/themes/dark.less'
 
 // third-party plugins styles
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'vuelayers/lib/style.css'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import 'vuelayers/lib/style.css'
+// import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.snow.css'
 
 // vb vendors styles
 import '@/@vb/css/vendors/antd/style.scss'
@@ -37,6 +37,6 @@ import '@/@vb/css/extra/clean.scss' // clean styles
 import '@/@vb/css/extra/air.scss' // air styles
 
 export default {
-  name: 'styleLoader',
+  name: 'StyleLoader',
 }
 </script>

@@ -7,13 +7,17 @@
       Revenue today
     </p>
     <p class="mb-4">
-      Lorem ipsum dolor sit amit,consectetur eiusmdd tempory incididunt ut labore et dolore magna elit
+      Lorem ipsum dolor sit amit,consectetur eiusmdd tempory incididunt ut
+      labore et dolore magna elit
     </p>
-    <a href="javascript: void(0);" class="btn btn-outline-primary mb-1">View history</a>
+    <a
+      href="javascript: void(0);"
+      class="btn btn-outline-primary mb-1"
+    >View history</a>
   </div>
 </template>
 <script>
 export default {
-  name: 'KitGeneral1v1',
+  name: 'VbGeneral1v1',
 }
 </script>

@@ -1,17 +1,22 @@
 <template>
   <div class="mb-4">
-    <a-table :columns="columns" :dataSource="data" :pagination="false" :class="$style.table">
-      <template slot="progress" slot-scope="bar">
+    <a-table
+      :columns="columns"
+      :data-source="data"
+      :pagination="false"
+      :class="$style.table"
+    >
+      <template #progress="bar">
         <div class="progress">
           <div
             :class="['progress-bar', bar.color]"
-            :style="{width: bar.value + '%'}"
+            :style="{ width: bar.value + '%' }"
             role="progressbar"
-          ></div>
+          />
         </div>
       </template>
-      <template slot="value" slot-scope="text">
-        <span class="font-weight-bold">{{text}}</span>
+      <template #value="text">
+        <span class="font-weight-bold">{{ text }}</span>
       </template>
     </a-table>
   </div>
@@ -39,7 +44,7 @@ const columns = [
 ]
 
 export default {
-  name: 'KitTable1',
+  name: 'VbTable1',
   data: function () {
     return {
       columns,

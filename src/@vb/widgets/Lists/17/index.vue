@@ -1,13 +1,20 @@
 <template>
   <ul class="list-unstyled">
     <li :class="$style.item">
-      <div :class="$style.separator" class="bg-success mr-3"/>
+      <div
+        :class="$style.separator"
+        class="bg-success mr-3"
+      />
       <label
         htmlFor="checkbox-1"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" checked id="checkbox-1"/>
+        <input
+          id="checkbox-1"
+          type="checkbox"
+          checked
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Received</div>
@@ -16,13 +23,20 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="bg-primary mr-3"/>
+      <div
+        :class="$style.separator"
+        class="bg-primary mr-3"
+      />
       <label
         htmlFor="checkbox-2"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" checked id="checkbox-2"/>
+        <input
+          id="checkbox-2"
+          type="checkbox"
+          checked
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Approved</div>
@@ -31,13 +45,19 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="mr-3"/>
+      <div
+        :class="$style.separator"
+        class="mr-3"
+      />
       <label
         htmlFor="checkbox-3"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" id="checkbox-3"/>
+        <input
+          id="checkbox-3"
+          type="checkbox"
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Received</div>
@@ -46,13 +66,19 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="bg-danger mr-3"/>
+      <div
+        :class="$style.separator"
+        class="bg-danger mr-3"
+      />
       <label
         htmlFor="checkbox-4"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" id="checkbox-4"/>
+        <input
+          id="checkbox-4"
+          type="checkbox"
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Withdrawal Failed</div>
@@ -61,13 +87,19 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="bg-info mr-3"/>
+      <div
+        :class="$style.separator"
+        class="bg-info mr-3"
+      />
       <label
         htmlFor="checkbox-5"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" id="checkbox-5"/>
+        <input
+          id="checkbox-5"
+          type="checkbox"
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Received</div>
@@ -76,13 +108,19 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="mr-3"/>
+      <div
+        :class="$style.separator"
+        class="mr-3"
+      />
       <label
         htmlFor="checkbox-6"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" id="checkbox-6"/>
+        <input
+          id="checkbox-6"
+          type="checkbox"
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Received</div>
@@ -91,13 +129,19 @@
       </label>
     </li>
     <li :class="$style.item">
-      <div :class="$style.separator" class="mr-3"/>
+      <div
+        :class="$style.separator"
+        class="mr-3"
+      />
       <label
         htmlFor="checkbox-7"
         class="mb-0"
         :class="[$style.control, $style.checkbox]"
       >
-        <input type="checkbox" id="checkbox-7"/>
+        <input
+          id="checkbox-7"
+          type="checkbox"
+        >
         <span :class="[$style.controlIndicator]" />
         <div class="d-inline-block">
           <div>Payment Received</div>
@@ -109,9 +153,9 @@
 </template>
 <script>
 export default {
-  name: 'KitList17',
+  name: 'VbList17',
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

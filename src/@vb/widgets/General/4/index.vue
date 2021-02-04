@@ -3,9 +3,7 @@
     <div class="text-dark text-uppercase font-weight-bold mb-1">
       Work in progress
     </div>
-    <p>
-      Lorem ipsum dolor...
-    </p>
+    <p>Lorem ipsum dolor...</p>
     <div class="progress">
       <div
         class="progress-bar bg-success"
@@ -14,12 +12,12 @@
         aria-valuenow="60"
         aria-valuemin="0"
         aria-valuemax="100"
-      ></div>
+      />
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'KitGeneral4',
+  name: 'VbGeneral4',
 }
 </script>

@@ -10,21 +10,34 @@
     <div :class="$style.logoContainer">
       <div :class="$style.logo">
         <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
-        <div :class="$style.name">{{ settings.logo }}</div>
-        <div v-if="settings.logo === 'Clean UI Pro'" :class="$style.descr">Vue</div>
+        <div :class="$style.name">
+          {{ settings.logo }}
+        </div>
+        <div v-if="settings.logo === 'Clean UI Pro'" :class="$style.descr">
+          Vue
+        </div>
       </div>
     </div>
     <div :class="$style.navigation">
-      <a-menu :mode="'horizontal'" :selectedKeys="selectedKeys" @click="handleClick">
+      <a-menu
+        :mode="'horizontal'"
+        :selected-keys="selectedKeys"
+        @click="handleClick"
+      >
         <template v-for="item in menuData">
           <template v-if="!item.roles || item.roles.includes(user.role)">
             <item
               v-if="!item.children && !item.category"
+              :key="item.key"
               :menu-info="item"
               :styles="$style"
-              :key="item.key"
             />
-            <sub-menu v-if="item.children" :menu-info="item" :styles="$style" :key="item.key" />
+            <sub-menu
+              v-if="item.children"
+              :key="item.key"
+              :menu-info="item"
+              :styles="$style"
+            />
           </template>
         </template>
       </a-menu>
@@ -41,22 +54,18 @@ import SubMenu from './partials/submenu'
 import Item from './partials/item'
 
 export default {
-  name: 'menu-top',
+  name: 'MenuTop',
   components: { SubMenu, Item },
-  computed: {
-    ...mapState(['settings']),
-    ...mapGetters('user', ['user']),
-  },
-  mounted() {
-    this.selectedKeys = store.get('app.menu.selectedKeys') || []
-    this.setSelectedKeys()
-  },
   data() {
     return {
       menuData: getMenuData,
       selectedKeys: [],
       openKeys: [],
     }
+  },
+  computed: {
+    ...mapState(['settings']),
+    ...mapGetters('user', ['user']),
   },
   watch: {
     'settings.isMenuCollapsed'() {
@@ -65,6 +74,10 @@ export default {
     '$route'() {
       this.setSelectedKeys()
     },
+  },
+  mounted() {
+    this.selectedKeys = store.get('app.menu.selectedKeys') || []
+    this.setSelectedKeys()
   },
   methods: {
     handleClick(e) {

@@ -2,13 +2,21 @@
   <div>
     <ul class="list-unstyled">
       <li :class="$style.item">
-        <div :class="$style.itemHead" class="mb-2">
+        <div
+          :class="$style.itemHead"
+          class="mb-2"
+        >
           <div :class="$style.itemPic">
-            <img src="resources/images/avatars/1.jpg" alt="Jamie Rockstar"/>
+            <img
+              src="resources/images/avatars/1.jpg"
+              alt="Jamie Rockstar"
+            >
           </div>
           <div class="mr-2">
             <div>Jamie Rockstar</div>
-            <div class="text-muted">Backoffice Agent</div>
+            <div class="text-muted">
+              Backoffice Agent
+            </div>
           </div>
         </div>
         <div class="text-muted mb-2">
@@ -19,20 +27,28 @@
             class="progress-bar bg-success"
             style="width: 70%"
             role="progressbar"
-            aria-valuenow={70}
-            aria-valuemin={0}
-            aria-valuemax={100}
+            aria-valuenow="{70}"
+            aria-valuemin="{0}"
+            aria-valuemax="{100}"
           />
         </div>
       </li>
       <li :class="$style.item">
-        <div :class="$style.itemHead" class="mb-2">
+        <div
+          :class="$style.itemHead"
+          class="mb-2"
+        >
           <div :class="$style.itemPic">
-            <img src="resources/images/avatars/2.jpg" alt="Mary Stanform"/>
+            <img
+              src="resources/images/avatars/2.jpg"
+              alt="Mary Stanform"
+            >
           </div>
           <div class="mr-2">
             <div>Mary Stanform</div>
-            <div class="text-muted">Developer</div>
+            <div class="text-muted">
+              Developer
+            </div>
           </div>
         </div>
         <div class="text-muted mb-2">
@@ -43,20 +59,28 @@
             class="progress-bar bg-primary"
             style="width: 40%"
             role="progressbar"
-            aria-valuenow={40}
-            aria-valuemin={0}
-            aria-valuemax={100}
+            aria-valuenow="{40}"
+            aria-valuemin="{0}"
+            aria-valuemax="{100}"
           />
         </div>
       </li>
       <li :class="$style.item">
-        <div :class="$style.itemHead" class="mb-2">
+        <div
+          :class="$style.itemHead"
+          class="mb-2"
+        >
           <div :class="$style.itemPic">
-            <img src="resources/images/avatars/5.jpg" alt="Jess Hofner"/>
+            <img
+              src="resources/images/avatars/5.jpg"
+              alt="Jess Hofner"
+            >
           </div>
           <div class="mr-2">
             <div>Jess Hofner</div>
-            <div class="text-muted">CEO</div>
+            <div class="text-muted">
+              CEO
+            </div>
           </div>
         </div>
         <div class="text-muted mb-2">
@@ -67,9 +91,9 @@
             class="progress-bar bg-danger"
             style="width: 90%"
             role="progressbar"
-            aria-valuenow={90}
-            aria-valuemin={0}
-            aria-valuemax={100}
+            aria-valuenow="{90}"
+            aria-valuemin="{0}"
+            aria-valuemax="{100}"
           />
         </div>
       </li>
@@ -78,9 +102,9 @@
 </template>
 <script>
 export default {
-  name: 'KitList10',
+  name: 'VbList10',
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

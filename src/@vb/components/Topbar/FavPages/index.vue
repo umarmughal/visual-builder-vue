@@ -1,8 +1,10 @@
 <template>
   <div :class="$style.container">
-    <template v-for="item in favs">
-      <a-tooltip placement="bottom" :key="item.key">
-        <template slot="title">{{ item.title }}</template>
+    <template v-for="item in favs" :key="item.key">
+      <a-tooltip placement="bottom">
+        <template #title>
+          {{ item.title }}
+        </template>
         <span>
           <router-link :to="item.url" :class="$style.item" class="mr-3">
             <i class="fe" :class="[$style.icon, item.icon]" />
@@ -11,52 +13,63 @@
       </a-tooltip>
     </template>
     <a-tooltip placement="bottom">
-      <template slot="title">Bookmarks</template>
+      <template #title> Bookmarks </template>
       <span :class="$style.item">
-        <a-dropdown :visible="dropdownVisible" :trigger="['click']" placement="bottomLeft">
+        <a-dropdown
+          :visible="dropdownVisible"
+          :trigger="['click']"
+          placement="bottomLeft"
+        >
           <div :class="$style.dropdown" @click="toggleDropdown">
-            <i class="fe fe-star" :class="$style.icon"></i>
+            <i class="fe fe-star" :class="$style.icon" />
           </div>
-          <div slot="overlay">
-            <div class="card cui__utils__shadow width-350">
-              <div class="card-body p-1">
-                <div class="p-2">
-                  <a-input
-                    v-model="searchText"
-                    @change="filterPagesList"
-                    allowClear
-                    :placeholder="$t('topBar.findPages')"
-                  />
-                </div>
-                <div class="height-200">
-                  <vue-custom-scrollbar :style="{ height: '100%' }">
-                    <div class="px-2 pb-2">
-                      <template v-for="item in filteredPagesList">
-                        <router-link :key="item.key" :to="item.url" :class="$style.link">
-                          <div
-                            :class="{
-                              [$style.setIcon]: true,
-                              [$style.setIconActive]: item.isActive,
-                            }"
-                            @click="e => setFav(e, item)"
-                          >
-                            <i class="fe fe-star" />
-                          </div>
-                          <span>
-                            <i class="mr-2 fe" :class="item.icon" />
-                            {{ item.title }}
-                          </span>
-                        </router-link>
-                      </template>
-                    </div>
-                  </vue-custom-scrollbar>
-                </div>
-                <div class="p-2">
-                  <a-button type="primary" @click="toggleDropdown">Close</a-button>
+          <slot name="overlay">
+            <div>
+              <div class="card vb__utils__shadow width-350">
+                <div class="card-body p-1">
+                  <div class="p-2">
+                    <a-input
+                      v-model="searchText"
+                      allow-clear
+                      :placeholder="$t('topBar.findPages')"
+                      @change="filterPagesList"
+                    />
+                  </div>
+                  <div class="height-200">
+                    <vue-custom-scrollbar :style="{ height: '100%' }">
+                      <div class="px-2 pb-2">
+                        <template
+                          v-for="item in filteredPagesList"
+                          :key="item.key"
+                        >
+                          <router-link :to="item.url" :class="$style.link">
+                            <div
+                              :class="{
+                                [$style.setIcon]: true,
+                                [$style.setIconActive]: item.isActive,
+                              }"
+                              @click="(e) => setFav(e, item)"
+                            >
+                              <i class="fe fe-star" />
+                            </div>
+                            <span>
+                              <i class="mr-2 fe" :class="item.icon" />
+                              {{ item.title }}
+                            </span>
+                          </router-link>
+                        </template>
+                      </div>
+                    </vue-custom-scrollbar>
+                  </div>
+                  <div class="p-2">
+                    <a-button type="primary" @click="toggleDropdown"
+                      >Close</a-button
+                    >
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </slot>
         </a-dropdown>
       </span>
     </a-tooltip>

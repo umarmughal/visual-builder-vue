@@ -8,23 +8,31 @@
         style="height: 300px"
       >
         <vl-view
-          :min-zoom.sync="minZoom"
-          :zoom.sync="zoom"
-          :center.sync="center"
-          :rotation.sync="rotation"
-        ></vl-view>
+          v-model:min-zoom="minZoom"
+          v-model:zoom="zoom"
+          v-model:center="center"
+          v-model:rotation="rotation"
+        />
         <vl-layer-tile id="osm">
-          <vl-source-osm></vl-source-osm>
+          <vl-source-osm />
         </vl-layer-tile>
       </vl-map>
     </div>
     <div class="mb-4">
-      <a-table :columns="columns" :dataSource="data" :pagination="false" :class="$style.table">
-        <template slot="location" slot-scope="text">
-          <a href="javascript: void(0);" class="text-blue">{{text}}</a>
+      <a-table
+        :columns="columns"
+        :data-source="data"
+        :pagination="false"
+        :class="$style.table"
+      >
+        <template #location="text">
+          <a
+            href="javascript: void(0);"
+            class="text-blue"
+          >{{ text }}</a>
         </template>
-        <template slot="value" slot-scope="text">
-          <span class="font-weight-bold">{{text}}</span>
+        <template #value="text">
+          <span class="font-weight-bold">{{ text }}</span>
         </template>
       </a-table>
     </div>
@@ -33,7 +41,7 @@
 <script>
 import data from './data.json'
 export default {
-  name: 'KitChart7',
+  name: 'VbChart7',
   data: function () {
     const columns = [
       {

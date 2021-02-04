@@ -2,10 +2,16 @@
   <div>
     <ul class="list-unstyled">
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold text-danger">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold text-danger"
+          >
             2:28
-            <br/>
+            <br>
             PM
           </div>
           <div class="mr-3">
@@ -13,16 +19,22 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold text-blue">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold text-blue"
+          >
             1:02
-            <br/>
+            <br>
             AM
           </div>
           <div class="mr-3">
@@ -30,16 +42,22 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold"
+          >
             2:28
-            <br/>
+            <br>
             PM
           </div>
           <div class="mr-3">
@@ -47,16 +65,22 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold"
+          >
             2:28
-            <br/>
+            <br>
             PM
           </div>
           <div class="mr-3">
@@ -64,16 +88,22 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold"
+          >
             2:28
-            <br/>
+            <br>
             PM
           </div>
           <div class="mr-3">
@@ -81,16 +111,22 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
       <li :class="$style.item">
-        <a href="javascript: void(0);" :class="$style.itemLink">
-          <div :class="$style.itemMeta" class="font-weight-bold">
+        <a
+          href="javascript: void(0);"
+          :class="$style.itemLink"
+        >
+          <div
+            :class="$style.itemMeta"
+            class="font-weight-bold"
+          >
             2:28
-            <br/>
+            <br>
             PM
           </div>
           <div class="mr-3">
@@ -98,8 +134,8 @@
             <div class="text-muted">Mary has approved your quote.</div>
           </div>
           <div :class="$style.itemAction">
-            <span/>
-            <span/>
+            <span />
+            <span />
           </div>
         </a>
       </li>
@@ -108,9 +144,9 @@
 </template>
 <script>
 export default {
-  name: 'KitList3',
+  name: 'VbList3',
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="card-body">
-      <div class="font-weight-bold font-size-36 font-weight-bold text-primary">246 / Day</div>
+      <div class="font-weight-bold font-size-36 font-weight-bold text-primary">
+        246 / Day
+      </div>
     </div>
     <div class="position-relative">
       <vue-chartist
@@ -19,7 +21,7 @@ import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 import Chartist from 'chartist'
 export default {
-  name: 'KitChart13',
+  name: 'VbChart13',
   components: {
     'vue-chartist': VueChartist,
   },

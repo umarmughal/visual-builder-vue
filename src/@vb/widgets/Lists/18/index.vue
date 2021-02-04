@@ -1,7 +1,15 @@
 <template>
-  <ul class="list-unstyled" :class="$style.list">
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Organic search</div>
+  <ul
+    class="list-unstyled"
+    :class="$style.list"
+  >
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Organic search
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.danger]" />
@@ -10,8 +18,13 @@
         +25%
       </div>
     </li>
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Google</div>
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Google
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.primary]" />
@@ -20,8 +33,13 @@
         +85%
       </div>
     </li>
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Microsoft</div>
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Microsoft
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.success]" />
@@ -30,8 +48,13 @@
         +16%
       </div>
     </li>
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Yandex</div>
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Yandex
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.orange]" />
@@ -40,8 +63,13 @@
         +154%
       </div>
     </li>
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Bing Search</div>
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Bing Search
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.default]" />
@@ -50,8 +78,13 @@
         +87%
       </div>
     </li>
-    <li :class="$style.item" class="text-muted">
-      <div class="text-uppercase mb-1">Chinese aw inc</div>
+    <li
+      :class="$style.item"
+      class="text-muted"
+    >
+      <div class="text-uppercase mb-1">
+        Chinese aw inc
+      </div>
       <div>
         <div class="text-nowrap d-inline-block">
           <div :class="[$style.donut, $style.default]" />
@@ -64,9 +97,9 @@
 </template>
 <script>
 export default {
-  name: 'KitList18',
+  name: 'VbList18',
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import "./style.module.scss";
 </style>

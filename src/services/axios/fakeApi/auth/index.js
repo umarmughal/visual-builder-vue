@@ -1,11 +1,19 @@
-import jwt from 'jsonwebtoken'
 import mock from '../mock'
+
+const fakeJwt = {
+  sign: (id) => {
+    return `${id}.366be641c17cb6d9c5d8944e00bfce3189d8b1515a`
+  },
+  verify: (token) => {
+    return Number(token.split('.')[0])
+  },
+}
 
 const users = [
   {
     id: 1,
-    email: 'demo@sellpixels.com',
-    password: 'demo123',
+    email: 'demo@visualbuilder.cloud',
+    password: 'VisualBuilder',
     name: 'Tom Jones',
     avatar: '',
     role: 'admin',
@@ -25,14 +33,29 @@ mock.onPost('/api/auth/login').reply(request => {
   if (user) {
     const userData = Object.assign({}, user)
     delete userData.password
-    userData.accessToken = jwt.sign({ id: userData.id }, jwtConfig.secret, {
-      expiresIn: jwtConfig.expiresIn,
-    }) // generate jwt token
+    userData.accessToken = fakeJwt.sign(userData.id) // generate jwt token
 
     return [200, userData]
   }
 
   return [401, error]
+})
+
+mock.onGet('/api/auth/account').reply(request => {
+  const { AccessToken } = request.headers
+  if (AccessToken) {
+    const id = fakeJwt.verify(AccessToken)
+    const userData = Object.assign(
+      {},
+      users.find(item => item.id === id),
+    )
+    delete userData.password
+    userData.accessToken = fakeJwt.sign(userData.id) // refresh jwt token
+
+    return [200, userData]
+  }
+
+  return [401]
 })
 
 mock.onPost('/api/auth/register').reply(request => {
@@ -52,33 +75,12 @@ mock.onPost('/api/auth/register').reply(request => {
 
     const userData = Object.assign({}, user)
     delete userData.password
-    userData.accessToken = jwt.sign({ id: userData.id }, jwtConfig.secret, {
-      expiresIn: jwtConfig.expiresIn,
-    })
+    userData.accessToken = fakeJwt.sign(users.length)
 
     return [200, userData]
   }
 
   return [401, 'This email is already in use.']
-})
-
-mock.onGet('/api/auth/account').reply(request => {
-  const { AccessToken } = request.headers
-  if (AccessToken) {
-    const { id } = jwt.verify(AccessToken, jwtConfig.secret)
-    const userData = Object.assign(
-      {},
-      users.find(item => item.id === id),
-    )
-    delete userData.password
-    userData.accessToken = jwt.sign({ id: userData.id }, jwtConfig.secret, {
-      expiresIn: jwtConfig.expiresIn,
-    }) // refresh jwt token
-
-    return [200, userData]
-  }
-
-  return [401]
 })
 
 mock.onGet('/api/auth/logout').reply(() => {

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <cui-forgot-password />
+    <vb-forgot-password />
   </div>
 </template>
 <script>
-import CuiForgotPassword from '@/@vb/components/Auth/ForgotPassword'
+import VbForgotPassword from '@/@vb/components/Auth/ForgotPassword'
 export default {
   components: {
-    CuiForgotPassword,
+    VbForgotPassword,
   },
 }
 </script>

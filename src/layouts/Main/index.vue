@@ -1,68 +1,69 @@
 <template>
   <div
     :class="{
-      cui__layout__grayBackground: settings.isGrayBackground,
+      vb__layout__grayBackground: settings.isGrayBackground,
     }"
   >
     <a-layout
       :class="{
-        cui__layout__contentMaxWidth: settings.isContentMaxWidth,
-        cui__layout__appMaxWidth: settings.isAppMaxWidth,
-        cui__layout__grayBackground: settings.isGrayBackground,
-        cui__layout__squaredBorders: settings.isSquaredBorders,
-        cui__layout__cardsShadow: settings.isCardShadow,
-        cui__layout__borderless: settings.isBorderless,
+        vb__layout: true,
+        vb__layout__contentMaxWidth: settings.isContentMaxWidth,
+        vb__layout__appMaxWidth: settings.isAppMaxWidth,
+        vb__layout__squaredBorders: settings.isSquaredBorders,
+        vb__layout__cardsShadow: settings.isCardShadow,
+        vb__layout__borderless: settings.isBorderless,
       }"
     >
-      <cui-sidebar />
-      <cui-support-chat />
+      <!-- <vb-sidebar /> -->
+      <!-- <vb-support-chat /> -->
 
       <!-- left menu -->
-      <cui-menu-left
+      <!-- <vb-menu-left
         v-if="settings.menuLayoutType === 'left' && !settings.isMobileView"
-      />
+      /> -->
 
       <!-- left menu mobile -->
-      <div v-if="settings.isMobileView">
+      <!-- <div v-if="settings.isMobileView">
         <div :class="$style.handler" @click="toggleMobileMenu">
-          <div :class="$style.handlerIcon"></div>
+          <div :class="$style.handlerIcon" />
         </div>
         <a-drawer
           :closable="false"
           :visible="settings.isMobileMenuOpen"
           placement="left"
-          :wrapClassName="$style.mobileMenu"
+          :wrap-class-name="$style.mobileMenu"
           @close="toggleMobileMenu"
         >
-          <cui-menu-left />
+          <vb-menu-left />
         </a-drawer>
-      </div>
+      </div> -->
 
       <!-- top menu -->
-      <cui-menu-top
+      <!-- <vb-menu-top
         v-if="settings.menuLayoutType === 'top' && !settings.isMobileView"
-      />
+      /> -->
 
       <a-layout>
         <a-layout-header
           :class="{
-            cui__layout__header: true,
-            cui__layout__fixedHeader: settings.isTopbarFixed,
-            cui__layout__headerGray: settings.isGrayTopbar,
+            vb__layout__header: true,
+            vb__layout__fixedHeader: settings.isTopbarFixed,
+            vb__layout__headerGray: settings.isGrayTopbar,
+            vb__layout__separatedHeader: settings.isTopbarSeparated,
           }"
         >
-          <cui-topbar />
+          <!-- <vb-topbar /> -->
         </a-layout-header>
-        <cui-breadcrumbs />
-        <a-layout-content style="height: '100%'; position: 'relative'">
-          <div class="cui__utils__content">
+        <vb-breadcrumbs />
+        <a-layout-content class="vb__layout__content">
+          <router-view v-slot="{ Component }">
             <transition :name="settings.routerAnimation" mode="out-in">
-              <router-view />
+              <component :is="Component" />
             </transition>
-          </div>
+          </router-view>
         </a-layout-content>
         <a-layout-footer>
-          <cui-footer />
+          <vb-footer />
         </a-layout-footer>
       </a-layout>
     </a-layout>
@@ -71,30 +72,30 @@
 
 <script>
 import { mapState } from 'vuex'
-import CuiTopbar from '@/@vb/components/Topbar'
-import CuiBreadcrumbs from '@/@vb/components/Breadcrumbs'
-import CuiFooter from '@/@vb/components/Footer'
-import CuiSidebar from '@/@vb/components/Sidebar'
-import CuiSupportChat from '@/@vb/components/SupportChat'
-import CuiMenuLeft from '@/@vb/components/Menu/MenuLeft'
-import CuiMenuTop from '@/@vb/components/Menu/MenuTop'
+// import VbTopbar from '@/@vb/components/Topbar'
+import VbBreadcrumbs from '@/@vb/components/Breadcrumbs'
+import VbFooter from '@/@vb/components/Footer'
+// import VbSidebar from '@/@vb/components/Sidebar'
+// import VbSupportChat from '@/@vb/components/SupportChat'
+// import VbMenuLeft from '@/@vb/components/Menu/MenuLeft'
+// import VbMenuTop from '@/@vb/components/Menu/MenuTop'
 
 export default {
   name: 'MainLayout',
-  components: { CuiFooter, CuiTopbar, CuiMenuLeft, CuiMenuTop, CuiBreadcrumbs, CuiSidebar, CuiSupportChat },
-  computed: mapState(['settings']),
+  components: { VbFooter, VbBreadcrumbs },
   data: function () {
     return {
       touchStartPrev: 0,
       touchStartLocked: false,
     }
   },
+  computed: mapState(['settings']),
   mounted() {
     this.bindMobileSlide()
     this.detectViewPort(true)
     window.addEventListener('resize', this.detectViewPortListener)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('resize', this.detectViewPortListener)
   },
   methods: {

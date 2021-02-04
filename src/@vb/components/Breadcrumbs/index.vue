@@ -1,15 +1,20 @@
 <template>
   <div :class="$style.breadcrumbs">
     <div :class="$style.path">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">
+        Home
+      </router-link>
       <template v-for="(item, index) in breadcrumb">
-        <span v-if="index != 0" :key="index">
-          <span :class="$style.arrow"></span>
+        <span
+          v-if="index != 0"
+          :key="index"
+        >
+          <span :class="$style.arrow" />
           <span>{{ item.title }}</span>
         </span>
       </template>
       <span v-if="activeItem">
-        <span :class="$style.arrow"></span>
+        <span :class="$style.arrow" />
         <strong :class="$style.current">{{ activeItem.title }}</strong>
       </span>
     </div>
@@ -22,7 +27,7 @@ import { getMenuData } from '@/services/menu'
 import reduce from 'lodash/reduce'
 
 export default {
-  name: 'breadcrumbs',
+  name: 'Breadcrumbs',
   data() {
     return {
       breadcrumb: [],
@@ -35,6 +40,14 @@ export default {
     menuData() {
       return getMenuData
     },
+  },
+  watch: {
+    $route(to) {
+      this.breadcrumb = this.getPath(this.menuData, to.path)
+    },
+  },
+  mounted: function () {
+    this.breadcrumb = this.getPath(this.menuData, this.$route.path)
   },
   methods: {
     getPath(data, url, parents = []) {
@@ -60,14 +73,6 @@ export default {
       )
       this.activeItem = items[0]
       return items
-    },
-  },
-  mounted: function () {
-    this.breadcrumb = this.getPath(this.menuData, this.$route.path)
-  },
-  watch: {
-    $route(to) {
-      this.breadcrumb = this.getPath(this.menuData, to.path)
     },
   },
 }

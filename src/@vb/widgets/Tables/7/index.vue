@@ -1,39 +1,66 @@
 <template>
   <div>
-    <div class="mb-2" :class="$style.textDivider">
-      <h4 class="font-size-24 font-weight-bold" :class="$style.textDividerContent">Waiting actions</h4>
+    <div
+      class="mb-2"
+      :class="$style.textDivider"
+    >
+      <h4
+        class="font-size-24 font-weight-bold"
+        :class="$style.textDividerContent"
+      >
+        Waiting actions
+      </h4>
     </div>
     <div class="mb-4">
       <a-table
         :columns="columns"
-        :dataSource="data"
+        :data-source="data"
         :pagination="false"
-        :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
+        :row-selection="{
+          selectedRowKeys: selectedRowKeys,
+          onChange: onSelectChange,
+        }"
         :class="$style.table"
       >
-        <template slot="location" slot-scope="text">
-          <a href="javascript: void(0);" class="text-blue">{{text}}</a>
+        <template #location="text">
+          <a
+            href="javascript: void(0);"
+            class="text-blue"
+          >{{ text }}</a>
         </template>
-        <template slot="value" slot-scope="text">
-          <span class="font-weight-bold">{{text}}</span>
+        <template #value="text">
+          <span class="font-weight-bold">{{ text }}</span>
         </template>
-        <template slot="users" slot-scope="users">
-          <div :class="[users.length ? '' : 'd-none', 'kit__utils__avatarGroup']">
+        <template #users="users">
+          <div
+            :class="[users.length ? '' : 'd-none', 'vb__utils__avatarGroup']"
+          >
             <div
-              class="kit__utils__avatar kit__utils__avatar--rounded"
               v-for="user in users"
               :key="user"
+              class="vb__utils__avatar vb__utils__avatar--rounded"
             >
-              <img :src="user" alt="User" />
+              <img
+                :src="user"
+                alt="User"
+              >
             </div>
-            <button type="button" class="kit__utils__avatarGroupAdd">
+            <button
+              type="button"
+              class="vb__utils__avatarGroupAdd"
+            >
               <i class="fe fe-plus" />
             </button>
           </div>
         </template>
-        <template slot="action">
+        <template #action>
           <div class="text-nowrap">
-            <button type="button" class="btn btn-outline-success mr-2 mb-2">Accept</button>
+            <button
+              type="button"
+              class="btn btn-outline-success mr-2 mb-2"
+            >
+              Accept
+            </button>
           </div>
         </template>
       </a-table>
@@ -77,7 +104,7 @@ const columns = [
 ]
 
 export default {
-  name: 'KitTable7',
+  name: 'VbTable7',
   data: function () {
     return {
       columns,

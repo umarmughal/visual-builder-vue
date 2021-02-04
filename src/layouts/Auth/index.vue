@@ -1,21 +1,21 @@
 <template>
-  <a-layout>
+  <a-layout class="vb__layout">
     <a-layout-content>
-      <cui-sidebar />
-      <cui-support-chat />
+      <!-- <vb-sidebar /> -->
+      <!-- <vb-support-chat /> -->
       <div
         :class="{
           [$style.container]: true,
-          cui__layout__squaredBorders: settings.isSquaredBorders,
-          cui__layout__cardsShadow: settings.isCardShadow,
-          cui__layout__borderless: settings.isBorderless,
+          vb__layout__squaredBorders: settings.isSquaredBorders,
+          vb__layout__cardsShadow: settings.isCardShadow,
+          vb__layout__borderless: settings.isBorderless,
           [$style.white]: settings.authPagesColor === 'white',
           [$style.gray]: settings.authPagesColor === 'gray',
         }"
         :style="{
           backgroundImage:
             settings.authPagesColor === 'image'
-              ? `url(resources/images/content/photos/7.jpg)`
+              ? `url(resources/images/content/photos/8.jpeg)`
               : 'none',
         }"
       >
@@ -27,17 +27,37 @@
         >
           <div :class="$style.logoContainer">
             <div :class="$style.logo">
-              <img
-                src="resources/images/logo.svg"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                version="1.1"
+                height="24px"
+                width="24px"
                 class="mr-2"
-                alt="Clean UI"
-              />
-              <div :class="$style.name">{{ settings.logo }}</div>
-              <div
-                v-if="settings.logo === 'Clean UI Pro'"
-                :class="$style.descr"
               >
-                Vue
+                <g>
+                  <path
+                    fill="#4b7cf3"
+                    strokeWidth="1"
+                    stroke="#4b7cf3"
+                    d="M12,10.9c-0.1,0-0.2,0-0.2-0.1L3.5,6.1C3.4,6,3.3,5.8,3.3,5.6c0-0.2,0.1-0.3,0.2-0.4l8.2-4.7c0.2-0.1,0.3-0.1,0.5,0      l8.2,4.7c0.2,0.1,0.2,0.3,0.2,0.4S20.6,6,20.5,6.1l-8.2,4.7C12.2,10.8,12.1,10.9,12,10.9z M4.8,5.6L12,9.8l7.2-4.2L12,1.5      L4.8,5.6z"
+                  />
+                  <path
+                    fill="#4b7cf3"
+                    strokeWidth="1"
+                    stroke="#4b7cf3"
+                    d="M13.6,23.6c-0.1,0-0.2,0-0.2-0.1c-0.2-0.1-0.2-0.3-0.2-0.4v-9.5c0-0.2,0.1-0.3,0.2-0.4l8.2-4.7c0.2-0.1,0.3-0.1,0.5,0      c0.2,0.1,0.2,0.3,0.2,0.4v9.5c0,0.2-0.1,0.3-0.3,0.4l-8.2,4.7C13.8,23.6,13.7,23.6,13.6,23.6z M14.1,13.9v8.3l7.2-4.2V9.8      L14.1,13.9z"
+                  />
+                  <path
+                    fill="#4b7cf3"
+                    strokeWidth="1"
+                    stroke="#4b7cf3"
+                    d="M10.4,23.6c-0.1,0-0.2,0-0.2-0.1l-8.2-4.7c-0.2-0.1-0.3-0.3-0.3-0.4V8.9c0-0.2,0.1-0.3,0.2-0.4c0.2-0.1,0.3-0.1,0.5,0      l8.2,4.7c0.2,0.1,0.2,0.3,0.2,0.4v9.5c0,0.2-0.1,0.3-0.2,0.4C10.5,23.6,10.5,23.6,10.4,23.6z M2.7,18.1l7.2,4.2v-8.3L2.7,9.8      V18.1z"
+                  />
+                </g>
+              </svg>
+              <div :class="$style.name">
+                {{ settings.logo }}
               </div>
             </div>
           </div>
@@ -45,45 +65,60 @@
             <span class="mr-2">Don't have an account?</span>
             <router-link
               to="/auth/register"
-              class="font-size-16 kit__utils__link"
-              >Sign up</router-link
+              class="font-size-16 vb__utils__link"
             >
+              Sign up
+            </router-link>
           </div>
         </div>
-        <div :class="$style.containerInner">
-          <transition :name="settings.routerAnimation" mode="out-in">
-            <router-view />
-          </transition>
+        <div class="mb-5">
+          <router-view v-slot="{ Component }">
+            <transition :name="settings.routerAnimation" mode="out-in">
+              <component :is="Component" />
+            </transition>
+          </router-view>
         </div>
         <div class="mt-auto pb-5 pt-5">
           <ul
             class="list-unstyled d-flex mb-0 flex-wrap justify-content-center"
             :class="[$style.footerNav]"
           >
-            <li class="list-inline-item">
+            <li>
               <a href="javascript: void(0);">Terms of Use</a>
             </li>
             <li class="active list-inline-item">
               <a href="javascript: void(0);">Compliance</a>
             </li>
-            <li class="list-inline-item">
-              <a href="javascript: void(0);">Confidential Information</a>
-            </li>
-            <li class="list-inline-item">
+            <li>
               <a href="javascript: void(0);">Support</a>
             </li>
-            <li class="list-inline-item">
+            <li>
               <a href="javascript: void(0);">Contacts</a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">About</a>
+            </li>
+            <li>
+              <a href="javascript: void(0);">Advertising</a>
             </li>
           </ul>
           <div class="text-center">
-            Copyright © 2017-2020 Mdtk Soft |
+            Copyright © {{ new Date().getFullYear() }}
             <a
-              href="https://www.mediatec.org/privacy"
+              href="https://sellpixels.com"
               target="_blank"
               rel="noopener noreferrer"
-              >Privacy Policy</a
             >
+              Sellpixels.com
+            </a>
+            |
+            <a
+              href="https://sellpixels.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>
@@ -93,12 +128,12 @@
 
 <script>
 import { mapState } from 'vuex'
-import CuiSidebar from '@/@vb/components/Sidebar'
-import CuiSupportChat from '@/@vb/components/SupportChat'
+// import VbSidebar from '@/@vb/components/Sidebar'
+// import VbSupportChat from '@/@vb/components/SupportChat'
 
 export default {
   name: 'AuthLayout',
-  components: { CuiSidebar, CuiSupportChat },
+  // components: { VbSidebar, VbSupportChat },
   computed: mapState(['settings']),
 }
 </script>

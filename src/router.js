@@ -1,21 +1,18 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import AuthLayout from '@/layouts/Auth'
 import MainLayout from '@/layouts/Main'
 import store from '@/store'
 
-Vue.use(Router)
-
-const router = new Router({
+const router = createRouter({
   base: process.env.BASE_URL,
-  // mode: 'history',
   scrollBehavior() {
     return { x: 0, y: 0 }
   },
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
-      redirect: 'dashboard',
+      redirect: '/dashboard',
       component: MainLayout,
       meta: {
         authRequired: true,
@@ -40,6 +37,7 @@ const router = new Router({
       children: [
         {
           path: '/auth/404',
+          name: 'route404',
           meta: {
             title: 'Error 404',
           },
@@ -85,24 +83,25 @@ const router = new Router({
 
     // Redirect to 404
     {
-      path: '*', redirect: 'auth/404', hidden: true,
+      path: '/:pathMatch(.*)*', redirect: { name: 'route404' },
     },
   ],
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.authRequired)) {
-    if (!store.state.user.authorized) {
-      next({
-        path: '/auth/login',
-        query: { redirect: to.fullPath },
-      })
-    } else {
-      next()
-    }
-  } else {
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   if (to.matched.some(record => record.meta.authRequired)) {
+//     console.log(store.state.user.authorized)
+//     if (!store.state.user.authorized) {
+//       next({
+//         path: '/auth/login',
+//         query: { redirect: to.fullPath },
+//       })
+//     } else {
+//       next()
+//     }
+//   } else {
+//     next()
+//   }
+// })
 
 export default router

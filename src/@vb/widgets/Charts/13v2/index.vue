@@ -1,9 +1,16 @@
 <template>
   <div>
     <div class="card-body">
-      <div class="font-weight-bold font-size-36 font-weight-bold text-pink">13,846$</div>
+      <div class="font-weight-bold font-size-36 font-weight-bold text-pink">
+        13,846$
+      </div>
     </div>
-    <vue-chartist class="height-200 ct-hidden-points" type="Line" :data="data" :options="options" />
+    <vue-chartist
+      class="height-200 ct-hidden-points"
+      type="Line"
+      :data="data"
+      :options="options"
+    />
   </div>
 </template>
 <script>
@@ -12,7 +19,7 @@ import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 import Chartist from 'chartist'
 export default {
-  name: 'KitChart13v2',
+  name: 'VbChart13v2',
   components: {
     'vue-chartist': VueChartist,
   },

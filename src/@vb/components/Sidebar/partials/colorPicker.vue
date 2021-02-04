@@ -1,19 +1,21 @@
 <template>
   <div>
-    <template v-for="item in colors">
+    <template
+      v-for="item in colors"
+      :key="item"
+    >
       <a
-        :key="item"
         href="javascript: void(0);"
-        @click="colorPickerHandler(setting, item)"
         :class="{
-          [$style.cui__sidebar__select__item]: true,
-          [$style.cui__sidebar__select__item__active]: value === item,
-          [$style.cui__sidebar__select__item__black]: item === 'dark',
-          [$style.cui__sidebar__select__item__white]: item === 'white',
-          [$style.cui__sidebar__select__item__gray]: item === 'gray',
-          [$style.cui__sidebar__select__item__blue]: item === 'blue',
-          [$style.cui__sidebar__select__item__img]: item === 'image',
+          [$style.vb__sidebar__select__item]: true,
+          [$style.vb__sidebar__select__item__active]: value === item,
+          [$style.vb__sidebar__select__item__black]: item === 'dark',
+          [$style.vb__sidebar__select__item__white]: item === 'white',
+          [$style.vb__sidebar__select__item__gray]: item === 'gray',
+          [$style.vb__sidebar__select__item__blue]: item === 'blue',
+          [$style.vb__sidebar__select__item__img]: item === 'image',
         }"
+        @click="colorPickerHandler(setting, item)"
       />
     </template>
   </div>

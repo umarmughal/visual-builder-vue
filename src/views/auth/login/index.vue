@@ -1,13 +1,13 @@
 <template>
   <div>
-    <cui-login />
+    <vb-login />
   </div>
 </template>
 <script>
-import CuiLogin from '@/@vb/components/Auth/Login'
+import VbLogin from '@/@vb/components/Auth/Login'
 export default {
   components: {
-    CuiLogin,
+    VbLogin,
   },
 }
 </script>

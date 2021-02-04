@@ -3,24 +3,26 @@
     <div :class="$style.dropdown">
       <span class="text-uppercase">{{ language }}</span>
     </div>
-    <a-menu slot="overlay" @click="selectLocale">
-      <a-menu-item key="en-US">
-        <span class="text-uppercase font-size-12 mr-2">EN</span>
-        English
-      </a-menu-item>
-      <a-menu-item key="fr-FR">
-        <span class="text-uppercase font-size-12 mr-2">FR</span>
-        French
-      </a-menu-item>
-      <a-menu-item key="ru-RU">
-        <span class="text-uppercase font-size-12 mr-2">RU</span>
-        Русский
-      </a-menu-item>
-      <a-menu-item key="zh-CN">
-        <span class="text-uppercase font-size-12 mr-2">CN</span>
-        简体中文
-      </a-menu-item>
-    </a-menu>
+    <template #overlay>
+      <a-menu @click="selectLocale">
+        <a-menu-item key="en-US">
+          <span class="text-uppercase font-size-12 mr-2">EN</span>
+          English
+        </a-menu-item>
+        <a-menu-item key="fr-FR">
+          <span class="text-uppercase font-size-12 mr-2">FR</span>
+          French
+        </a-menu-item>
+        <a-menu-item key="ru-RU">
+          <span class="text-uppercase font-size-12 mr-2">RU</span>
+          Русский
+        </a-menu-item>
+        <a-menu-item key="zh-CN">
+          <span class="text-uppercase font-size-12 mr-2">CN</span>
+          简体中文
+        </a-menu-item>
+      </a-menu>
+    </template>
   </a-dropdown>
 </template>
 

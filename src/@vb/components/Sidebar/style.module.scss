@@ -1,6 +1,6 @@
 @import '@/mixins.scss';
 
-.cui__sidebar {
+.vb__sidebar {
   width: rem(300);
   position: fixed;
   z-index: 999;
@@ -103,11 +103,11 @@
       width: 0;
       height: 0;
 
-      &:checked + .air__sidebar__switch__slider {
+      &:checked + .vb__sidebar__switch__slider {
         background-color: $blue;
       }
 
-      &:checked + .air__sidebar__switch__slider:before {
+      &:checked + .vb__sidebar__switch__slider:before {
         transform: translateX(26px);
       }
     }
@@ -244,8 +244,8 @@
 }
 
 // dark theme
-[data-kit-theme='dark'] {
-  .cui__sidebar {
+[data-vb-theme='dark'] {
+  .vb__sidebar {
     background: $dark-gray-6;
 
     &__type {

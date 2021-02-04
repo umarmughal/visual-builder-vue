@@ -20,6 +20,6 @@
 </template>
 <script>
 export default {
-  name: 'KitGeneral18v1',
+  name: 'VbGeneral18v1',
 }
 </script>

@@ -1,20 +1,28 @@
 <template>
   <div>
     <div>
-      <div class="text-dark font-size-18 font-weight-bold mb-1">Year Profit</div>
-      <div class="text-gray-6 mb-2">Revenue by location and date</div>
+      <div class="text-dark font-size-18 font-weight-bold mb-1">
+        Year Profit
+      </div>
+      <div class="text-gray-6 mb-2">
+        Revenue by location and date
+      </div>
       <div class="d-flex flex-wrap align-items-center">
         <div class="mr-3 mt-3 mb-3 position-relative">
           <doughnut-chart
+            ref="doughnut"
             :chartdata="data"
             :options="options"
             :height="140"
             :width="140"
-            ref="doughnut"
           />
-          <div class="text-gray-5 font-size-28" :class="$style.tooltip" ref="tooltip"></div>
+          <div
+            ref="tooltip"
+            class="text-gray-5 font-size-28"
+            :class="$style.tooltip"
+          />
         </div>
-        <div v-html="customLegend"></div>
+        <div v-html="customLegend" />
       </div>
     </div>
   </div>
@@ -23,7 +31,7 @@
 import DoughnutChart from './DoughnutChart.vue'
 import data from './data.json'
 export default {
-  name: 'KitChart9',
+  name: 'VbChart9',
   components: {
     DoughnutChart,
   },

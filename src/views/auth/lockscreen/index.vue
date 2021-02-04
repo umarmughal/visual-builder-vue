@@ -1,13 +1,13 @@
 <template>
   <div>
-    <cui-lockscreen />
+    <vb-lockscreen />
   </div>
 </template>
 <script>
-import CuiLockscreen from '@/@vb/components/Auth/Lockscreen'
+import VbLockscreen from '@/@vb/components/Auth/Lockscreen'
 export default {
   components: {
-    CuiLockscreen,
+    VbLockscreen,
   },
 }
 </script>

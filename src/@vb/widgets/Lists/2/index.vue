@@ -1,7 +1,13 @@
 <template>
   <div>
-    <a-tabs defaultActiveKey="1" :class="$style.tabs">
-      <a-tab-pane tab="Alerts" key="1">
+    <a-tabs
+      default-active-key="1"
+      :class="$style.tabs"
+    >
+      <a-tab-pane
+        key="1"
+        tab="Alerts"
+      >
         <div class="text-gray-6">
           <ul class="list-unstyled">
             <li class="mb-3">
@@ -67,18 +73,28 @@
           </ul>
         </div>
       </a-tab-pane>
-      <a-tab-pane tab="Events" key="2">
-        <div class="text-center mb-3 py-4 bg-light rounded">No Events</div>
+      <a-tab-pane
+        key="2"
+        tab="Events"
+      >
+        <div class="text-center mb-3 py-4 bg-light rounded">
+          No Events
+        </div>
       </a-tab-pane>
-      <a-tab-pane tab="Actions" key="3">
-        <div class="text-center mb-3 py-4 bg-light rounded">No Actions</div>
+      <a-tab-pane
+        key="3"
+        tab="Actions"
+      >
+        <div class="text-center mb-3 py-4 bg-light rounded">
+          No Actions
+        </div>
       </a-tab-pane>
     </a-tabs>
   </div>
 </template>
 <script>
 export default {
-  name: 'KitList2',
+  name: 'VbList2',
 }
 </script>
 <style lang="scss" module>

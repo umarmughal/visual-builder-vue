@@ -1,8 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 import store from 'store'
-
-Vue.use(Vuex)
 
 const STORED_SETTINGS = storedSettings => {
   const settings = {}
@@ -16,24 +12,31 @@ const STORED_SETTINGS = storedSettings => {
 export default {
   state: {
     ...STORED_SETTINGS({
-      authProvider: 'firebase', // firebase, jwt
-      logo: 'Clean UI Pro',
+      // Read docs for available values: https://docs.visualbuilder.cloud
+      // VB:REPLACE-START:SETTINGS
+      authProvider: 'jwt',
+      logo: 'Visual Builder',
+      version: 'fluent',
+      theme: 'default',
       locale: 'en-US',
       isSidebarOpen: false,
       isSupportChatOpen: false,
       isMobileView: false,
       isMobileMenuOpen: false,
       isMenuCollapsed: false,
-      menuLayoutType: 'left', // left, top, nomenu
+      isPreselectedOpen: false,
+      preselectedVariant: 'default',
+      menuLayoutType: 'left',
       routerAnimation: 'slide-fadein-up', // none, slide-fadein-up, slide-fadein-right, fadein, zoom-fadein
-      menuColor: 'white', // white, dark, gray
-      theme: 'default', // default, dark
-      authPagesColor: 'white', // white, gray, image
+      menuColor: 'gray',
+      authPagesColor: 'gray',
+      isAuthTopbar: true,
       primaryColor: '#4b7cf3',
       leftMenuWidth: 256,
       isMenuUnfixed: false,
       isMenuShadow: false,
       isTopbarFixed: false,
+      isTopbarSeparated: false,
       isGrayTopbar: false,
       isContentMaxWidth: false,
       isAppMaxWidth: false,
@@ -41,6 +44,14 @@ export default {
       isCardShadow: true,
       isSquaredBorders: false,
       isBorderless: false,
+      layoutMenu: 'classic',
+      layoutTopbar: 'v1',
+      layoutBreadcrumbs: 'v1',
+      layoutFooter: 'v1',
+      flyoutMenuType: 'flyout',
+      flyoutMenuColor: 'blue',
+
+      // VB:REPLACE-END:SETTINGS
     }),
   },
   mutations: {
@@ -87,7 +98,7 @@ export default {
         }
         const body = document.querySelector('body')
         const styleEl = document.createElement('style')
-        const css = document.createTextNode(`:root { --kit-color-primary: ${color};}`)
+        const css = document.createTextNode(`:root { --vb-color-primary: ${color};}`)
         styleEl.setAttribute('id', 'primaryColor')
         styleEl.appendChild(css)
         body.appendChild(styleEl)
@@ -99,7 +110,7 @@ export default {
     SET_THEME(state, payload) {
       const { theme } = payload
       const nextTheme = theme === 'dark' ? 'dark' : 'default'
-      document.querySelector('html').setAttribute('data-kit-theme', nextTheme)
+      document.querySelector('html').setAttribute('data-vb-theme', nextTheme)
       state.theme = nextTheme
       store.set('app.settings.theme', nextTheme)
     },

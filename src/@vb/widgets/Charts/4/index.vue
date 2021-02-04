@@ -1,8 +1,15 @@
 <template>
   <div>
-    <div class="font-weight-bold text-dark font-size-24">78,367</div>
+    <div class="font-weight-bold text-dark font-size-24">
+      78,367
+    </div>
     <div>Total Sales</div>
-    <vue-chartist class="height-200 ct-hidden-points" type="Line" :data="data" :options="options" />
+    <vue-chartist
+      class="height-200 ct-hidden-points"
+      type="Line"
+      :data="data"
+      :options="options"
+    />
   </div>
 </template>
 <script>
@@ -10,7 +17,7 @@ import data from './data.json'
 import VueChartist from 'v-chartist'
 import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 export default {
-  name: 'KitChart4',
+  name: 'VbChart4',
   components: {
     'vue-chartist': VueChartist,
   },
