@@ -6,7 +6,7 @@
         [$style.vb__sidebar__toggled]: settings.isSidebarOpen,
       }"
     >
-      <vue-custom-scrollbar :style="{ height: '100%' }">
+      <div class="overflow-auto" :style="{ height: '100%' }">
         <div :class="$style.vb__sidebar__inner">
           <a
             href="javascript: void(0);"
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-      </vue-custom-scrollbar>
+      </div>
     </div>
     <a-tooltip placement="left">
       <template #title>
@@ -311,13 +311,12 @@
 </template>
 
 <script>
-import vueCustomScrollbar from 'vue-custom-scrollbar'
 import { mapState } from 'vuex'
 import throttle from 'lodash/throttle'
 import VbColorPicker from './partials/colorPicker'
 
 export default {
-  components: { vueCustomScrollbar, VbColorPicker },
+  components: { VbColorPicker },
   data() {
     return {
       defaultColor: '#4b7cf3',

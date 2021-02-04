@@ -117,6 +117,6 @@ export default {
   },
   actions: {},
   getters: {
-    state: state => state,
+    settings: state => state,
   },
 }

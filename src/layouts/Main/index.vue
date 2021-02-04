@@ -14,7 +14,7 @@
         vb__layout__borderless: settings.isBorderless,
       }"
     >
-      <!-- <vb-sidebar /> -->
+      <vb-sidebar />
       <!-- <vb-support-chat /> -->
 
       <!-- left menu -->
@@ -52,7 +52,7 @@
             vb__layout__separatedHeader: settings.isTopbarSeparated,
           }"
         >
-          <!-- <vb-topbar /> -->
+          <vb-topbar />
         </a-layout-header>
         <vb-breadcrumbs />
         <a-layout-content class="vb__layout__content">
@@ -72,17 +72,17 @@
 
 <script>
 import { mapState } from 'vuex'
-// import VbTopbar from '@/@vb/components/Topbar'
+import VbTopbar from '@/@vb/components/Topbar'
 import VbBreadcrumbs from '@/@vb/components/Breadcrumbs'
 import VbFooter from '@/@vb/components/Footer'
-// import VbSidebar from '@/@vb/components/Sidebar'
+import VbSidebar from '@/@vb/components/Sidebar'
 // import VbSupportChat from '@/@vb/components/SupportChat'
 // import VbMenuLeft from '@/@vb/components/Menu/MenuLeft'
 // import VbMenuTop from '@/@vb/components/Menu/MenuTop'
 
 export default {
   name: 'MainLayout',
-  components: { VbFooter, VbBreadcrumbs },
+  components: { VbFooter, VbTopbar, VbSidebar, VbBreadcrumbs },
   data: function () {
     return {
       touchStartPrev: 0,

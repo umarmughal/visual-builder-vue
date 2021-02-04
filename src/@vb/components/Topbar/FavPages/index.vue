@@ -36,7 +36,7 @@
                     />
                   </div>
                   <div class="height-200">
-                    <vue-custom-scrollbar :style="{ height: '100%' }">
+                    <div class="overflow-auto" :style="{ height: '100%' }">
                       <div class="px-2 pb-2">
                         <template
                           v-for="item in filteredPagesList"
@@ -59,7 +59,7 @@
                           </router-link>
                         </template>
                       </div>
-                    </vue-custom-scrollbar>
+                    </div>
                   </div>
                   <div class="p-2">
                     <a-button type="primary" @click="toggleDropdown"
@@ -78,13 +78,9 @@
 
 <script>
 import store from 'store'
-import vueCustomScrollbar from 'vue-custom-scrollbar'
 import { getMenuData } from '@/services/menu'
 
 export default {
-  components: {
-    vueCustomScrollbar,
-  },
   data: function () {
     return {
       dropdownVisible: false,

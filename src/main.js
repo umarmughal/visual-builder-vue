@@ -5,11 +5,12 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-// import { i18n } from './localization'
+import { i18n } from './localization'
 import './services/axios/fakeApi' // mocking api
 
 createApp(App)
   .use(store)
   .use(router)
+  .use(i18n)
   .use(Antd)
   .mount("#app")
