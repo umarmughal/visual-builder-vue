@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import NProgress from 'nprogress'
 import AuthLayout from '@/layouts/Auth'
 import MainLayout from '@/layouts/Main'
 import store from '@/store'
@@ -86,6 +87,14 @@ const router = createRouter({
       path: '/:pathMatch(.*)*', redirect: { name: 'route404' },
     },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  setTimeout(() => {
+    NProgress.done()
+  }, 300)
+  next()
 })
 
 // router.beforeEach((to, from, next) => {
