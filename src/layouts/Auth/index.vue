@@ -1,8 +1,8 @@
 <template>
   <a-layout class="vb__layout">
     <a-layout-content>
-      <!-- <vb-sidebar /> -->
-      <!-- <vb-support-chat /> -->
+      <vb-sidebar />
+      <vb-support-chat />
       <div
         :class="{
           [$style.container]: true,
@@ -128,12 +128,12 @@
 
 <script>
 import { mapState } from 'vuex'
-// import VbSidebar from '@/@vb/components/Sidebar'
-// import VbSupportChat from '@/@vb/components/SupportChat'
+import VbSidebar from '@/@vb/components/Sidebar'
+import VbSupportChat from '@/@vb/components/SupportChat'
 
 export default {
   name: 'AuthLayout',
-  // components: { VbSidebar, VbSupportChat },
+  components: { VbSidebar, VbSupportChat },
   computed: mapState(['settings']),
 }
 </script>

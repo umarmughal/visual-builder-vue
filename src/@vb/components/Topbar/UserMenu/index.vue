@@ -1,18 +1,9 @@
 <template>
-  <a-dropdown
-    :trigger="['click']"
-    placement="bottomLeft"
-    @visibleChange="addCount"
-  >
+  <a-dropdown :trigger="['click']" placement="bottomLeft">
     <div :class="$style.dropdown">
-      <a-badge :count="count">
-        <a-avatar
-          shape="square"
-          icon="user"
-          size="large"
-          :class="$style.avatar"
-        />
-      </a-badge>
+      <a-avatar shape="square" size="large" :class="$style.avatar">
+        <template #icon><UserOutlined /></template>
+      </a-avatar>
     </div>
     <template #overlay>
       <a-menu>
@@ -65,24 +56,17 @@
 </template>
 
 <script>
+import { UserOutlined } from '@ant-design/icons-vue'
 import { mapState } from 'vuex'
 
 export default {
-  data: function () {
-    return {
-      count: 7,
-    }
+  components: {
+    UserOutlined,
   },
   computed: {
     ...mapState(['user']),
-    loading() {
-      return this.$store.state.user.loading
-    },
   },
   methods: {
-    addCount() {
-      this.count++
-    },
     logout() {
       this.$store.dispatch('user/LOGOUT')
     },

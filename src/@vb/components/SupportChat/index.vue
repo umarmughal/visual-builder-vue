@@ -1,16 +1,13 @@
 <template>
   <div :class="$style.chat">
-    <button
-      type="button"
-      :class="$style.toggleButton"
+    <a
+      role="button"
+      class="vb__utils__sidebar__button vb__utils__sidebar__button__long"
       @click="toggleSupportChat()"
     >
-      <i
-        :class="$style.icon"
-        class="fe fe-message-square mr-md-2"
-      />
+      <i :class="$style.icon" class="fe fe-message-square mr-md-2" />
       <span class="d-none d-md-inline">Support Chat</span>
-    </button>
+    </a>
     <div
       :class="{
         [$style.container]: true,

@@ -6,13 +6,13 @@
   >
     <div :class="$style.dropdown">
       <a-badge :count="count">
-        <i class="fe fe-bell" :class="$style.icon" />
+        <i class="fe fe-shopping-cart" :class="$style.icon" />
       </a-badge>
     </div>
     <template #overlay>
       <div class="card vb__utils__shadow width-350">
         <div class="card-body pb-2">
-          <list3 />
+          <general26 />
         </div>
       </div>
     </template>
@@ -21,14 +21,14 @@
 
 <script>
 import { ref } from 'vue'
-import List3 from '@/@vb/widgets/Lists/3'
+import General26 from '@/@vb/widgets/General/26'
 
 export default {
   components: {
-    List3,
+    General26,
   },
   setup() {
-    const count = ref(7)
+    const count = ref(2)
     const addCount = () => {
       count.value++
     }

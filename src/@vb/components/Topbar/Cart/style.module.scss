@@ -31,34 +31,25 @@
     &::after {
       color: $gray-6;
     }
+
+    .icon {
+      color: $primary;
+    }
   }
 }
 
-.flag {
-  vertical-align: top;
-  text-transform: uppercase;
-  padding-right: rem(5);
-
-  img {
-    height: rem(21);
-    margin-right: rem(5);
-  }
-}
-
-.menuIcon {
-  img {
-    height: rem(21);
-    margin-right: rem(10);
-  }
+.icon {
+  margin-right: rem(8);
+  position: relative;
+  bottom: -2px;
+  font-size: rem(17);
+  color: $gray-5;
+  @include transition-slow;
 }
 
 // dark theme
 [data-vb-theme='dark'] {
-  .dropdown {
+  .icon {
     color: $dark-gray-2;
-
-    &:hover {
-      color: $primary;
-    }
   }
 }

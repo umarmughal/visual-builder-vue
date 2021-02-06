@@ -480,7 +480,7 @@
               </div>
             </a-collapse-panel>
             <a-collapse-panel key="4" header="Topbar Settings">
-              <div className="pt-2 mb-2">
+              <div class="pt-2 mb-2">
                 <h6>
                   <strong>Topbar Variant</strong>
                 </h6>
@@ -502,15 +502,15 @@
                   </div>
                 </a-radio-group>
               </div>
-              <div className="pt-2 mb-2">
-                <div className="row">
-                  <div className="col-auto mr-auto">
+              <div class="pt-2 mb-2">
+                <div class="row">
+                  <div class="col-auto mr-auto">
                     <h6>
                       <strong>Topbar Separated</strong>
                     </h6>
                   </div>
-                  <div className="col-auto">
-                    <div className="vb__sidebar__fixSwitch">
+                  <div class="col-auto">
+                    <div class="vb__sidebar__fixSwitch">
                       <a-switch
                         :checked="settings.isTopbarSeparated"
                         @click="
@@ -521,15 +521,15 @@
                   </div>
                 </div>
               </div>
-              <div className="pt-2 mb-2">
-                <div className="row">
-                  <div className="col-auto mr-auto">
+              <div class="pt-2 mb-2">
+                <div class="row">
+                  <div class="col-auto mr-auto">
                     <h6>
                       <strong>Topbar Fixed</strong>
                     </h6>
                   </div>
-                  <div className="col-auto">
-                    <div className="vb__sidebar__fixSwitch">
+                  <div class="col-auto">
+                    <div class="vb__sidebar__fixSwitch">
                       <a-switch
                         :checked="settings.isTopbarFixed"
                         @click="changeSettingSwitch($event, 'isTopbarFixed')"
@@ -538,15 +538,15 @@
                   </div>
                 </div>
               </div>
-              <div className="pt-2 mb-2">
-                <div className="row">
-                  <div className="col-auto mr-auto">
+              <div class="pt-2 mb-2">
+                <div class="row">
+                  <div class="col-auto mr-auto">
                     <h6>
                       <strong>Topbar Gray Bg</strong>
                     </h6>
                   </div>
-                  <div className="col-auto">
-                    <div className="vb__sidebar__fixSwitch">
+                  <div class="col-auto">
+                    <div class="vb__sidebar__fixSwitch">
                       <a-switch
                         :checked="settings.isGrayTopbar"
                         @click="changeSettingSwitch($event, 'isGrayTopbar')"
@@ -557,7 +557,7 @@
               </div>
             </a-collapse-panel>
             <a-collapse-panel key="5" header="Breadcrumbs Settings">
-              <div className="pt-2 mb-2">
+              <div class="pt-2 mb-2">
                 <h6>
                   <strong>Breadcrumbs Variant</strong>
                 </h6>
@@ -584,7 +584,7 @@
               </div>
             </a-collapse-panel>
             <a-collapse-panel key="6" header="Footer Settings">
-              <div className="pt-2 mb-1">
+              <div class="pt-2 mb-1">
                 <h6>
                   <strong>Footer Variant</strong>
                 </h6>
@@ -618,181 +618,6 @@
             </a-collapse-panel>
           </a-collapse>
         </div>
-        <!-- <div :class="$style.vb__sidebar__inner">
-          <a
-            href="javascript: void(0);"
-            :class="$style.vb__sidebar__close"
-            class="fe fe-x-circle"
-            @click="toggleSettings()"
-          />
-          <h5>
-            <strong>Theme Settings</strong>
-          </h5>
-          
-          <div :class="$style.vb__sidebar__type">
-            <div :class="$style.vb__sidebar__type__title">
-              <span>Menu Layout</span>
-            </div>
-            <div :class="$style.vb__sidebar__type__items">
-              <a-radio-group
-                :default-value="settings.menuLayoutType"
-                @change="selectMenuLayoutType"
-              >
-                <div class="row">
-                  <div class="col-6">
-                    <div class="mb-2">
-                      <a-radio :value="'left'"> Left Menu </a-radio>
-                    </div>
-                    <div class="mb-2">
-                      <a-radio :value="'top'"> Top Menu </a-radio>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="mb-2">
-                      <a-radio :value="'nomenu'"> No menu </a-radio>
-                    </div>
-                  </div>
-                </div>
-              </a-radio-group>
-            </div>
-          </div>
-          
-          <div :class="$style.vb__sidebar__type" class="mb-2">
-            <div :class="$style.vb__sidebar__type__title">
-              <span>Left Menu Width</span>
-            </div>
-            <div :class="$style.vb__sidebar__type__items">
-              <a-slider
-                :min="256"
-                :max="300"
-                :value="settings.leftMenuWidth"
-                @change="setWidth"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Left Menu: Collapsed</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isMenuCollapsed"
-                @click="settingChange($event, 'isMenuCollapsed')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Left Menu: Unfixed</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isMenuUnfixed"
-                @click="settingChange($event, 'isMenuUnfixed')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Left Menu: Shadow</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isMenuShadow"
-                @click="settingChange($event, 'isMenuShadow')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Menu: Color</div>
-            <div :class="$style.vb__sidebar__container">
-              <vb-color-picker
-                :value="settings.menuColor"
-                :setting="'menuColor'"
-                :colors="['white', 'gray', 'dark']"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Auth: Background</div>
-            <div :class="$style.vb__sidebar__container">
-              <vb-color-picker
-                :value="settings.authPagesColor"
-                :setting="'authPagesColor'"
-                :colors="['white', 'gray', 'image']"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Topbar: Fixed</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isTopbarFixed"
-                @click="settingChange($event, 'isTopbarFixed')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">
-              Topbar: Gray Background
-            </div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isGrayTopbar"
-                @click="settingChange($event, 'isGrayTopbar')"
-              />
-            </div>
-          </div>
-
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">App: Content Max-Width</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isContentMaxWidth"
-                @click="settingChange($event, 'isContentMaxWidth')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">App: Max-Width</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isAppMaxWidth"
-                @click="settingChange($event, 'isAppMaxWidth')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">App: Gray Background</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isGrayBackground"
-                @click="settingChange($event, 'isGrayBackground')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Cards: Squared Borders</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isSquaredBorders"
-                @click="settingChange($event, 'isSquaredBorders')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Cards: Shadow</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isCardShadow"
-                @click="settingChange($event, 'isCardShadow')"
-              />
-            </div>
-          </div>
-          <div :class="$style.vb__sidebar__item">
-            <div :class="$style.vb__sidebar__label">Cards: Borderless</div>
-            <div :class="$style.vb__sidebar__container">
-              <a-switch
-                :checked="settings.isBorderless"
-                @click="settingChange($event, 'isBorderless')"
-              />
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
     <div class="vb__utils__sidebar__buttons">

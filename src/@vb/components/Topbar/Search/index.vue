@@ -7,17 +7,18 @@
       style="width: 200px"
       @focus="openSearch"
     >
-      <slot name="prefix">
+      <template #prefix>
         <span>
+          <search-outlined style="color: rgba(0, 0, 0, 0.25)" />
           <a-icon type="search" style="color: rgba(0, 0, 0, 0.25)" />
         </span>
-      </slot>
+      </template>
     </a-input>
     <div
       :class="[$style.livesearch, showSearch ? $style.livesearchVisible : '']"
     >
       <button :class="$style.close" type="button" @click="closeSearch">
-        <i class="icmn-cross" />
+        <i class="fe fe-x" />
       </button>
       <div class="container-fluid">
         <div :class="$style.wrapper">
@@ -143,23 +144,36 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+import { SearchOutlined } from '@ant-design/icons-vue'
+
 export default {
-  data: function () {
-    return {
-      showSearch: false,
-      searchText: '',
-    }
+  components: {
+    SearchOutlined,
   },
-  methods: {
-    openSearch() {
-      this.showSearch = true
+  setup() {
+    const showSearch = ref(false)
+    const searchText = ref('')
+    const innerInput = ref(null)
+
+    const openSearch = () => {
+      showSearch.value = true
       setTimeout(() => {
-        this.$refs.innerInput.focus()
+        innerInput.value.focus()
       }, 100)
-    },
-    closeSearch() {
-      this.showSearch = false
-    },
+    }
+
+    const closeSearch = () => {
+      showSearch.value = false
+    }
+
+    return {
+      showSearch,
+      searchText,
+      openSearch,
+      closeSearch,
+      innerInput,
+    }
   },
 }
 </script>

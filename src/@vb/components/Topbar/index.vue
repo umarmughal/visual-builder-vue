@@ -3,20 +3,23 @@
     <div class="mr-4">
       <vb-fav-pages />
     </div>
-    <div class="mr-auto">
+    <div class="mr-auto mr-md-1">
       <vb-search />
     </div>
     <div class="mr-4 d-none d-md-block">
       <vb-issues-history />
     </div>
-    <div class="mb-0 mr-auto d-xl-block d-none">
+    <div class="mr-auto d-xl-block d-none">
       <vb-project-management />
     </div>
-    <div class="mr-4 d-none d-sm-block">
-      <vb-language-switcher />
+    <div className="mr-3 d-none d-sm-block ml-auto">
+      <vb-cart />
     </div>
-    <div class="mr-4 d-none d-sm-block">
+    <div class="mr-3 d-none d-sm-block">
       <vb-actions />
+    </div>
+    <div class="mr-3 d-none d-sm-block">
+      <vb-language-switcher />
     </div>
     <div>
       <vb-user-menu />
@@ -32,6 +35,7 @@ import VbLanguageSwitcher from './LanguageSwitcher'
 import VbActions from './Actions'
 import VbUserMenu from './UserMenu'
 import VbFavPages from './FavPages'
+import VbCart from './Cart'
 
 export default {
   components: {
@@ -42,6 +46,7 @@ export default {
     VbActions,
     VbUserMenu,
     VbFavPages,
+    VbCart,
   },
 }
 </script>
