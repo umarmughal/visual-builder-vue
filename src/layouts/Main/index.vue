@@ -71,7 +71,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { computed, onMounted, ref } from 'vue'
+import { useStore } from 'vuex'
 import VbTopbar from '@/@vb/components/Topbar'
 import VbBreadcrumbs from '@/@vb/components/Breadcrumbs'
 import VbFooter from '@/@vb/components/Footer'
@@ -83,39 +84,29 @@ import VbSidebar from '@/@vb/components/Sidebar'
 export default {
   name: 'MainLayout',
   components: { VbFooter, VbTopbar, VbSidebar, VbBreadcrumbs },
-  data: function () {
-    return {
-      touchStartPrev: 0,
-      touchStartLocked: false,
+  setup() {
+    const store = useStore()
+    const settings = computed(() => store.getters.settings)
+    const touchStartPrev = ref(0)
+    const touchStartLocked = ref(false)
+
+    const toggleMobileMenu = () => {
+      const value = !settings.value.isMobileMenuOpen
+      store.commit('CHANGE_SETTING', { setting: 'isMobileMenuOpen', value })
     }
-  },
-  computed: mapState(['settings']),
-  mounted() {
-    this.bindMobileSlide()
-    this.detectViewPort(true)
-    window.addEventListener('resize', this.detectViewPortListener)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.detectViewPortListener)
-  },
-  methods: {
-    toggleMobileMenu() {
-      const value = !this.settings.isMobileMenuOpen
-      this.$store.commit('CHANGE_SETTING', { setting: 'isMobileMenuOpen', value })
-    },
-    changeSetting: function (setting, value) {
-      this.$store.commit('CHANGE_SETTING', { setting, value })
-    },
-    setViewPort: function (isMobileView = false, isTabletView = false) {
-      this.$store.commit('CHANGE_SETTING', { setting: 'isMobileView', value: isMobileView })
-      this.$store.commit('CHANGE_SETTING', { setting: 'isTabletView', value: isTabletView })
-    },
-    detectViewPortListener: function () {
-      this.detectViewPort(false)
-    },
-    detectViewPort: function (firstLoad = false) {
-      const isMobile = this.settings.isMobileView
-      const isTablet = this.settings.isTabletView
+
+    const setViewPort = (isMobileView = false, isTabletView = false) => {
+      store.commit('CHANGE_SETTING', { setting: 'isMobileView', value: isMobileView })
+      store.commit('CHANGE_SETTING', { setting: 'isTabletView', value: isTabletView })
+    }
+
+    // resize viewport events (commit toggleMenu, etc...)
+    const detectViewPortListener = () => {
+      detectViewPort(false)
+    }
+    const detectViewPort = (firstLoad = false) => {
+      const isMobile = settings.value.isMobileView
+      const isTablet = settings.value.isTabletView
       const width = window.innerWidth
       const state = {
         next: {
@@ -131,19 +122,21 @@ export default {
       }
       // desktop
       if (state.next.desktop && ((state.next.desktop !== state.prev.desktop) || firstLoad)) {
-        this.setViewPort(false, false)
+        setViewPort(false, false)
       }
       // tablet & collapse menu
       if (state.next.tablet && !state.next.mobile && ((state.next.tablet !== state.prev.tablet) || firstLoad)) {
-        this.setViewPort(false, true)
-        this.$store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value: true })
+        setViewPort(false, true)
+        store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value: true })
       }
       // mobile
       if (state.next.mobile && ((state.next.mobile !== state.prev.mobile) || firstLoad)) {
-        this.setViewPort(true, false)
+        setViewPort(true, false)
       }
-    },
-    bindMobileSlide() {
+    }
+
+    // mobile slide bindings
+    const bindMobileSlide = () => {
       // mobile menu touch slide opener
       const unify = e => {
         return e.changedTouches ? e.changedTouches[0] : e
@@ -152,8 +145,8 @@ export default {
         'touchstart',
         e => {
           const x = unify(e).clientX
-          this.touchStartPrev = x
-          this.touchStartLocked = x > 70
+          touchStartPrev.value = x
+          touchStartLocked.value = x > 70
         },
         { passive: false },
       )
@@ -161,15 +154,23 @@ export default {
         'touchmove',
         e => {
           const x = unify(e).clientX
-          const prev = this.touchStartPrev
-          if (x - prev > 50 && !this.touchStartLocked) {
-            this.toggleMobileMenu()
-            this.touchStartLocked = true
+          const prev = touchStartPrev.value
+          if (x - prev > 50 && !touchStartLocked.value) {
+            toggleMobileMenu()
+            touchStartLocked.value = true
           }
         },
         { passive: false },
       )
-    },
+    }
+
+    onMounted(() => bindMobileSlide())
+    onMounted(() => detectViewPort(true))
+    onMounted(() => window.addEventListener('resize', detectViewPortListener))
+
+    return {
+      settings,
+    }
   },
 }
 </script>
