@@ -1,4 +1,5 @@
 import router from '@/router'
+import { notification } from 'ant-design-vue'
 
 import * as firebase from '@/services/firebase'
 import * as jwt from '@/services/jwt'
@@ -18,6 +19,18 @@ const mapAuthProviders = {
   },
 }
 
+const DEV = process.env.REACT_APP_AUTHENTICATED
+  ? {
+    id: '1',
+    name: 'Tom Jones',
+    role: 'admin',
+    email: 'demo@sellpixels.com',
+    avatar: '',
+    authorized: true,
+    accountFetchIsTouched: true,
+  }
+  : {}
+
 export default {
   namespaced: true,
   state: {
@@ -26,8 +39,10 @@ export default {
     role: '',
     email: '',
     avatar: '',
-    authorized: process.env.VUE_APP_AUTHENTICATED || false, // false is default value
+    authorized: false,
     loading: false,
+    accountFetchIsTouched: false,
+    ...DEV, // remove it, used for demo build
   },
   mutations: {
     SET_STATE(state, payload) {
@@ -47,10 +62,10 @@ export default {
       login(email, password).then(success => {
         if (success) {
           dispatch('LOAD_CURRENT_ACCOUNT')
-          // Vue.prototype.$notification.success({
-          //   message: 'Logged In',
-          //   description: 'You have successfully logged in!',
-          // })
+          notification.success({
+            message: 'Logged In',
+            description: 'You have successfully logged in!',
+          })
         }
         if (!success) {
           commit('SET_STATE', {
@@ -69,10 +84,10 @@ export default {
       register(email, password, name).then(success => {
         if (success) {
           dispatch('LOAD_CURRENT_ACCOUNT')
-          // Vue.prototype.$notification.success({
-          //   message: 'Succesful Registered',
-          //   description: 'You have successfully registered!',
-          // })
+          notification.success({
+            message: 'Succesful Registered',
+            description: 'You have successfully registered!',
+          })
         }
         if (!success) {
           commit('SET_STATE', {

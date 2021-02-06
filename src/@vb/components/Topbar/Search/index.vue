@@ -10,7 +10,6 @@
       <template #prefix>
         <span>
           <search-outlined style="color: rgba(0, 0, 0, 0.25)" />
-          <a-icon type="search" style="color: rgba(0, 0, 0, 0.25)" />
         </span>
       </template>
     </a-input>

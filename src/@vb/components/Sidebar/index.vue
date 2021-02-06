@@ -767,7 +767,7 @@ export default {
       store.commit('CHANGE_SETTING', { setting, value })
     }
     const changeSettingSwitch = (e, setting) => {
-      const value = settings.value[setting]
+      const value = !settings.value[setting]
       store.commit('CHANGE_SETTING', { setting, value })
     }
     const toggleSettings = () => {

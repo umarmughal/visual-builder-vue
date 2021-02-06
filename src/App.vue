@@ -4,9 +4,9 @@
 </template>
 
 <script>
-import { computed, watch } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import Localization from '@/localization'
 import StyleLoader from '@/styleLoader'
 
@@ -15,14 +15,31 @@ export default {
   components: { Localization, StyleLoader },
   setup() {
     const route = useRoute()
+    const router = useRouter()
     const store = useStore()
     const logo = computed(() => store.getters.settings.logo)
     const routeTitle = computed(() => route.meta.title)
+    const nextRoute = computed(() => route.query.redirect || '/')
+    const currentRoute = computed(() => route.name)
+    const authorized = computed(() => store.getters['user/user'].authorized)
 
+    // watch page title change
     watch(
       [logo, routeTitle],
       ([logo, routeTitle]) => document.title = `${logo} | ${routeTitle}` || `${logo}`,
     )
+
+    // initial auth check
+    onMounted(() => {
+      store.dispatch('user/LOAD_CURRENT_ACCOUNT')
+    })
+
+    // redirect if authorized and current page is login
+    watch(authorized, (authorized) => {
+      if (authorized && currentRoute.value === 'login') {
+        router.push(nextRoute.value)
+      }
+    })
   },
 }
 </script>

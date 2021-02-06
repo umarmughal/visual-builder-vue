@@ -13,6 +13,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'home',
       redirect: '/dashboard',
       component: MainLayout,
       meta: {
@@ -53,6 +54,7 @@ const router = createRouter({
         },
         {
           path: '/auth/login',
+          name: 'login',
           meta: {
             title: 'Sign In',
           },
@@ -94,23 +96,20 @@ router.beforeEach((to, from, next) => {
   setTimeout(() => {
     NProgress.done()
   }, 300)
-  next()
-})
 
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.authRequired)) {
-//     console.log(store.state.user.authorized)
-//     if (!store.state.user.authorized) {
-//       next({
-//         path: '/auth/login',
-//         query: { redirect: to.fullPath },
-//       })
-//     } else {
-//       next()
-//     }
-//   } else {
-//     next()
-//   }
-// })
+  if (to.matched.some(record => record.meta.authRequired)) {
+    if (store.getters['user/user'].authorized) {
+      next()
+      return
+    }
+    next({
+      name: 'login', //named path
+      query: { redirect: to.fullPath },
+    })
+  } else {
+    next()
+  }
+
+})
 
 export default router
