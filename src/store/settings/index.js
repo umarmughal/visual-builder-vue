@@ -56,8 +56,16 @@ export default {
   },
   mutations: {
     CHANGE_SETTING(state, payload) {
-      window.localStorage.setItem(`app.settings.${payload.setting}`, payload.value)
+      store.set(`app.settings.${payload.setting}`, payload.value)
       state[payload.setting] = payload.value
+    },
+    CHANGE_SETTING_BULK(state, payload) {
+      const settings = {}
+      Object.keys(payload).forEach((key) => {
+        store.set(`app.settings.${key}`, payload[key])
+        settings[key] = payload[key]
+        state[key] = payload[key]
+      })
     },
     SETUP_URL_SETTINGS(state, payload) {
       let queryParams = payload

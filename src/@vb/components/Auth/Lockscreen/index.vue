@@ -13,7 +13,6 @@
         </div>
       </div>
       <a-form
-        ref="registerForm"
         :model="lockscreenForm"
         :rules="rules"
         layout="vertical"
@@ -39,16 +38,21 @@
   </div>
 </template>
 <script>
+import { reactive } from 'vue'
+
 export default {
   name: 'VbLockscreen',
-  data: function () {
+  setup() {
+    const rules = {
+      password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
+    }
+    const lockscreenForm = reactive({
+      password: '',
+    })
+
     return {
-      rules: {
-        password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
-      },
-      lockscreenForm: {
-        password: '',
-      },
+      rules,
+      lockscreenForm,
     }
   },
 }

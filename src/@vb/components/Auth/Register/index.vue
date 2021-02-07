@@ -9,7 +9,6 @@
         </p>
       </div>
       <a-form
-        ref="registerForm"
         :model="registerForm"
         :rules="rules"
         layout="vertical"
@@ -62,34 +61,41 @@
   </div>
 </template>
 <script>
+import { computed, reactive } from 'vue'
+import { useStore } from 'vuex'
+
 export default {
   name: 'VbRegister',
-  data: function () {
-    return {
-      rules: {
-        name: [{ required: true, message: 'Please input your name!', trigger: 'change' }],
-        email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
-        password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
-      },
-      registerForm: {
-        name: '',
-        email: '',
-        password: '',
-      },
+  setup() {
+    const store = useStore()
+    const settings = computed(() => store.getters.settings)
+    const loading = computed(() => store.getters['user/user'].loading)
+    const rules = {
+      name: [{ required: true, message: 'Please input your name!', trigger: 'change' }],
+      email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
+      password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
     }
-  },
-  computed: {
-    loading() {
-      return this.$store.state.user.loading
-    },
-  },
-  methods: {
-    handleFinish(values) {
-      this.$store.dispatch('user/REGISTER', { payload: values })
-    },
-    handleFinishFailed(errors) {
+    const registerForm = reactive({
+      name: '',
+      email: '',
+      password: '',
+    })
+
+    const handleFinish = (values) => {
+      store.dispatch('user/REGISTER', { payload: values })
+    }
+    const handleFinishFailed = (errors) => {
       console.log(errors)
-    },
+    }
+
+    return {
+      settings,
+      loading,
+      rules,
+      registerForm,
+      handleFinish,
+      handleFinishFailed,
+    }
   },
 }
 </script>

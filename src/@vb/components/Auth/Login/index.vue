@@ -17,7 +17,6 @@
         </a-radio-group>
       </div>
       <a-form
-        ref="loginForm"
         :model="loginForm"
         :rules="rules"
         layout="vertical"
@@ -57,39 +56,73 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { computed, reactive } from 'vue'
+import { useStore } from 'vuex'
 
 export default {
   name: 'VbLogin',
-  data: function () {
+  setup() {
+    const store = useStore()
+    const settings = computed(() => store.getters.settings)
+    const loading = computed(() => store.getters['user/user'].loading)
+    const rules = {
+      email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
+      password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
+    }
+    const loginForm = reactive({
+      email: 'demo@visualbuilder.cloud',
+      password: 'VisualBuilder',
+    })
+
+    const changeAuthProvider = (value) => {
+      store.commit('CHANGE_SETTING', { setting: 'authProvider', value })
+    }
+    const handleFinish = (values) => {
+      store.dispatch('user/LOGIN', { payload: values })
+    }
+    const handleFinishFailed = (errors) => {
+      console.log(errors)
+    }
+
     return {
-      rules: {
-        email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
-        password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
-      },
-      loginForm: {
-        email: 'demo@visualbuilder.cloud',
-        password: 'VisualBuilder',
-      },
+      settings,
+      loading,
+      rules,
+      loginForm,
+      changeAuthProvider,
+      handleFinish,
+      handleFinishFailed,
     }
   },
-  computed: {
-    ...mapState(['settings']),
-    loading() {
-      return this.$store.state.user.loading
-    },
-  },
-  methods: {
-    changeAuthProvider(value) {
-      this.$store.commit('CHANGE_SETTING', { setting: 'authProvider', value })
-    },
-    handleFinish(values) {
-      this.$store.dispatch('user/LOGIN', { payload: values })
-    },
-    handleFinishFailed(errors) {
-      console.log(errors)
-    },
-  },
+  // data: function () {
+  //   return {
+  //     rules: {
+  //       email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
+  //       password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
+  //     },
+  //     loginForm: {
+  //       email: 'demo@visualbuilder.cloud',
+  //       password: 'VisualBuilder',
+  //     },
+  //   }
+  // },
+  // computed: {
+  //   ...mapState(['settings']),
+  //   loading() {
+  //     return this.$store.state.user.loading
+  //   },
+  // },
+  // methods: {
+  //   changeAuthProvider(value) {
+  //     this.$store.commit('CHANGE_SETTING', { setting: 'authProvider', value })
+  //   },
+  //   handleFinish(values) {
+  //     this.$store.dispatch('user/LOGIN', { payload: values })
+  //   },
+  //   handleFinishFailed(errors) {
+  //     console.log(errors)
+  //   },
+  // },
 }
 </script>
 <style lang="scss" module>

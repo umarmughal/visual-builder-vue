@@ -27,16 +27,21 @@
   </div>
 </template>
 <script>
+import { reactive } from 'vue'
+
 export default {
   name: 'VbForgotPassword',
-  data: function () {
+  setup() {
+    const rules = {
+      email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
+    }
+    const forgotForm = reactive({
+      email: '',
+    })
+
     return {
-      rules: {
-        email: [{ required: true, message: 'Please input email!', trigger: 'change' }],
-      },
-      forgotForm: {
-        email: '',
-      },
+      rules,
+      forgotForm,
     }
   },
 }
