@@ -14,7 +14,7 @@
           <span
             :class="[$style.breadcrumbLink, $style.breadcrumbLink__current]"
           >
-            Dashboard
+            {{ activeItem.title }}
           </span>
         </li>
       </span>
