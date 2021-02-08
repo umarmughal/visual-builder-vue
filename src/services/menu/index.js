@@ -1,27 +1,40 @@
 export const getMenuData = [
   // Vb:REPLACE-START:MENU-CONFIG
-  {
-    title: 'Dashboard',
-    key: '__dashboard',
-    url: '/dashboard',
-    icon: 'fe fe-home',
-    children: [
-      {
-        title: 'New',
-        key: 'new',
-        url: '/dashboard/new',
-      },
-      {
-        title: 'Hello',
-        key: 'hello',
-        url: '/dashboard/hello',
-      },
-    ],
-  },
+
+
   {
     category: true,
     title: 'Apps & Pages',
     key: '2t2ghm',
+  },
+  {
+    title: 'Dashboard',
+    key: 'dashboard',
+    icon: 'fe fe-home',
+    children: [
+      {
+        title: 'Alpha',
+        key: 'alpha',
+        url: '/dashboard/alpha',
+      },
+      {
+        title: 'Beta',
+        key: 'beta',
+        url: '/dashboard/beta',
+      },
+    ],
+  },
+  {
+    title: 'Tree',
+    key: 'tree',
+    url: '/tree',
+    icon: 'fe fe-home',
+  },
+  {
+    title: 'Cars',
+    key: 'cars',
+    url: '/cars',
+    icon: 'fe fe-home',
   },
   {
     title: 'Apps',
