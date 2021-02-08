@@ -1,20 +1,15 @@
 <template>
   <div :class="$style.breadcrumbs">
     <div :class="$style.path">
-      <router-link to="/">
-        Home
-      </router-link>
+      <router-link to="/">Home</router-link>
       <template v-for="(item, index) in breadcrumb">
-        <span
-          v-if="index != 0"
-          :key="index"
-        >
-          <span :class="$style.arrow" />
+        <span v-if="index != 0" :key="index">
+          <span :class="$style.arrow"></span>
           <span>{{ item.title }}</span>
         </span>
       </template>
       <span v-if="activeItem">
-        <span :class="$style.arrow" />
+        <span :class="$style.arrow"></span>
         <strong :class="$style.current">{{ activeItem.title }}</strong>
       </span>
     </div>
@@ -22,35 +17,21 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { ref, watch, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { getMenuData } from '@/services/menu'
 import reduce from 'lodash/reduce'
 
 export default {
   name: 'Breadcrumbs',
-  data() {
-    return {
-      breadcrumb: [],
-      activeItem: {},
-      path: [],
-    }
-  },
-  computed: {
-    ...mapState(['settings']),
-    menuData() {
-      return getMenuData
-    },
-  },
-  watch: {
-    $route(to) {
-      this.breadcrumb = this.getPath(this.menuData, to.path)
-    },
-  },
-  mounted: function () {
-    this.breadcrumb = this.getPath(this.menuData, this.$route.path)
-  },
-  methods: {
-    getPath(data, url, parents = []) {
+  setup() {
+    const route = useRoute()
+    const breadcrumb = ref([])
+    const activeItem = ref([])
+    const menuData = getMenuData
+    const routePath = computed(() => route.path)
+
+    const getPath = (data, url, parents = []) => {
       if (url === '/') {
         url = '/dashboard'
       }
@@ -61,7 +42,7 @@ export default {
             return result
           }
           if (entry.children) {
-            const nested = this.getPath(entry.children, url, [entry].concat(parents))
+            const nested = getPath(entry.children, url, [entry].concat(parents))
             return (result || []).concat(nested.filter(e => !!e))
           }
           if (entry.url === url) {
@@ -71,9 +52,20 @@ export default {
         },
         [],
       )
-      this.activeItem = items[0]
+      activeItem.value = items[0]
       return items
-    },
+    }
+
+    onMounted(() => {
+      breadcrumb.value = getPath(menuData, routePath.value)
+    })
+
+    watch(routePath, (routePath) => breadcrumb.value = getPath(menuData, routePath))
+
+    return {
+      breadcrumb,
+      activeItem,
+    }
   },
 }
 </script>

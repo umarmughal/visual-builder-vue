@@ -5,6 +5,14 @@ export const getMenuData = [
     key: '__dashboard',
     url: '/dashboard',
     icon: 'fe fe-home',
+    children: [
+      {
+        title: 'Dashboards',
+        key: '__dashboard',
+        url: '/dashboard/new',
+        icon: 'fe fe-home',
+      },
+    ],
   },
 
   // Vb:REPLACE-END:MENU-CONFIG

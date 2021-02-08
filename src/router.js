@@ -28,6 +28,13 @@ const router = createRouter({
           },
           component: () => import('./views/dashboard'),
         },
+        {
+          path: '/dashboard/new',
+          meta: {
+            title: 'new',
+          },
+          component: () => import('./views/dashboard'),
+        },
       ],
     },
 

@@ -1,17 +1,23 @@
 @import '@/mixins.scss';
 
 .footer {
+  max-width: rem(1280);
   margin: 0 auto;
-  padding: 0 rem(30) rem(30);
+  padding: 0 rem(30);
+  color: $text;
 
   @media (max-width: $sm-max-width) {
     padding: 0 rem(16) !important;
   }
 }
 
-.footerInner {
+.footerFullWidth {
+  max-width: none;
+}
+
+.inner {
   border-top: 1px solid $border;
-  padding-top: rem(30);
+  padding: rem(30) 0;
 }
 
 .logo {
@@ -41,7 +47,7 @@
     color: $dark-gray-1;
   }
 
-  .footerInner {
+  .inner {
     border-top: 1px solid $dark-gray-4;
   }
 }
