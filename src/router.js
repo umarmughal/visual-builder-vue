@@ -28,41 +28,6 @@ const router = createRouter({
           },
           component: () => import('./views/dashboard'),
         },
-        {
-          path: '/dashboard/alpha',
-          meta: {
-            title: 'Alpha',
-          },
-          component: () => import('./views/dashboard'),
-        },
-        {
-          path: '/dashboard/beta',
-          meta: {
-            title: 'Beta',
-          },
-          component: () => import('./views/dashboard'),
-        },
-        {
-          path: '/tree',
-          meta: {
-            title: 'Tree',
-          },
-          component: () => import('./views/dashboard'),
-        },
-        {
-          path: '/apps/profile',
-          meta: {
-            title: 'Profile',
-          },
-          component: () => import('./views/dashboard'),
-        },
-        {
-          path: '/cars',
-          meta: {
-            title: 'Cars',
-          },
-          component: () => import('./views/dashboard'),
-        },
       ],
     },
 
