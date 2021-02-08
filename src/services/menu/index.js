@@ -7,10 +7,32 @@ export const getMenuData = [
     icon: 'fe fe-home',
     children: [
       {
-        title: 'Dashboards',
-        key: '__dashboard',
+        title: 'New',
+        key: 'new',
         url: '/dashboard/new',
-        icon: 'fe fe-home',
+      },
+      {
+        title: 'Hello',
+        key: 'hello',
+        url: '/dashboard/hello',
+      },
+    ],
+  },
+  {
+    category: true,
+    title: 'Apps & Pages',
+    key: '2t2ghm',
+  },
+  {
+    title: 'Apps',
+    key: '6rq4ze6',
+    url: '/apps',
+    icon: 'fe fe-database',
+    children: [
+      {
+        title: 'Profile',
+        key: 'e38wke',
+        url: '/apps/profile',
       },
     ],
   },

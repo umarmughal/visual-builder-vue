@@ -17,7 +17,7 @@
       <vb-variants />
       <vb-sidebar />
       <vb-support-chat />
-      <!-- <vb-menu-classic v-if="settings.layoutMenu === 'classic'" /> -->
+      <vb-menu-classic v-if="settings.layoutMenu === 'classic'" />
       <!-- <vb-menu-flyout v-if="settings.layoutMenu === 'flyout'" /> -->
       <!-- <vb-menu-simply v-if="settings.layoutMenu === 'simply'" /> -->
       <a-layout>

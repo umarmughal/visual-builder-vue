@@ -36,8 +36,14 @@ export default {
   isSubMenu: true,
   props: {
     ...Menu.SubMenu.props,
-    menuInfo: Object,
-    styles: Object,
+    menuInfo: {
+      type: Object,
+      default: () => { },
+    },
+    styles: {
+      type: Object,
+      default: () => { },
+    },
   },
 }
 </script>

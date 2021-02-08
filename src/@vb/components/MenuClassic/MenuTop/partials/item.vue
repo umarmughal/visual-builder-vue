@@ -28,8 +28,14 @@ export default {
   name: "SubMenu",
   props: {
     ...Menu.Item.props,
-    menuInfo: Object,
-    styles: Object,
+    menuInfo: {
+      type: Object,
+      default: () => { },
+    },
+    styles: {
+      type: Object,
+      default: () => { },
+    },
   },
 };
 </script>

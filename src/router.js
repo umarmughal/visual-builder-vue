@@ -35,6 +35,13 @@ const router = createRouter({
           },
           component: () => import('./views/dashboard'),
         },
+        {
+          path: '/dashboard/hello',
+          meta: {
+            title: 'new',
+          },
+          component: () => import('./views/dashboard'),
+        },
       ],
     },
 
@@ -105,14 +112,14 @@ router.beforeEach((to, from, next) => {
   }, 300)
 
   if (to.matched.some(record => record.meta.authRequired)) {
-    if (store.getters['user/user'].authorized) {
+    if (!store.state.user.authorized) {
+      next({
+        path: '/auth/login',
+        query: { redirect: to.fullPath },
+      })
+    } else {
       next()
-      return
     }
-    next({
-      name: 'login', //named path
-      query: { redirect: to.fullPath },
-    })
   } else {
     next()
   }
