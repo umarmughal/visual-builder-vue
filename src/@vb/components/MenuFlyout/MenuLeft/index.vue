@@ -116,12 +116,13 @@
           </div>
         </div>
         <a href="javascript: void(0);" :class="$style.air__menuLeft__user">
-          <div :class="$style.air__menuLeft__user__avatar">
-            <img
-              src="resources/images/avatars/avatar.png"
-              alt="David Beckham"
-            />
-          </div>
+          <a-avatar
+            shape="square"
+            size="large"
+            :class="$style.air__menuLeft__user__avatar"
+          >
+            <template #icon><UserOutlined /></template>
+          </a-avatar>
           <div :class="$style.air__menuLeft__user__name">David Beckham</div>
           <div :class="$style.air__menuLeft__user__role">Administrator</div>
         </a>
@@ -180,66 +181,60 @@
 </template>
 
 <script>
+import { ref, onMounted, computed, watch } from 'vue'
+import { useStore } from 'vuex'
+import { useRoute } from 'vue-router'
 import _ from 'lodash'
-import { mapState } from 'vuex'
 import { getMenuData } from '@/services/menu'
+import { UserOutlined } from '@ant-design/icons-vue'
 import SubMenu from './partials/submenu'
 import Item from './partials/item'
 import Category from './partials/category'
 
 export default {
   name: 'MenuLeft',
-  components: { SubMenu, Item, Category },
-  data() {
-    return {
-      menuData: getMenuData,
-      activeSubmenu: '',
-      activeItem: '',
-      renderedFlyoutItems: {},
-      flyoutTimers: {},
-    }
-  },
-  computed: {
-    ...mapState(['settings']),
-    flyoutActive() {
-      return (this.settings.flyoutMenuType === 'flyout' || this.settings.flyoutMenuType === 'compact' || this.settings.isMenuCollapsed) && !this.settings.isMobileView
-    },
-  },
-  watch: {
-    '$route'() {
-      this.setActiveItems()
-    },
-  },
-  mounted() {
-    this.setActiveItems()
-  },
-  methods: {
-    toggleMobileMenu() {
+  components: { SubMenu, Item, Category, UserOutlined },
+  setup() {
+    const store = useStore()
+    const route = useRoute()
+    const menuData = computed(() => getMenuData)
+    const activeSubmenu = ref('')
+    const activeItem = ref('')
+    const renderedFlyoutItems = ref({})
+    const flyoutTimers = ref({})
+    const settings = computed(() => store.getters.settings)
+    const pathname = computed(() => route.path)
+    const flyoutActive = computed(() => {
+      return (settings.value.flyoutMenuType === 'flyout' || settings.value.flyoutMenuType === 'compact' || settings.value.isMenuCollapsed) && !settings.value.isMobileView
+    })
+
+    const toggleMobileMenu = () => {
       const setting = 'isMobileMenuOpen'
-      const value = !this.settings[setting]
-      this.$store.commit('CHANGE_SETTING', { setting, value })
-    },
-    toggleMenu() {
+      const value = !settings.value[setting]
+      store.commit('CHANGE_SETTING', { setting, value })
+    }
+
+    const toggleMenu = () => {
       const setting = 'isMenuCollapsed'
-      const value = !this.settings[setting]
-      this.$store.commit('CHANGE_SETTING', { setting, value })
-    },
-    toggleSettings() {
+      const value = !settings.value[setting]
+      store.commit('CHANGE_SETTING', { setting, value })
+    }
+
+    const toggleSettings = () => {
       const setting = 'isSidebarOpen'
-      const value = !this.settings[setting]
-      this.$store.commit('CHANGE_SETTING', { setting, value })
-    },
-    handleSubmenuClick(key) {
-      const currentKey = this.activeSubmenu
-      if (this.flyoutActive) {
+      const value = !settings.value[setting]
+      store.commit('CHANGE_SETTING', { setting, value })
+    }
+
+    const handleSubmenuClick = (key) => {
+      const currentKey = activeSubmenu.value
+      if (flyoutActive.value) {
         return
       }
-      this.activeSubmenu = currentKey === key ? '' : key
-    },
-    setActiveItems() {
-      const menuData = this.menuData
-      const pathname = this.$route.path
+      activeSubmenu.value = currentKey === key ? '' : key
+    }
 
+    const setActiveItems = () => {
       const flattenItems = (items, key) =>
         items.reduce((flattenedItems, item) => {
           flattenedItems.push(item)
@@ -248,11 +243,11 @@ export default {
           }
           return flattenedItems
         }, [])
-      const activeItem = _.find(flattenItems(menuData, 'children'), ['url', pathname]) || {}
-      const activeSubmenu = menuData.reduce((key, parent) => {
+      const selectedItem = _.find(flattenItems(menuData.value, 'children'), ['url', pathname.value]) || {}
+      const selectedSubmenu = menuData.value.reduce((key, parent) => {
         if (Array.isArray(parent.children)) {
           parent.children.map(child => {
-            if (child.key === activeItem.key) {
+            if (child.key === selectedItem.key) {
               key = parent
             }
             return ''
@@ -261,16 +256,17 @@ export default {
         return key
       })
 
-      this.activeItem = activeItem.key
-      this.activeSubmenu = activeSubmenu.key
-    },
-    handleFlyoutOver(event, key, items) {
-      if (this.flyoutActive) {
-        clearInterval(this.flyoutTimers[key])
+      activeItem.value = selectedItem.key
+      activeSubmenu.value = selectedSubmenu.key
+    }
+
+    const handleFlyoutOver = (event, key, items) => {
+      if (flyoutActive.value) {
+        clearInterval(flyoutTimers.value[key])
         const item = event.currentTarget
         const itemDimensions = item.getBoundingClientRect()
-        this.renderedFlyoutItems = {
-          ...this.renderedFlyoutItems,
+        renderedFlyoutItems.value = {
+          ...renderedFlyoutItems.value,
           [key]: {
             key,
             itemDimensions,
@@ -278,21 +274,43 @@ export default {
           },
         }
       }
-    },
-    handleFlyoutOut(key) {
-      if (this.flyoutActive) {
-        this.flyoutTimers[key] = setTimeout(() => {
-          const updatedFlyoutItems = Object.assign({}, this.renderedFlyoutItems)
+    }
+
+    const handleFlyoutOut = (key) => {
+      if (flyoutActive.value) {
+        flyoutTimers.value[key] = setTimeout(() => {
+          const updatedFlyoutItems = Object.assign({}, renderedFlyoutItems.value)
           delete updatedFlyoutItems[key]
-          this.renderedFlyoutItems = {
+          renderedFlyoutItems.value = {
             ...updatedFlyoutItems,
           }
         }, 100)
       }
-    },
-    handleFlyoutContainerOver(key) {
-      clearInterval(this.flyoutTimers[key])
-    },
+    }
+
+    const handleFlyoutContainerOver = (key) => {
+      clearInterval(flyoutTimers.value[key])
+    }
+
+    onMounted(setActiveItems)
+    watch(pathname, () => setActiveItems())
+
+    return {
+      menuData,
+      activeSubmenu,
+      activeItem,
+      renderedFlyoutItems,
+      flyoutTimers,
+      settings,
+      flyoutActive,
+      toggleMobileMenu,
+      toggleMenu,
+      toggleSettings,
+      handleSubmenuClick,
+      handleFlyoutOver,
+      handleFlyoutOut,
+      handleFlyoutContainerOver,
+    }
   },
 }
 </script>

@@ -33,8 +33,16 @@ export default {
     const store = useStore()
     const settings = computed(() => store.getters.settings)
 
+    const toggleMobileMenu = () => {
+      store.commit('CHANGE_SETTING', {
+        setting: 'isMobileMenuOpen',
+        value: !settings.value['isMobileMenuOpen'],
+      })
+    }
+
     return {
       settings,
+      toggleMobileMenu,
     }
   },
 }

@@ -265,6 +265,7 @@
     line-height: 1.3;
     &__avatar {
       float: left;
+      background: $dark-gray-4 !important;
     }
     &__name {
       margin-left: rem(60);
@@ -663,6 +664,10 @@
           color: $gray-5;
         }
 
+        &__user__avatar {
+          background: $gray-2 !important;
+        }
+
         &__logo {
           &__letter {
             color: $black;
@@ -747,6 +752,10 @@
 
         &__user__role {
           color: $gray-5;
+        }
+
+        &__user__avatar {
+          background: $gray-2 !important;
         }
 
         &__logo {

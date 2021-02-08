@@ -200,65 +200,6 @@ export default {
       handleOpenChange,
     }
   },
-  // data() {
-  //   return {
-  //     menuData: getMenuData,
-  //     selectedKeys: [],
-  //     openKeys: [],
-  //   }
-  // },
-  // computed: {
-  //   ...mapState(['settings']),
-  //   ...mapGetters('user', ['user']),
-  // },
-  // watch: {
-  //   'settings.isMenuCollapsed'() {
-  //     this.openKeys = []
-  //   },
-  //   '$route'() {
-  //     this.setSelectedKeys()
-  //   },
-  // },
-  // mounted() {
-  //   this.openKeys = store.get('app.menu.openedKeys') || []
-  //   this.selectedKeys = store.get('app.menu.selectedKeys') || []
-  //   this.setSelectedKeys()
-  // },
-  // methods: {
-  //   onCollapse: function (collapsed, type) {
-  //     const value = !this.settings.isMenuCollapsed
-  //     this.$store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value })
-  //   },
-  //   handleClick(e) {
-  //     if (e.key === 'settings') {
-  //       this.$store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
-  //       return
-  //     }
-  //     store.set('app.menu.selectedKeys', [e.key])
-  //     this.selectedKeys = [e.key]
-  //   },
-  //   handleOpenChange(openKeys) {
-  //     store.set('app.menu.openedKeys', openKeys)
-  //     this.openKeys = openKeys
-  //   },
-  //   setSelectedKeys() {
-  //     const pathname = this.$route.path
-  //     const menuData = this.menuData.concat()
-  //     const flattenItems = (items, key) =>
-  //       items.reduce((flattenedItems, item) => {
-  //         flattenedItems.push(item)
-  //         if (Array.isArray(item[key])) {
-  //           return flattenedItems.concat(flattenItems(item[key], key))
-  //         }
-  //         return flattenedItems
-  //       }, [])
-  //     const selectedItem = find(flattenItems(menuData, 'children'), [
-  //       'url',
-  //       pathname,
-  //     ])
-  //     this.selectedKeys = selectedItem ? [selectedItem.key] : []
-  //   },
-  // },
 }
 </script>
 

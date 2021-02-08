@@ -71,8 +71,10 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
-import store from 'store'
+import { ref, onMounted, computed, watch } from 'vue'
+import { useStore } from 'vuex'
+import { useRoute } from 'vue-router'
+import { default as localStore } from 'store'
 import find from 'lodash/find'
 import { getMenuData } from '@/services/menu'
 import SubMenu from './partials/submenu'
@@ -81,41 +83,37 @@ import Item from './partials/item'
 export default {
   name: 'MenuTop',
   components: { SubMenu, Item },
-  data() {
-    return {
-      menuData: getMenuData,
-      selectedKeys: [],
-      openKeys: [],
+  setup() {
+    const store = useStore()
+    const route = useRoute()
+    const menuData = computed(() => getMenuData)
+    const selectedKeys = ref([])
+    const openKeys = ref([])
+    const settings = computed(() => store.getters.settings)
+    const isMenuCollapsed = computed(() => store.getters.settings.isMenuCollapsed)
+    const user = computed(() => store.getters['user/user'])
+    const pathname = computed(() => route.pathname)
+
+    const onCollapse = (collapsed, type) => {
+      const value = !settings.value.isMenuCollapsed
+      store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value })
     }
-  },
-  computed: {
-    ...mapState(['settings']),
-    ...mapGetters('user', ['user']),
-  },
-  watch: {
-    'settings.isMenuCollapsed'() {
-      this.openKeys = []
-    },
-    '$route'() {
-      this.setSelectedKeys()
-    },
-  },
-  mounted() {
-    this.selectedKeys = store.get('app.menu.selectedKeys') || []
-    this.setSelectedKeys()
-  },
-  methods: {
-    handleClick(e) {
+
+    const handleClick = (e) => {
       if (e.key === 'settings') {
-        this.$store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
+        store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
         return
       }
-      store.set('app.menu.selectedKeys', [e.key])
-      this.selectedKeys = [e.key]
-    },
-    setSelectedKeys() {
-      const pathname = this.$route.path
-      const menuData = this.menuData.concat()
+      localStore.set('app.menu.selectedKeys', [e.key])
+      selectedKeys.value = [e.key]
+    }
+
+    const handleOpenChange = (openKeys) => {
+      localStore.set('app.menu.openedKeys', openKeys)
+      openKeys.value = openKeys
+    }
+
+    const setSelectedKeys = () => {
       const flattenItems = (items, key) =>
         items.reduce((flattenedItems, item) => {
           flattenedItems.push(item)
@@ -124,12 +122,32 @@ export default {
           }
           return flattenedItems
         }, [])
-      const selectedItem = find(flattenItems(menuData, 'children'), [
+      const selectedItem = find(flattenItems(menuData.value.concat(), 'children'), [
         'url',
         pathname,
       ])
-      this.selectedKeys = selectedItem ? [selectedItem.key] : []
-    },
+      selectedKeys.value = selectedItem ? [selectedItem.key] : []
+    }
+
+    onMounted(() => {
+      openKeys.value = localStore.get('app.menu.openedKeys') || []
+      selectedKeys.value = localStore.get('app.menu.selectedKeys') || []
+      setSelectedKeys()
+    })
+
+    watch(pathname, () => setSelectedKeys())
+    watch(isMenuCollapsed, () => openKeys.value = [])
+
+    return {
+      menuData,
+      selectedKeys,
+      openKeys,
+      settings,
+      user,
+      onCollapse,
+      handleClick,
+      handleOpenChange,
+    }
   },
 }
 </script>
