@@ -47,6 +47,9 @@
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "lint-staged": {
     "*.{js,jsx,vue}": [
       "vue-cli-service lint",

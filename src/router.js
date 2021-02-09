@@ -28,6 +28,37 @@ const router = createRouter({
           },
           component: () => import('./views/dashboard'),
         },
+
+
+
+        {
+          path: '/widgets/general',
+          meta: {
+            title: 'Widgets / General',
+          },
+          component: () => import('./views/widgets/general'),
+        },
+        {
+          path: '/widgets/lists',
+          meta: {
+            title: 'Widgets / Lists',
+          },
+          component: () => import('./views/widgets/lists'),
+        },
+        {
+          path: '/widgets/tables',
+          meta: {
+            title: 'Widgets / Tables',
+          },
+          component: () => import('./views/widgets/tables'),
+        },
+        {
+          path: '/widgets/charts',
+          meta: {
+            title: 'Widgets / Charts',
+          },
+          component: () => import('./views/widgets/charts'),
+        },
       ],
     },
 

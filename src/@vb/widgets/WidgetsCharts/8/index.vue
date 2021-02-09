@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="mb-2"
-      :class="$style.textDivider"
-    >
+    <div class="mb-2" :class="$style.textDivider">
       <h4
         class="font-size-24 font-weight-bold"
         :class="$style.textDividerContent"
@@ -21,7 +18,7 @@
           onChange: onSelectChange,
         }"
       >
-        <template #userName="user">
+        <template #userName="{ text: user }">
           <div>
             <div>{{ user.name }}</div>
             <div class="text-gray-4">
@@ -29,90 +26,49 @@
             </div>
           </div>
         </template>
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
-        <template #value="text">
+        <template #value="{ text }">
           <span class="font-weight-bold">{{ text }}</span>
         </template>
-        <template #chart="chartData">
-          <vue-chartist
-            class="ct-hidden-points"
-            type="Line"
-            :data="chartData"
-            :options="options"
-          />
-        </template>
+        <template #chart>[TODO_CHARTS]</template>
       </a-table>
     </div>
   </div>
 </template>
 <script>
 import tableData from './data.json'
-import VueChartist from 'v-chartist'
-import ChartistTooltip from 'chartist-plugin-tooltips-updated'
 
 const columns = [
   {
-    title: 'User Name',
+    title: 'Username',
     dataIndex: 'userName',
-    scopedSlots: { customRender: 'userName' },
+    slots: { customRender: 'userName' },
   },
   {
     title: 'Location',
     dataIndex: 'location',
-    scopedSlots: { customRender: 'location' },
+    slots: { customRender: 'location' },
   },
   {
     title: 'Value',
     dataIndex: 'value',
     className: 'text-right text-gray-6',
-    scopedSlots: { customRender: 'Value' },
+    slots: { customRender: 'value' },
   },
   {
     title: 'Last week profit',
     dataIndex: 'chart',
     className: 'text-right',
-    scopedSlots: { customRender: 'chart' },
+    slots: { customRender: 'chart' },
   },
 ]
 export default {
   name: 'VbChart8',
-  components: {
-    'vue-chartist': VueChartist,
-  },
   data: function () {
-    const options = {
-      width: '110px',
-      height: '50px',
-      chartPadding: {
-        right: 0,
-        left: 0,
-        top: 5,
-        bottom: 5,
-      },
-      fullWidth: true,
-      showPoint: true,
-      lineSmooth: true,
-      axisY: {
-        showGrid: false,
-        showLabel: false,
-        offset: 0,
-      },
-      axisX: {
-        showGrid: false,
-        showLabel: false,
-        offset: 0,
-      },
-      showArea: false,
-      plugins: [ChartistTooltip({ anchorToPoint: false, appendToBody: true, seriesName: false })],
-    }
     return {
       tableData,
-      options,
       selectedRowKeys: [],
       columns,
     }

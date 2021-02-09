@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="mb-2"
-      :class="$style.textDivider"
-    >
+    <div class="mb-2" :class="$style.textDivider">
       <h4
         class="font-size-24 font-weight-bold"
         :class="$style.textDividerContent"
@@ -22,7 +19,7 @@
         }"
         :class="$style.table"
       >
-        <template #userName="user">
+        <template #userName="{ text: user }">
           <div>
             <div>{{ user.name }}</div>
             <div class="text-gray-4">
@@ -30,21 +27,15 @@
             </div>
           </div>
         </template>
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
-        <template #value="text">
+        <template #value="{ text }">
           <span class="font-weight-bold">{{ text }}</span>
         </template>
         <template #action>
           <div class="text-nowrap">
-            <button
-              type="button"
-              class="btn btn-outline-danger mr-2 mb-2"
-            >
+            <button type="button" class="btn btn-outline-danger mr-2 mb-2">
               Decline
             </button>
           </div>
@@ -60,25 +51,25 @@ const columns = [
     title: 'USER NAME',
     dataIndex: 'userName',
     className: 'text-gray-6',
-    scopedSlots: { customRender: 'userName' },
+    slots: { customRender: 'userName' },
   },
   {
     title: 'LOCATION',
     dataIndex: 'location',
     className: 'text-gray-6',
-    scopedSlots: { customRender: 'location' },
+    slots: { customRender: 'location' },
   },
   {
     title: 'VALUE',
     dataIndex: 'value',
     key: 'value',
     className: 'text-right text-gray-6',
-    scopedSlots: { customRender: 'value' },
+    slots: { customRender: 'value' },
   },
   {
     dataIndex: 'action',
     className: 'text-right',
-    scopedSlots: { customRender: 'action' },
+    slots: { customRender: 'action' },
   },
 ]
 

@@ -7,7 +7,7 @@
         :pagination="false"
         :class="$style.table"
       >
-        <template #description="text">
+        <template #description="{ text }">
           <div class="text-wrap width-300">
             <div class="text-dark mb-3">
               {{ text.title }}
@@ -15,28 +15,17 @@
             <div>{{ text.content }}</div>
           </div>
         </template>
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
-        <template #value="text">
+        <template #value="{ text }">
           <span class="font-weight-bold">{{ text }}</span>
         </template>
       </a-table>
     </div>
     <div class="mt-4 d-flex align-items-center flex-wrap">
-      <button
-        type="button"
-        class="btn btn-primary mr-2 mb-2"
-      >
-        Save
-      </button>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-link mb-2"
-      >Cancel</a>
+      <button type="button" class="btn btn-primary mr-2 mb-2">Save</button>
+      <a href="javascript: void(0);" class="btn btn-link mb-2">Cancel</a>
     </div>
   </div>
 </template>
@@ -47,19 +36,19 @@ const columns = [
     title: 'DESCRIPTION',
     dataIndex: 'description',
     className: 'bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'description' },
+    slots: { customRender: 'description' },
   },
   {
     title: 'LOCATION',
     dataIndex: 'location',
     className: 'text-right bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'location' },
+    slots: { customRender: 'location' },
   },
   {
     title: 'VALUE',
     dataIndex: 'value',
     className: 'text-right bg-transparent  text-gray-6',
-    scopedSlots: { customRender: 'value' },
+    slots: { customRender: 'value' },
   },
 ]
 

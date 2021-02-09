@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      class="mb-2"
-      :class="$style.textDivider"
-    >
+    <div class="mb-2" :class="$style.textDivider">
       <h4
         class="font-size-24 font-weight-bold"
         :class="$style.textDividerContent"
@@ -22,16 +19,13 @@
         }"
         :class="$style.table"
       >
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
-        <template #value="text">
+        <template #value="{ text }">
           <span class="font-weight-bold">{{ text }}</span>
         </template>
-        <template #users="users">
+        <template #users="{ text: users }">
           <div
             :class="[users.length ? '' : 'd-none', 'vb__utils__avatarGroup']"
           >
@@ -40,25 +34,16 @@
               :key="user"
               class="vb__utils__avatar vb__utils__avatar--rounded"
             >
-              <img
-                :src="user"
-                alt="User"
-              >
+              <img :src="user" alt="User" />
             </div>
-            <button
-              type="button"
-              class="vb__utils__avatarGroupAdd"
-            >
+            <button type="button" class="vb__utils__avatarGroupAdd">
               <i class="fe fe-plus" />
             </button>
           </div>
         </template>
         <template #action>
           <div class="text-nowrap">
-            <button
-              type="button"
-              class="btn btn-outline-success mr-2 mb-2"
-            >
+            <button type="button" class="btn btn-outline-success mr-2 mb-2">
               Accept
             </button>
           </div>
@@ -79,13 +64,13 @@ const columns = [
     title: 'LOCATION',
     dataIndex: 'location',
     className: 'text-gray-6',
-    scopedSlots: { customRender: 'location' },
+    slots: { customRender: 'location' },
   },
   {
     title: 'VALUE',
     dataIndex: 'value',
     className: 'text-gray-6',
-    scopedSlots: { customRender: 'value' },
+    slots: { customRender: 'value' },
   },
   {
     title: 'DESCRIPTION',
@@ -94,12 +79,12 @@ const columns = [
   },
   {
     dataIndex: 'users',
-    scopedSlots: { customRender: 'users' },
+    slots: { customRender: 'users' },
   },
   {
     dataIndex: 'action',
     className: 'text-right',
-    scopedSlots: { customRender: 'action' },
+    slots: { customRender: 'action' },
   },
 ]
 

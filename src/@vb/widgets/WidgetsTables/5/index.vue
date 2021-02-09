@@ -11,15 +11,12 @@
         :pagination="false"
         :class="$style.table"
       >
-        <template #avatar="link">
+        <template #avatar="{ text: link }">
           <div class="vb__utils__avatar">
-            <img
-              :src="link"
-              alt="User"
-            >
+            <img :src="link" alt="User" />
           </div>
         </template>
-        <template #userName="user">
+        <template #userName="{ text: user }">
           <div>
             <div>{{ user.name }}</div>
             <div class="text-gray-4">
@@ -27,18 +24,12 @@
             </div>
           </div>
         </template>
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
         <template #action>
           <div class="text-nowrap">
-            <button
-              type="button"
-              class="btn btn-light"
-            >
+            <button type="button" class="btn btn-light">
               <span class="text-blue">Add</span>
             </button>
           </div>
@@ -53,24 +44,24 @@ const columns = [
   {
     dataIndex: 'avatar',
     className: 'bg-transparent text-gray-6 width-50',
-    scopedSlots: { customRender: 'avatar' },
+    slots: { customRender: 'avatar' },
   },
   {
     title: 'USER NAME',
     dataIndex: 'userName',
     className: 'bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'userName' },
+    slots: { customRender: 'userName' },
   },
   {
     title: 'LOCATION',
     dataIndex: 'location',
     className: 'bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'location' },
+    slots: { customRender: 'location' },
   },
   {
     dataIndex: 'action',
     className: 'bg-transparent text-right',
-    scopedSlots: { customRender: 'action' },
+    slots: { customRender: 'action' },
   },
 ]
 

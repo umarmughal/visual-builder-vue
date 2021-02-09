@@ -6,7 +6,7 @@
       :pagination="false"
       :class="$style.table"
     >
-      <template #progress="bar">
+      <template #progress="{ text: bar }">
         <div class="progress">
           <div
             :class="['progress-bar', bar.color]"
@@ -15,7 +15,7 @@
           />
         </div>
       </template>
-      <template #value="text">
+      <template #value="{ text }">
         <span class="font-weight-bold">{{ text }}</span>
       </template>
     </a-table>
@@ -33,13 +33,13 @@ const columns = [
     title: 'PROGRESS',
     dataIndex: 'progress',
     className: 'text-right bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'progress' },
+    slots: { customRender: 'progress' },
   },
   {
     title: 'VALUE',
     dataIndex: 'value',
     className: 'text-right bg-transparent text-gray-6',
-    scopedSlots: { customRender: 'value' },
+    slots: { customRender: 'value' },
   },
 ]
 

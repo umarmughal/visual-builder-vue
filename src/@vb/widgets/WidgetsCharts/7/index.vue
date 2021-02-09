@@ -1,7 +1,8 @@
 <template>
   <div>
     <div>
-      <vl-map
+      [TODO_VL_MAP]
+      <!-- <vl-map
         :load-tiles-while-animating="true"
         :load-tiles-while-interacting="true"
         data-projection="EPSG:4326"
@@ -16,7 +17,7 @@
         <vl-layer-tile id="osm">
           <vl-source-osm />
         </vl-layer-tile>
-      </vl-map>
+      </vl-map> -->
     </div>
     <div class="mb-4">
       <a-table
@@ -25,13 +26,10 @@
         :pagination="false"
         :class="$style.table"
       >
-        <template #location="text">
-          <a
-            href="javascript: void(0);"
-            class="text-blue"
-          >{{ text }}</a>
+        <template #location="{ text }">
+          <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
-        <template #value="text">
+        <template #value="{ text }">
           <span class="font-weight-bold">{{ text }}</span>
         </template>
       </a-table>
@@ -53,7 +51,7 @@ export default {
         title: 'Location',
         dataIndex: 'location',
         className: 'bg-transparent',
-        scopedSlots: { customRender: 'location' },
+        slots: { customRender: 'location' },
       },
       {
         title: 'Phone',
@@ -64,7 +62,7 @@ export default {
         title: 'Value',
         dataIndex: 'value',
         className: 'text-right bg-transparent text-gray-6',
-        scopedSlots: { customRender: 'value' },
+        slots: { customRender: 'value' },
       },
     ]
     return {
