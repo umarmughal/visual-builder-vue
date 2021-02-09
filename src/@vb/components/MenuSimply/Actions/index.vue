@@ -21,7 +21,7 @@
 
 <script>
 import { ref } from 'vue'
-import List3 from '@/@vb/widgets/Lists/3'
+import List3 from '@/@vb/widgets/WidgetsLists/3'
 
 export default {
   components: {

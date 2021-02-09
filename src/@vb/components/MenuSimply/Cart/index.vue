@@ -21,7 +21,7 @@
 
 <script>
 import { ref } from 'vue'
-import General26 from '@/@vb/widgets/General/26'
+import General26 from '@/@vb/widgets/WidgetsGeneral/26'
 
 export default {
   components: {

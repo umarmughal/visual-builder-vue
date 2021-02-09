@@ -33,7 +33,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import General14 from '@/@vb/widgets/General/14'
+import General14 from '@/@vb/widgets/WidgetsGeneral/14'
 
 export default {
   components: {
