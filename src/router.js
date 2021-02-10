@@ -14,6 +14,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      // VB:REPLACE-NEXT-LINE:ROUTER-REDIRECT
       redirect: '/dashboard',
       component: MainLayout,
       meta: {
@@ -21,44 +22,14 @@ const router = createRouter({
         hidden: true,
       },
       children: [
+        // VB:REPLACE-START:ROUTER-CONFIG
         {
           path: '/dashboard',
-          meta: {
-            title: 'Dashboard',
-          },
+          meta: { title: 'Dashboard' },
           component: () => import('./views/dashboard'),
         },
 
-
-
-        {
-          path: '/widgets/general',
-          meta: {
-            title: 'Widgets / General',
-          },
-          component: () => import('./views/widgets/general'),
-        },
-        {
-          path: '/widgets/lists',
-          meta: {
-            title: 'Widgets / Lists',
-          },
-          component: () => import('./views/widgets/lists'),
-        },
-        {
-          path: '/widgets/tables',
-          meta: {
-            title: 'Widgets / Tables',
-          },
-          component: () => import('./views/widgets/tables'),
-        },
-        {
-          path: '/widgets/charts',
-          meta: {
-            title: 'Widgets / Charts',
-          },
-          component: () => import('./views/widgets/charts'),
-        },
+        // VB:REPLACE-END:ROUTER-CONFIG
       ],
     },
 
@@ -117,7 +88,8 @@ const router = createRouter({
 
     // Redirect to 404
     {
-      path: '/:pathMatch(.*)*', redirect: { name: 'route404' },
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'route404' },
     },
   ],
 })
@@ -140,7 +112,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-
 })
 
 export default router

@@ -5,19 +5,27 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "cd .cloudflare/ && wrangler publish",
     "build-demo": "VUE_APP_AUTHENTICATED=true vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build-deploy": "yarn vb-full && yarn build-demo && yarn deploy && yarn vb-seed",
+    "vb": "node ./scripts/vb.js",
+    "vb-full": "REDIRECT_URL=/dashboard/alpha node ./scripts/generate.js --config=config-full.json",
+    "vb-seed": "node ./scripts/generate.js --config=config-seed.json"
   },
   "dependencies": {
     "ant-design-vue": "^2.0.0-rc.9",
     "axios": "^0.21.1",
     "axios-mock-adapter": "^1.19.0",
     "bootstrap": "^4.5.3",
+    "chalk": "^4.1.0",
+    "cli-select": "^1.1.2",
     "core-js": "^3.6.5",
     "firebase": "^8.2.5",
     "lodash": "^4.17.20",
     "nprogress": "^0.2.0",
     "qs": "^6.9.6",
+    "readline-sync": "^1.4.10",
     "register-service-worker": "^1.7.1",
     "store": "^2.0.12",
     "vue": "^3.0.0",

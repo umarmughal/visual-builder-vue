@@ -1,5 +1,5 @@
 export const getMenuData = [
-  // Vb:REPLACE-START:MENU-CONFIG
+  // VB:REPLACE-START:MENU-CONFIG
   {
     title: 'Dashboard',
     key: '__dashboard',
@@ -7,5 +7,5 @@ export const getMenuData = [
     icon: 'fe fe-home',
   },
 
-  // Vb:REPLACE-END:MENU-CONFIG
+  // VB:REPLACE-END:MENU-CONFIG
 ]

@@ -16,7 +16,7 @@ export default {
   props: {
     redirect: {
       type: Boolean,
-      value: false,
+      default: false,
     },
     roles: {
       type: Array,
