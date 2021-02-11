@@ -1,5 +1,9 @@
 <template>
-  <div>{{ data.title }}</div>
+  <div class="vb__utils__heading">
+    <strong>
+      {{ data.title }}
+    </strong>
+  </div>
 </template>
 
 <script>

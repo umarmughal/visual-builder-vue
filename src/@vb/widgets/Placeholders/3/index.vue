@@ -1,3 +1,3 @@
 <template>
-  <div>Placeholders-3</div>
+  <a-skeleton avatar />
 </template>

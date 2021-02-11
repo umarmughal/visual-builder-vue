@@ -15,7 +15,7 @@ export default {
       // Read docs for available values: https://docs.visualbuilder.cloud
       // VB:REPLACE-START:SETTINGS
       authProvider: 'jwt',
-      logo: 'Visual Builder',
+      logo: 'Waves App',
       version: 'fluent',
       theme: 'default',
       locale: 'en-US',
@@ -25,10 +25,10 @@ export default {
       isMobileMenuOpen: false,
       isMenuCollapsed: false,
       isPreselectedOpen: false,
-      preselectedVariant: 'default',
+      preselectedVariant: 'waves',
       menuLayoutType: 'left',
-      routerAnimation: 'slide-fadein-up', // none, slide-fadein-up, slide-fadein-right, fadein, zoom-fadein
-      menuColor: 'gray',
+      routerAnimation: 'slide-fadein-up',
+      menuColor: 'white',
       authPagesColor: 'gray',
       isAuthTopbar: true,
       primaryColor: '#4b7cf3',
@@ -36,7 +36,7 @@ export default {
       isMenuUnfixed: false,
       isMenuShadow: false,
       isTopbarFixed: false,
-      isTopbarSeparated: false,
+      isTopbarSeparated: true,
       isGrayTopbar: false,
       isContentMaxWidth: false,
       isAppMaxWidth: false,
@@ -44,10 +44,10 @@ export default {
       isCardShadow: true,
       isSquaredBorders: false,
       isBorderless: false,
-      layoutMenu: 'classic',
+      layoutMenu: 'flyout',
       layoutTopbar: 'v1',
       layoutBreadcrumbs: 'v1',
-      layoutFooter: 'v1',
+      layoutFooter: 'v3',
       flyoutMenuType: 'flyout',
       flyoutMenuColor: 'blue',
 
@@ -61,7 +61,7 @@ export default {
     },
     CHANGE_SETTING_BULK(state, payload) {
       const settings = {}
-      Object.keys(payload).forEach((key) => {
+      Object.keys(payload).forEach(key => {
         store.set(`app.settings.${key}`, payload[key])
         settings[key] = payload[key]
         state[key] = payload[key]
@@ -74,7 +74,14 @@ export default {
         const str = payload.redirect
         const subs = str.substring(str.indexOf('?') + 1)
         if (str.indexOf('?') >= 0) {
-          queryParams = JSON.parse('{"' + decodeURI(subs).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}')
+          queryParams = JSON.parse(
+            '{"' +
+              decodeURI(subs)
+                .replace(/"/g, '\\"')
+                .replace(/&/g, '","')
+                .replace(/=/g, '":"') +
+              '"}',
+          )
         }
       }
       delete queryParams.redirect
@@ -93,7 +100,9 @@ export default {
               value = queryParams[key]
               break
           }
-          if (key in state) { state[key] = value }
+          if (key in state) {
+            state[key] = value
+          }
         })
       }
     },

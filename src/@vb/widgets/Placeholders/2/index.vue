@@ -1,3 +1,4 @@
 <template>
-  <div>Placeholders-2</div>
+  <a-skeleton :paragraph="{ rows: 4 }" active />
+  <a-skeleton :paragraph="{ rows: 1 }" active />
 </template>

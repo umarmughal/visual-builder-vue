@@ -1,3 +1,3 @@
 <template>
-  <div>Placeholders</div>
+  <a-skeleton />
 </template>
