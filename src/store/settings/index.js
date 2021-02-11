@@ -15,7 +15,7 @@ export default {
       // Read docs for available values: https://docs.visualbuilder.cloud
       // VB:REPLACE-START:SETTINGS
       authProvider: 'jwt',
-      logo: 'Waves App',
+      logo: 'Visual Builder',
       version: 'fluent',
       theme: 'default',
       locale: 'en-US',
@@ -25,10 +25,10 @@ export default {
       isMobileMenuOpen: false,
       isMenuCollapsed: false,
       isPreselectedOpen: false,
-      preselectedVariant: 'waves',
+      preselectedVariant: 'default',
       menuLayoutType: 'left',
       routerAnimation: 'slide-fadein-up',
-      menuColor: 'white',
+      menuColor: 'gray',
       authPagesColor: 'gray',
       isAuthTopbar: true,
       primaryColor: '#4b7cf3',
@@ -36,7 +36,7 @@ export default {
       isMenuUnfixed: false,
       isMenuShadow: false,
       isTopbarFixed: false,
-      isTopbarSeparated: true,
+      isTopbarSeparated: false,
       isGrayTopbar: false,
       isContentMaxWidth: false,
       isAppMaxWidth: false,
@@ -44,10 +44,10 @@ export default {
       isCardShadow: true,
       isSquaredBorders: false,
       isBorderless: false,
-      layoutMenu: 'flyout',
+      layoutMenu: 'classic',
       layoutTopbar: 'v1',
       layoutBreadcrumbs: 'v1',
-      layoutFooter: 'v3',
+      layoutFooter: 'v1',
       flyoutMenuType: 'flyout',
       flyoutMenuColor: 'blue',
 
@@ -76,11 +76,11 @@ export default {
         if (str.indexOf('?') >= 0) {
           queryParams = JSON.parse(
             '{"' +
-              decodeURI(subs)
-                .replace(/"/g, '\\"')
-                .replace(/&/g, '","')
-                .replace(/=/g, '":"') +
-              '"}',
+            decodeURI(subs)
+              .replace(/"/g, '\\"')
+              .replace(/&/g, '","')
+              .replace(/=/g, '":"') +
+            '"}',
           )
         }
       }

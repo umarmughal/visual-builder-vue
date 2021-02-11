@@ -1,11 +1,6 @@
 <template>
-  <div class="mb-4">
-    <a-table
-      :columns="columns"
-      :data-source="data"
-      :pagination="false"
-      :class="$style.table"
-    >
+  <div class="table-responsive text-nowrap">
+    <a-table :columns="columns" :data-source="data" :pagination="false">
       <template #progress="{ text: bar }">
         <div class="progress">
           <div
@@ -53,6 +48,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>

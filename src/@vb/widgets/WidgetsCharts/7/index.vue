@@ -19,13 +19,8 @@
         </vl-layer-tile>
       </vl-map> -->
     </div>
-    <div class="mb-4">
-      <a-table
-        :columns="columns"
-        :data-source="data"
-        :pagination="false"
-        :class="$style.table"
-      >
+    <div class="table-responsive text-nowrap">
+      <a-table :columns="columns" :data-source="data" :pagination="false">
         <template #location="{ text }">
           <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
         </template>
@@ -77,6 +72,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-light height-200 d-flex flex-column">
+    <div :class="$style.head" class="bg-light height-200 d-flex flex-column">
       <div class="card-header card-header-flex border-bottom-0">
         <div class="d-flex flex-column justify-content-center">
           <h5 class="mb-0 text-color-6">Basic Card</h5>

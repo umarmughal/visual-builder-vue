@@ -8,7 +8,7 @@
         Waiting actions
       </h4>
     </div>
-    <div class="mb-4">
+    <div class="table-responsive text-nowrap">
       <a-table
         :columns="columns"
         :data-source="tableData"

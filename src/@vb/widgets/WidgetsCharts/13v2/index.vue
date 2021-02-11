@@ -5,7 +5,7 @@
         13,846$
       </div>
     </div>
-    [TODO_CHARTS]
+    <div calss="position-relative">[TODO_CHARTS]</div>
   </div>
 </template>
 <script>

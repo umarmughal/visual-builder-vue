@@ -1,14 +1,8 @@
 <template>
   <div>
-    <ul
-      :class="$style.list"
-      class="list-unstyled"
-    >
+    <ul :class="$style.list" class="list-unstyled mb-0">
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.gray2, $style.md]" />
           </div>
@@ -23,10 +17,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.success, $style.md]" />
           </div>
@@ -41,10 +32,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.danger, $style.md]" />
           </div>
@@ -59,10 +47,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.gray2, $style.md]" />
           </div>
@@ -77,10 +62,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.info, $style.md]" />
           </div>
@@ -95,10 +77,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
+        <a href="javascript: void(0);" :class="$style.itemLink">
           <div :class="$style.itemMeta">
             <div :class="[$style.donut, $style.gray2, $style.md]" />
           </div>

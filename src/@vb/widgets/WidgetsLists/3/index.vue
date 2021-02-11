@@ -1,17 +1,11 @@
 <template>
   <div>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled mb-0">
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold text-danger"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold text-danger">
             2:28
-            <br>
+            <br />
             PM
           </div>
           <div class="mr-3">
@@ -25,16 +19,10 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold text-blue"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold text-blue">
             1:02
-            <br>
+            <br />
             AM
           </div>
           <div class="mr-3">
@@ -48,16 +36,10 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold">
             2:28
-            <br>
+            <br />
             PM
           </div>
           <div class="mr-3">
@@ -71,16 +53,10 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold">
             2:28
-            <br>
+            <br />
             PM
           </div>
           <div class="mr-3">
@@ -94,16 +70,10 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold">
             2:28
-            <br>
+            <br />
             PM
           </div>
           <div class="mr-3">
@@ -117,16 +87,10 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript: void(0);"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemMeta"
-            class="font-weight-bold"
-          >
+        <a href="javascript: void(0);" :class="$style.itemLink">
+          <div :class="$style.itemMeta" class="font-weight-bold">
             2:28
-            <br>
+            <br />
             PM
           </div>
           <div class="mr-3">

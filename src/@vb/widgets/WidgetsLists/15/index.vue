@@ -1,18 +1,9 @@
 <template>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled mb-0">
     <li :class="$style.item">
-      <a
-        href="javascript:;"
-        :class="$style.itemLink"
-      >
-        <div
-          :class="$style.itemCover"
-          class="mr-3"
-        >
-          <img
-            src="resources/images/content/hands.png"
-            alt="Hands"
-          >
+      <a href="javascript:;" :class="$style.itemLink">
+        <div :class="$style.itemCover" class="mr-3">
+          <img src="resources/images/content/hands.png" alt="Hands" />
         </div>
         <div>
           <div class="text-blue">New York Times</div>
@@ -25,18 +16,9 @@
       </a>
     </li>
     <li :class="$style.item">
-      <a
-        href="javascript:;"
-        :class="$style.itemLink"
-      >
-        <div
-          :class="$style.itemCover"
-          class="mr-3"
-        >
-          <img
-            src="resources/images/content/hands.png"
-            alt="Hands"
-          >
+      <a href="javascript:;" :class="$style.itemLink">
+        <div :class="$style.itemCover" class="mr-3">
+          <img src="resources/images/content/hands.png" alt="Hands" />
         </div>
         <div>
           <div class="text-blue">CNN</div>
@@ -49,18 +31,9 @@
       </a>
     </li>
     <li :class="$style.item">
-      <a
-        href="javascript:;"
-        :class="$style.itemLink"
-      >
-        <div
-          :class="$style.itemCover"
-          class="mr-3"
-        >
-          <img
-            src="resources/images/content/hands.png"
-            alt="Hands"
-          >
+      <a href="javascript:;" :class="$style.itemLink">
+        <div :class="$style.itemCover" class="mr-3">
+          <img src="resources/images/content/hands.png" alt="Hands" />
         </div>
         <div>
           <div class="text-blue">English Speakers</div>

@@ -1,7 +1,9 @@
 <template>
   <div class="card-body position-relative overflow-hidden">
-    <div class="font-size-36 font-weight-bold text-dark mb-n2">$240.56</div>
-    <div class="text-uppercase">Outcome</div>
+    <div class="font-size-36 font-weight-bold text-dark line-height-1 mt-2">
+      $240.56
+    </div>
+    <div class="text-uppercase mb-1">Outcome</div>
     <div :class="$style.chartContainer">[TODO_CHARTS]</div>
   </div>
 </template>

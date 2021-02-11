@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-nowrap align-items-start pt-4">
+  <div class="d-flex flex-nowrap align-items-start">
     <div
       class="mr-4 flex-shrink-0 align-self-start vb__utils__avatar vb__utils__avatar--size64"
     >

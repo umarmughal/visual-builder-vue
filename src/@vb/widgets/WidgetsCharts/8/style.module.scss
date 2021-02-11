@@ -5,13 +5,6 @@
   margin: 0 auto;
 }
 
-.table {
-  white-space: nowrap !important;
-  :global(.ant-table-body) {
-    overflow-x: auto !important;
-  }
-}
-
 .textDivider {
   display: flex;
   flex-direction: row;
@@ -30,5 +23,15 @@
     flex-shrink: 0;
     padding-left: rem(24);
     padding-right: rem(24);
+  }
+}
+
+// dark theme
+[data-vb-theme='dark'] {
+  .textDivider {
+    &::before,
+    &::after {
+      background-color: $dark-gray-4;
+    }
   }
 }

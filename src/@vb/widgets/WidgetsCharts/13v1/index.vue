@@ -5,7 +5,7 @@
         12,255Gb
       </div>
     </div>
-    [TODO_CHARTS]
+    <div class="position-relative">[TODO_CHARTS]</div>
   </div>
 </template>
 <script>

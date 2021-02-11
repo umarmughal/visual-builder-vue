@@ -28,13 +28,6 @@
   }
 }
 
-.table {
-  white-space: nowrap !important;
-  :global(.ant-table-body) {
-    overflow-x: auto !important;
-  }
-}
-
 .avatar {
   width: rem(40);
   height: rem(40);

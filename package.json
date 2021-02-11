@@ -1,6 +1,6 @@
 {
   "name": "visual-builder-vue",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

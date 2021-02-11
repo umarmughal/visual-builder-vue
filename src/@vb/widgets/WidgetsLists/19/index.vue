@@ -1,17 +1,9 @@
 <template>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled mb-0">
     <li :class="$style.item">
-      <div
-        :class="$style.itemTime"
-        class="mr-3"
-      >
-        16:00
-      </div>
+      <div :class="$style.itemTime" class="mr-3">16:00</div>
       <div :class="$style.itemSeparator">
-        <div
-          :class="[$style.donut, $style.danger]"
-          class="mr-3"
-        />
+        <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
         Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut
@@ -19,32 +11,16 @@
       </div>
     </li>
     <li :class="$style.item">
-      <div
-        :class="$style.itemTime"
-        class="mr-3"
-      >
-        15:28
-      </div>
+      <div :class="$style.itemTime" class="mr-3">15:28</div>
       <div :class="$style.itemSeparator">
-        <div
-          :class="[$style.donut, $style.danger]"
-          class="mr-3"
-        />
+        <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>David Beckham was registered as administrator</div>
     </li>
     <li :class="$style.item">
-      <div
-        :class="$style.itemTime"
-        class="mr-3"
-      >
-        14:26
-      </div>
+      <div :class="$style.itemTime" class="mr-3">14:26</div>
       <div :class="$style.itemSeparator">
-        <div
-          :class="[$style.donut, $style.danger]"
-          class="mr-3"
-        />
+        <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
         Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut
@@ -52,17 +28,9 @@
       </div>
     </li>
     <li :class="$style.item">
-      <div
-        :class="$style.itemTime"
-        class="mr-3"
-      >
-        13:22
-      </div>
+      <div :class="$style.itemTime" class="mr-3">13:22</div>
       <div :class="$style.itemSeparator">
-        <div
-          :class="[$style.donut, $style.danger]"
-          class="mr-3"
-        />
+        <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
         Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut

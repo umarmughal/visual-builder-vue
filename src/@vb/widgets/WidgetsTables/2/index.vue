@@ -1,12 +1,7 @@
 <template>
   <div>
-    <div class="mb-4">
-      <a-table
-        :columns="columns"
-        :data-source="data"
-        :pagination="false"
-        :class="$style.table"
-      >
+    <div class="table-responsive text-nowrap">
+      <a-table :columns="columns" :data-source="data" :pagination="false">
         <template #description="{ text }">
           <div class="text-wrap width-300">
             <div class="text-dark mb-3">
@@ -62,6 +57,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>

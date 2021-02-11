@@ -1,5 +1,5 @@
 <template>
-  <div class="card-body">
+  <div>
     <div class="rounded overflow-hidden position-relative">
       <img
         class="img-fluid"

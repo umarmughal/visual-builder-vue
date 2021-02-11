@@ -1,5 +1,5 @@
 <template>
-  <div class="card overflow-hidden">
+  <div class="overflow-hidden position-relative rounded">
     <div v-if="isNew" :class="$style.new">New</div>
     <div class="card-body">
       <a

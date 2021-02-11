@@ -8,14 +8,10 @@
         <div class="font-weight-bold font-size-24 text-dark mb-1">
           David Beckham
         </div>
-        <div class="font-size-18">
-          8748-XXXX-1678-5416
-        </div>
+        <div class="font-size-18">8748-XXXX-1678-5416</div>
       </div>
     </div>
-    <div class="text-center text-gray-4 pt-3">
-      Expires at 03/22
-    </div>
+    <div class="border-top text-center text-gray-4 pt-3">Expires at 03/22</div>
   </div>
 </template>
 <script>

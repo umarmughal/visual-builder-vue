@@ -1,26 +1,16 @@
 <template>
   <div>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled mb-0">
       <li :class="$style.item">
-        <div
-          :class="$style.itemHead"
-          class="mb-3"
-        >
+        <div :class="$style.itemHead" class="mb-3">
           <div :class="$style.itemPic">
-            <img
-              src="resources/images/avatars/1.jpg"
-              alt="Mary Stanform"
-            >
+            <img src="resources/images/avatars/1.jpg" alt="Mary Stanform" />
           </div>
           <div class="mr-2">
             <div>Jamie Rockstar</div>
-            <div class="text-muted">
-              Backoffice Agent
-            </div>
+            <div class="text-muted">Backoffice Agent</div>
           </div>
-          <div class="text-success ml-auto">
-            Active
-          </div>
+          <div class="text-success ml-auto">Active</div>
         </div>
         <p class="mb-4">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -29,25 +19,15 @@
         </p>
       </li>
       <li :class="$style.item">
-        <div
-          :class="$style.itemHead"
-          class="mb-3"
-        >
+        <div :class="$style.itemHead" class="mb-3">
           <div :class="$style.itemPic">
-            <img
-              src="resources/images/avatars/2.jpg"
-              alt="Mary Stanform"
-            >
+            <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
           </div>
           <div class="mr-2">
             <div>Alex Kasie</div>
-            <div class="text-muted">
-              Support Agent
-            </div>
+            <div class="text-muted">Support Agent</div>
           </div>
-          <div class="text-danger ml-auto">
-            Suspended
-          </div>
+          <div class="text-danger ml-auto">Suspended</div>
         </div>
         <p class="mb-4">
           Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -1,15 +1,9 @@
 <template>
   <div>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled mb-0">
       <li :class="$style.item">
-        <a
-          href="javascript:;"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemPic"
-            class="bg-success"
-          >
+        <a href="javascript:;" :class="$style.itemLink">
+          <div :class="$style.itemPic" class="bg-success">
             <i class="fe fe-file-text" />
           </div>
           <div class="mr-2">
@@ -22,14 +16,8 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript:;"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemPic"
-            class="bg-info"
-          >
+        <a href="javascript:;" :class="$style.itemLink">
+          <div :class="$style.itemPic" class="bg-info">
             <i class="fe fe-mail" />
           </div>
           <div class="mr-2">
@@ -42,14 +30,8 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript:;"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemPic"
-            class="bg-danger"
-          >
+        <a href="javascript:;" :class="$style.itemLink">
+          <div :class="$style.itemPic" class="bg-danger">
             <i class="fe fe-grid" />
           </div>
           <div class="mr-2">
@@ -62,14 +44,8 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript:;"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemPic"
-            class="bg-primary"
-          >
+        <a href="javascript:;" :class="$style.itemLink">
+          <div :class="$style.itemPic" class="bg-primary">
             <i class="fe fe-database" />
           </div>
           <div class="mr-2">
@@ -82,14 +58,8 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="javascript:;"
-          :class="$style.itemLink"
-        >
-          <div
-            :class="$style.itemPic"
-            class="bg-success"
-          >
+        <a href="javascript:;" :class="$style.itemLink">
+          <div :class="$style.itemPic" class="bg-success">
             <i class="fe fe-flag" />
           </div>
           <div class="mr-2">

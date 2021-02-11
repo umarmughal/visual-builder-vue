@@ -1,11 +1,8 @@
 <template>
   <div>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled mb-0">
       <li :class="$style.item">
-        <a
-          href="#"
-          :class="$style.itemLink"
-        >
+        <a href="#" :class="$style.itemLink">
           <div :class="$style.itemPic">
             <i class="fe fe-file-text" />
           </div>
@@ -19,10 +16,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="#"
-          :class="$style.itemLink"
-        >
+        <a href="#" :class="$style.itemLink">
           <div :class="$style.itemPic">
             <i class="fe fe-mail" />
           </div>
@@ -36,10 +30,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="#"
-          :class="$style.itemLink"
-        >
+        <a href="#" :class="$style.itemLink">
           <div :class="$style.itemPic">
             <i class="fe fe-grid" />
           </div>
@@ -53,10 +44,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="#"
-          :class="$style.itemLink"
-        >
+        <a href="#" :class="$style.itemLink">
           <div :class="$style.itemPic">
             <i class="fe fe-database" />
           </div>
@@ -70,10 +58,7 @@
         </a>
       </li>
       <li :class="$style.item">
-        <a
-          href="#"
-          :class="$style.itemLink"
-        >
+        <a href="#" :class="$style.itemLink">
           <div :class="$style.itemPic">
             <i class="fe fe-flag" />
           </div>

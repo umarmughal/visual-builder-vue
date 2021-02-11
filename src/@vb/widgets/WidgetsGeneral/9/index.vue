@@ -1,110 +1,68 @@
 <template>
   <div class="d-flex flex-wrap">
-    <div class="w-50 mb-3">
-      <div class="vb__utils__avatarGroup">
+    <div class="mb-3 mr-auto">
+      <div class="vb__utils__avatarGroup mb-3">
         <div class="vb__utils__avatar vb__utils__avatar--size46">
-          <img
-            src="resources/images/avatars/1.jpg"
-            alt="User 1"
-          >
+          <img src="resources/images/avatars/1.jpg" alt="Mary Stanform" />
         </div>
         <div class="vb__utils__avatar vb__utils__avatar--size46">
-          <img
-            src="resources/images/avatars/2.jpg"
-            alt="User 2"
-          >
+          <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
         </div>
         <div class="vb__utils__avatar vb__utils__avatar--size46">
-          <img
-            src="resources/images/avatars/3.jpg"
-            alt="User 3"
-          >
+          <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
         </div>
         <div class="vb__utils__avatar vb__utils__avatar--size46">
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 4"
-          >
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
-        <button
-          type="button"
-          class="vb__utils__avatarGroupAdd"
-        >
+        <button type="button" class="vb__utils__avatarGroupAdd">
           <i class="fe fe-plus" />
         </button>
       </div>
       <div class="d-flex align-items-start">
-        <div class="vb__utils__avatar vb__utils__avatar--size64">
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 5"
-          >
+        <div class="vb__utils__avatar vb__utils__avatar--size64 mr-2">
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
         <div class="vb__utils__avatar vb__utils__avatar--size46">
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 6"
-          >
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
       </div>
     </div>
-    <div class="w-50">
-      <div class="vb__utils__avatarGroup">
+    <div>
+      <div class="vb__utils__avatarGroup mb-3">
         <div
           class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
         >
-          <img
-            src="resources/images/avatars/1.jpg"
-            alt="User 7"
-          >
+          <img src="resources/images/avatars/1.jpg" alt="Mary Stanform" />
         </div>
         <div
           class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
         >
-          <img
-            src="resources/images/avatars/2.jpg"
-            alt="User 8"
-          >
+          <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
         </div>
         <div
           class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
         >
-          <img
-            src="resources/images/avatars/3.jpg"
-            alt="User 9"
-          >
+          <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
         </div>
         <div
           class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
         >
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 10"
-          >
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
-        <button
-          type="button"
-          class="vb__utils__avatarGroupAdd"
-        >
+        <button type="button" class="vb__utils__avatarGroupAdd">
           <i class="fe fe-plus" />
         </button>
       </div>
       <div class="d-flex align-items-start">
         <div
-          class="vb__utils__avatar vb__utils__avatar--size64 vb__utils__avatar--rounded"
+          class="vb__utils__avatar vb__utils__avatar--size64 vb__utils__avatar--rounded mr-2"
         >
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 11"
-          >
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
         <div
           class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
         >
-          <img
-            src="resources/images/avatars/4.jpg"
-            alt="User 12"
-          >
+          <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
       </div>
     </div>

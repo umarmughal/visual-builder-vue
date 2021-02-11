@@ -4,13 +4,8 @@
       $29,931
       <sup class="text-uppercase text-gray-6 font-size-30">paid</sup>
     </div>
-    <div class="mb-4">
-      <a-table
-        :columns="columns"
-        :data-source="data"
-        :pagination="false"
-        :class="$style.table"
-      >
+    <div class="table-responsive text-nowrap">
+      <a-table :columns="columns" :data-source="data" :pagination="false">
         <template #avatar="{ text: link }">
           <div class="vb__utils__avatar">
             <img :src="link" alt="User" />
@@ -75,6 +70,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>

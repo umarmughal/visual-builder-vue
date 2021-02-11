@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card-body bg-light">
     <div class="h-100 pt-5 pb-5 text-center">
       <i class="fe fe-at-sign font-size-50" />
     </div>
@@ -13,9 +13,7 @@
       <div class="font-size-24 font-weight-bold text-success mr-auto">
         +3,125
       </div>
-      <div class="font-size-24 text-gray-4">
-        5,000
-      </div>
+      <div class="font-size-24 text-gray-4">5,000</div>
     </div>
     <div class="progress">
       <div

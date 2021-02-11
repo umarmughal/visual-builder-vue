@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="mb-4">
+    <div class="table-responsive text-nowrap mb-4">
       <a-table
         :columns="columns"
         :data-source="data"
@@ -40,7 +40,6 @@
           selectedRowKeys: selectedRowKeys,
           onChange: onSelectChange,
         }"
-        :class="$style.table"
       >
         <template #location="{ text }">
           <a href="javascript: void(0);" class="text-blue">{{ text }}</a>
@@ -140,6 +139,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>

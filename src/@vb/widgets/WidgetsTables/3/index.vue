@@ -1,45 +1,7 @@
 <template>
   <div>
-    <a-tabs default-active-key="1" :class="$style.tabs">
-      <a-tab-pane key="1" tab="History" />
-      <a-tab-pane key="2" tab="Actions" />
-      <a-tab-pane key="3">
-        <template #tab>
-          <a-dropdown placement="bottomRight" :trigger="['click']">
-            <a
-              class="nav-link dropdown-toggle"
-              href="javascript: void(0);"
-              role="button"
-              >Dropdown</a
-            >
-            <template #overlay>
-              <a-menu>
-                <a-menu-item>
-                  <a href="javascript:;">Action</a>
-                </a-menu-item>
-                <a-menu-item>
-                  <a href="javascript:;">Another action</a>
-                </a-menu-item>
-                <a-menu-item>
-                  <a href="javascript:;">Something else here</a>
-                </a-menu-item>
-                <a-menu-divider />
-                <a-menu-item>
-                  <a href="javascript:;">Separated link</a>
-                </a-menu-item>
-              </a-menu>
-            </template>
-          </a-dropdown>
-        </template>
-      </a-tab-pane>
-    </a-tabs>
-    <div class="mb-4 px-4">
-      <a-table
-        :columns="columns"
-        :data-source="data"
-        :pagination="false"
-        :class="$style.table"
-      >
+    <div class="table-responsive text-nowrap">
+      <a-table :columns="columns" :data-source="data" :pagination="false">
         <template #avatar="{ text: link }">
           <div class="vb__utils__avatar">
             <img :src="link" alt="User" />
@@ -107,6 +69,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" module>
-@import "./style.module.scss";
-</style>
