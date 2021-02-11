@@ -6,7 +6,7 @@
         [$style.vb__sidebar__toggled]: settings.isSidebarOpen,
       }"
     >
-      <div class="overflow-auto" :style="{ height: '100%' }">
+      <perfect-scrollbar :style="{ height: '100%' }">
         <div :class="$style.vb__sidebar__inner">
           <a
             href="javascript: void(0);"
@@ -618,7 +618,7 @@
             </a-collapse-panel>
           </a-collapse>
         </div>
-      </div>
+      </perfect-scrollbar>
     </div>
     <div class="vb__utils__sidebar__buttons">
       <a-tooltip placement="left">

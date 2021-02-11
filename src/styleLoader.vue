@@ -10,6 +10,8 @@ import '@/@vb/css/vendors/antd/themes/dark.less'
 
 // third-party plugins styles
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'he-tree-vue/dist/he-tree-vue.css'
+import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import 'vuelayers/lib/style.css'
 // import 'quill/dist/quill.core.css'
@@ -18,11 +20,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // vb vendors styles
 import '@/@vb/css/vendors/antd/style.scss'
 import '@/@vb/css/vendors/bootstrap/style.scss'
-import '@/@vb/css/vendors/perfect-scrollbar/style.scss'
 import '@/@vb/css/vendors/nprogress/style.scss'
-import '@/@vb/css/vendors/chartist/style.scss'
-import '@/@vb/css/vendors/chartist-tooltip-plugin/style.scss'
-import '@/@vb/css/vendors/quill/style.scss'
+import '@/@vb/css/vendors/he-tree-vue/style.scss'
+import '@/@vb/css/vendors/perfect-scrollbar/style.scss'
 
 // vb styles
 import '@/@vb/css/core.scss'

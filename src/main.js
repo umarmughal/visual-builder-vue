@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import Antd from 'ant-design-vue'
+import PerfectScrollbar from 'vue3-perfect-scrollbar'
 
 import App from './App.vue'
 import './registerServiceWorker'
@@ -13,4 +14,5 @@ createApp(App)
   .use(router)
   .use(i18n)
   .use(Antd)
+  .use(PerfectScrollbar)
   .mount("#app")

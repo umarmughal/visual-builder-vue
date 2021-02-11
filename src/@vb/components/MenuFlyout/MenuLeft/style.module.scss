@@ -9,10 +9,6 @@
   background: $dark-gray-6;
   overflow: hidden;
 
-  &__scroll {
-    overflow-y: auto;
-  }
-
   @media (max-width: $sm-max-width) {
     position: fixed;
     z-index: 950;

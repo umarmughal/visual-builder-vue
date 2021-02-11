@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="height-300 d-flex flex-column justify-content-end">
-      <div style="overflow: auto; height: 100%">
+      <perfect-scrollbar :style="{ height: '100%' }">
         <div :class="$style.contentWrapper">
           <div :class="$style.message">
             <div :class="$style.messageContent">
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </perfect-scrollbar>
     </div>
     <div class="pt-2 pb-2">Mary is typing...</div>
     <form action>

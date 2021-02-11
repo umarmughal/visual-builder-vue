@@ -62,18 +62,9 @@
           </div>
         </div>
       </div>
-      <div
-        :class="$style.menuScroll"
-        :style="{
-          height:
-            settings.isMobileView || settings.isMenuUnfixed
-              ? 'calc(100vh - 64px)'
-              : 'calc(100vh - 110px)',
-        }"
-      >
+      <perfect-scrollbar :style="{ height: '100%' }">
         <a-menu
           v-model:open-keys="openKeys"
-          force-sub-menu-render
           :inline-collapsed="
             settings.isMobileView ? false : settings.isMenuCollapsed
           "
@@ -116,7 +107,7 @@
             >Buy Bundle</a
           >
         </div>
-      </div>
+      </perfect-scrollbar>
     </div>
   </a-layout-sider>
 </template>

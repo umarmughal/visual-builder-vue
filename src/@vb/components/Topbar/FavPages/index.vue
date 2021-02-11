@@ -36,7 +36,7 @@
                     />
                   </div>
                   <div class="height-200">
-                    <div class="overflow-auto" :style="{ height: '100%' }">
+                    <perfect-scrollbar :style="{ height: '100%' }">
                       <div class="px-2 pb-2">
                         <template
                           v-for="item in filteredPagesList"
@@ -59,7 +59,7 @@
                           </router-link>
                         </template>
                       </div>
-                    </div>
+                    </perfect-scrollbar>
                   </div>
                   <div class="p-2">
                     <a-button type="primary" @click="toggleDropdown"

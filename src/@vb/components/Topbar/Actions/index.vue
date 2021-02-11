@@ -11,8 +11,8 @@
     </div>
     <template #overlay>
       <div class="card vb__utils__shadow width-350">
-        <div class="card-body pb-2">
-          <list3 />
+        <div class="card-body p-0">
+          <list5 />
         </div>
       </div>
     </template>
@@ -21,11 +21,11 @@
 
 <script>
 import { ref } from 'vue'
-import List3 from '@/@vb/widgets/WidgetsLists/3'
+import List5 from '@/@vb/widgets/WidgetsLists/5'
 
 export default {
   components: {
-    List3,
+    List5,
   },
   setup() {
     const count = ref(7)

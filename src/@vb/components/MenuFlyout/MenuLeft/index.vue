@@ -126,7 +126,7 @@
           <div :class="$style.air__menuLeft__user__name">David Beckham</div>
           <div :class="$style.air__menuLeft__user__role">Administrator</div>
         </a>
-        <div :class="$style.air__menuLeft__scroll">
+        <perfect-scrollbar>
           <div :class="$style.air__menuLeft__container">
             <ul :class="$style.air__menuLeft__list">
               <template v-for="(item, index) in menuData">
@@ -169,7 +169,7 @@
               >
             </div>
           </div>
-        </div>
+        </perfect-scrollbar>
       </div>
     </div>
     <a

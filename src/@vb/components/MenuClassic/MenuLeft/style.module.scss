@@ -8,11 +8,6 @@
   transition: none !important;
   font-size: rem(15);
 
-  &Scroll {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
   .menuOuter {
     position: fixed;
     height: 100%;
