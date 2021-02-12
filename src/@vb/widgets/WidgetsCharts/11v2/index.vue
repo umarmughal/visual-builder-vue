@@ -4,7 +4,7 @@
       $240.56
     </div>
     <div class="text-uppercase mb-1">Outcome</div>
-    <div :class="$style.chartContainer">[TODO_CHARTS]</div>
+    <!-- <div :class="$style.chartContainer">[TODO_CHARTS]</div> -->
   </div>
 </template>
 <script>

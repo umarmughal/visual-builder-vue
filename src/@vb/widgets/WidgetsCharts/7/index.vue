@@ -1,23 +1,19 @@
 <template>
   <div>
+    <!-- [TODO_VUELAYERS] -->
     <div>
-      [TODO_VL_MAP]
-      <!-- <vl-map
-        :load-tiles-while-animating="true"
-        :load-tiles-while-interacting="true"
-        data-projection="EPSG:4326"
-        style="height: 300px"
-      >
-        <vl-view
-          v-model:min-zoom="minZoom"
-          v-model:zoom="zoom"
-          v-model:center="center"
-          v-model:rotation="rotation"
-        />
-        <vl-layer-tile id="osm">
-          <vl-source-osm />
-        </vl-layer-tile>
-      </vl-map> -->
+      <a-alert message="Chart is disabled" type="info" show-icon>
+        <template #description
+          >The "vuelayers" plugin has not yet migrated to Vue3.
+          <a
+            href="https://github.com/ghettovoice/vuelayers"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="vb__utils__link"
+            >Visit github repository for details</a
+          ></template
+        >
+      </a-alert>
     </div>
     <div class="table-responsive text-nowrap">
       <a-table :columns="columns" :data-source="data" :pagination="false">

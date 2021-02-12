@@ -6,8 +6,8 @@
     }"
   >
     <div :class="$style.inner">
-      <div className="row">
-        <div className="col-md-8">
+      <div class="row">
+        <div class="col-md-8">
           <p>
             <strong
               >Visual Builder is the best solution for your next big

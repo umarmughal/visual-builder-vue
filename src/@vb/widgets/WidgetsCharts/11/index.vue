@@ -4,7 +4,7 @@
       1240
     </div>
     <div class="text-uppercase mb-1">Transactions</div>
-    <div :class="$style.chartContainer">[TODO_CHARTS]</div>
+    <!-- <div :class="$style.chartContainer">[TODO_CHARTS]</div> -->
   </div>
 </template>
 <script>

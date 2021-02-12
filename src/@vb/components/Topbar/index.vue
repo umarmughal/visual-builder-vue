@@ -12,7 +12,7 @@
     <div class="mr-auto d-xl-block d-none">
       <vb-project-management />
     </div>
-    <div className="mr-3 d-none d-sm-block ml-auto">
+    <div class="mr-3 d-none d-sm-block ml-auto">
       <vb-cart />
     </div>
     <div class="mr-3 d-none d-sm-block">
