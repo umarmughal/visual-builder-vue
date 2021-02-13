@@ -11,7 +11,7 @@
     </div>
     <template #overlay>
       <div class="card vb__utils__shadow width-350">
-        <div class="card-body pb-2">
+        <div class="card-body">
           <general26 />
         </div>
       </div>
