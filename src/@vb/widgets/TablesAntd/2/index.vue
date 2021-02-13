@@ -1,20 +1,17 @@
 <template>
-  <div class="table-response">
+  <div class="table-responsive text-nowrap">
     <a-table :columns="columns" :data-source="data">
       <template
         #filterDropdown="{
-          record: {
-            setSelectedKeys,
-            selectedKeys,
-            confirm,
-            clearFilters,
-            column,
-          },
+          setSelectedKeys,
+          selectedKeys,
+          confirm,
+          clearFilters,
+          column,
         }"
       >
         <div class="custom-filter-dropdown">
           <a-input
-            v-ant-ref="(c) => (searchInput = c)"
             :placeholder="`Search ${column.dataIndex}`"
             :value="selectedKeys[0]"
             style="width: 188px; margin-bottom: 8px; display: block"
@@ -200,6 +197,8 @@ export default {
       searchInput,
       data,
       columns,
+      handleReset,
+      handleSearch,
     }
   },
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="table-response">
+  <div class="table-responsive text-nowrap">
     <a-table :data-source="data" :columns="columns">
       <template
         #filterDropdown="{

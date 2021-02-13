@@ -1,5 +1,5 @@
 <template>
-  <div class="table-response">
+  <div class="table-responsive text-nowrap">
     <a-table
       :row-selection="rowSelection"
       :columns="columns"
