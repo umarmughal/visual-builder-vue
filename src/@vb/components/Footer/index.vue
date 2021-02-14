@@ -40,19 +40,11 @@
       <br />
       <p class="mb-0">
         Copyright © {{ new Date().getFullYear() }}
-        <a
-          href="https://sellpixels.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://sellpixels.com" target="_blank" rel="noopener noreferrer">
           Sellpixels.com
         </a>
         |
-        <a
-          href="https://sellpixels.com/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://sellpixels.com/privacy" target="_blank" rel="noopener noreferrer">
           Privacy Policy
         </a>
       </p>
@@ -76,5 +68,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

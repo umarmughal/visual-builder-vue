@@ -14,11 +14,15 @@
           </div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Basic' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Basic' }" />
+          </div>
           <div class="card-body"><vb-tables-bootstrap-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Dark table' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Dark table' }" />
+          </div>
           <div class="card-body"><vb-tables-bootstrap-3 /></div>
         </div>
         <div class="card">
@@ -46,7 +50,9 @@
           <div class="card-body"><vb-tables-bootstrap-7 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Small table' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Small table' }" />
+          </div>
           <div class="card-body"><vb-tables-bootstrap-8 /></div>
         </div>
         <div class="card">

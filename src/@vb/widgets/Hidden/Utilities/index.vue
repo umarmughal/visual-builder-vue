@@ -23,12 +23,7 @@
                   <code>.vb__utils__link</code>
                 </td>
                 <td>
-                  <a
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="vb__utils__link"
-                  >
+                  <a href="" rel="noopener noreferrer" target="_blank" className="vb__utils__link">
                     Blue Link
                   </a>
                 </td>
@@ -38,11 +33,7 @@
                   <code>.vb__utils__link__underlined</code>
                 </td>
                 <td>
-                  <a
-                    href=""
-                    target="_blank"
-                    className="vb__utils__link__underlined"
-                  >
+                  <a href="" target="_blank" className="vb__utils__link__underlined">
                     Underlined Link
                   </a>
                 </td>
@@ -171,8 +162,7 @@
                   <code>.text-break</code>
                 </td>
                 <td>
-                  Breaks strings if their length exceeds the width of their
-                  container
+                  Breaks strings if their length exceeds the width of their container
                 </td>
               </tr>
               <tr>
@@ -187,19 +177,13 @@
           <div className="p-3">
             <div className="row">
               <div className="col-md-4">
-                <div
-                  className="text-truncate height-100"
-                  style="border: 1px dashed #e6e8ea"
-                >
-                  This is text truncate. This is text truncate. This is text
-                  truncate. This is text truncate
+                <div className="text-truncate height-100" style="border: 1px dashed #e6e8ea">
+                  This is text truncate. This is text truncate. This is text truncate. This is text
+                  truncate
                 </div>
               </div>
               <div className="col-md-4">
-                <div
-                  className="text-break height-100"
-                  style="border: 1px dashed #e6e8ea"
-                >
+                <div className="text-break height-100" style="border: 1px dashed #e6e8ea">
                   This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break
                 </div>
               </div>
@@ -208,8 +192,7 @@
                   className="text-nowrap height-100"
                   style="border: 1px dashed #e6e8ea; overflow: hidden"
                 >
-                  This is text nowrap. This is text nowrap. This is text nowrap.
-                  This is text nowrap
+                  This is text nowrap. This is text nowrap. This is text nowrap. This is text nowrap
                 </div>
               </div>
             </div>
@@ -240,8 +223,8 @@
                   <code>.font-size-*</code>
                 </td>
                 <td>
-                  Available values: 0, 10, 12, 14, 16, 18, 21, 24, 28, 30, 36,
-                  40, 48, 50, 60, 70 , 80
+                  Available values: 0, 10, 12, 14, 16, 18, 21, 24, 28, 30, 36, 40, 48, 50, 60, 70 ,
+                  80
                 </td>
               </tr>
               <tr>
@@ -339,10 +322,9 @@
             <p className="text-center">Center aligned text</p>
             <p className="text-right">Right aligned text</p>
             <p className="text-justify">
-              Justified text: Lorem Ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem Ipsum has been the industrys
-              standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen
+              Justified text: Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen
               book
             </p>
           </div>

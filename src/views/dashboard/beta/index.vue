@@ -22,9 +22,15 @@
               }"
             />
           </div>
-          <div class="card-body bg-light rounded"><vb-widgets-general-21v2 /></div>
-          <div class="card-body bg-light rounded"><vb-widgets-general-21v2 /></div>
-          <div class="card-body bg-success text-white rounded"><vb-widgets-general-21 /></div>
+          <div class="card-body bg-light rounded">
+            <vb-widgets-general-21v2 />
+          </div>
+          <div class="card-body bg-light rounded">
+            <vb-widgets-general-21v2 />
+          </div>
+          <div class="card-body bg-success text-white rounded">
+            <vb-widgets-general-21 />
+          </div>
         </div>
         <div class="card">
           <div class="card-header">
@@ -75,7 +81,10 @@
         <div class="card">
           <div class="card-header">
             <vb-headers-heading-2
-              :data="{ title: 'Revenue', description: 'Block with important Account information' }"
+              :data="{
+                title: 'Revenue',
+                description: 'Block with important Account information',
+              }"
             />
           </div>
           <div class="card-body"><vb-widgets-general-1v1 /></div>

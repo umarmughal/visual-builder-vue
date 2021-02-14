@@ -26,7 +26,7 @@
   </a-form>
 </template>
 <script>
-import { defineComponent, reactive, toRaw } from 'vue';
+import { defineComponent, reactive, toRaw } from 'vue'
 
 export default defineComponent({
   setup() {
@@ -35,37 +35,29 @@ export default defineComponent({
       gender: '',
       password: '',
       password2: '',
-    });
+    })
 
     const rules = {
-      username: [
-        { required: true },
-      ],
-      gender: [
-        { required: true },
-      ],
-      password: [
-        { required: true },
-      ],
-      password2: [
-        { required: true },
-      ],
+      username: [{ required: true }],
+      gender: [{ required: true }],
+      password: [{ required: true }],
+      password2: [{ required: true }],
     }
 
     const handleFinish = values => {
-      console.log(values, formState);
-    };
+      console.log(values, formState)
+    }
 
     const handleFinishFailed = errors => {
-      console.log(errors);
-    };
+      console.log(errors)
+    }
 
     return {
       formState,
       rules,
       handleFinish,
       handleFinishFailed,
-    };
+    }
   },
-});
+})
 </script>

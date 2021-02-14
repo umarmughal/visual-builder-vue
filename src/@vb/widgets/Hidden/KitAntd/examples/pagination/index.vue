@@ -24,19 +24,10 @@
       <a-pagination size="small" :total="50" />
     </div>
     <div class="mb-5">
-      <a-pagination
-        size="small"
-        :total="50"
-        show-size-changer
-        show-quick-jumper
-      />
+      <a-pagination size="small" :total="50" show-size-changer show-quick-jumper />
     </div>
     <div class="mb-5">
-      <a-pagination
-        size="small"
-        :total="50"
-        :show-total="(total) => `Total ${total} items`"
-      />
+      <a-pagination size="small" :total="50" :show-total="total => `Total ${total} items`" />
     </div>
   </div>
 </template>

@@ -51,15 +51,15 @@ export default {
     const primaryColor = computed(() => store.getters.settings.primaryColor)
 
     // watch queryParams change
-    watch(query, (query) => store.commit('SETUP_URL_SETTINGS', query))
+    watch(query, query => store.commit('SETUP_URL_SETTINGS', query))
 
     // listen & set vb-version (pro, air, fluent, ...)
-    watch(version, (version) => {
+    watch(version, version => {
       document.querySelector('html').setAttribute('data-vb-version', version)
     })
 
     // listen & set vb-theme (dark, default, ...)
-    watch(theme, (theme) => {
+    watch(theme, theme => {
       document.querySelector('html').setAttribute('data-vb-theme', theme)
       store.commit('CHANGE_SETTING', {
         setting: 'menuColor',
@@ -68,7 +68,7 @@ export default {
     })
 
     // listen & set primaryColor
-    watch(primaryColor, (primaryColor) => {
+    watch(primaryColor, primaryColor => {
       const styleElement = document.querySelector('#primaryColor')
       if (styleElement) {
         styleElement.remove()

@@ -15,13 +15,17 @@
           <div class="card-body"><vb-widgets-tables-5 /></div>
         </div>
         <div class="card">
-          <div class="card-header py-0"><vb-headers-card-header-tabbed-6 /></div>
+          <div class="card-header py-0">
+            <vb-headers-card-header-tabbed-6 />
+          </div>
           <div class="card-body"><vb-widgets-charts-3 /></div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="card">
-          <div class="card-body text-white bg-success rounded"><vb-widgets-general-2v3 /></div>
+          <div class="card-body text-white bg-success rounded">
+            <vb-widgets-general-2v3 />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-widgets-general-2 /></div>

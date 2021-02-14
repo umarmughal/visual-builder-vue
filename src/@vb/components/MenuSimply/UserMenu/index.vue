@@ -9,30 +9,25 @@
       <a-menu>
         <a-menu-item>
           <div>
-            <strong
-              >{{ $t("topBar.profileMenu.hello") }},
-              {{ user.name || "Anonymous" }}</strong
-            >
+            <strong>{{ $t('topBar.profileMenu.hello') }}, {{ user.name || 'Anonymous' }}</strong>
           </div>
           <div>
-            <strong class="mr-1"
-              >{{ $t("topBar.profileMenu.billingPlan") }}:
-            </strong>
+            <strong class="mr-1">{{ $t('topBar.profileMenu.billingPlan') }}: </strong>
             Professional
           </div>
           <div>
-            <strong class="mr-1">{{ $t("topBar.profileMenu.role") }}:</strong>
-            {{ user.role || "—" }}
+            <strong class="mr-1">{{ $t('topBar.profileMenu.role') }}:</strong>
+            {{ user.role || '—' }}
           </div>
         </a-menu-item>
         <a-menu-divider />
         <a-menu-item>
           <div>
-            <strong class="mr-1">{{ $t("topBar.profileMenu.email") }}:</strong>
-            {{ user.email || "—" }}
+            <strong class="mr-1">{{ $t('topBar.profileMenu.email') }}:</strong>
+            {{ user.email || '—' }}
           </div>
           <div>
-            <strong class="mr-1">{{ $t("topBar.profileMenu.phone") }}:</strong>
+            <strong class="mr-1">{{ $t('topBar.profileMenu.phone') }}:</strong>
             —
           </div>
         </a-menu-item>
@@ -40,14 +35,14 @@
         <a-menu-item>
           <a href="javascript: void(0);">
             <i class="fe fe-user mr-2" />
-            {{ $t("topBar.profileMenu.editProfile") }}
+            {{ $t('topBar.profileMenu.editProfile') }}
           </a>
         </a-menu-item>
         <a-menu-divider />
         <a-menu-item>
           <a href="javascript: void(0);" @click="logout">
             <i class="fe fe-log-out mr-2" />
-            {{ $t("topBar.profileMenu.logout") }}
+            {{ $t('topBar.profileMenu.logout') }}
           </a>
         </a-menu-item>
       </a-menu>
@@ -81,5 +76,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

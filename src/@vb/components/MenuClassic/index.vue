@@ -1,10 +1,6 @@
 <template>
-  <menu-left
-    v-if="settings.menuLayoutType === 'left' && !settings.isMobileView"
-  />
-  <menu-top
-    v-if="settings.menuLayoutType === 'top' && !settings.isMobileView"
-  />
+  <menu-left v-if="settings.menuLayoutType === 'left' && !settings.isMobileView" />
+  <menu-top v-if="settings.menuLayoutType === 'top' && !settings.isMobileView" />
   <div v-if="settings.isMobileView">
     <div :class="$style.handler" @click="toggleMobileMenu">
       <div :class="$style.handlerIcon"></div>
@@ -49,5 +45,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

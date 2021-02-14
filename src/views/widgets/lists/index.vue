@@ -2,113 +2,167 @@
   <div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'Tag' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'Tag' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-1 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST5' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST5' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-5 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST8' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST8' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-8 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST11' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST11' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-11 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST14' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST14' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-14 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST17' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST17' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-17 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST20' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST20' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-20 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST25' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST25' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-25 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST28' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST28' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-28 /></div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST2' }" />
+        </div>
         <div class="card"><vb-widgets-lists-2 /></div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST6' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST6' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-6 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST9' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST9' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-9 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST12' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST12' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-12 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST15' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST15' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-15 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST19' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST19' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-19 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST22' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST22' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-22 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST26' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST26' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-26 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST27' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST27' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-27 /></div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST3' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST3' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-3 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST4' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST4' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-4 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST7' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST7' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-7 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST10' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST10' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-10 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST13' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST13' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-13 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST16' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST16' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-16 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST18' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST18' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-18 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST23' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST23' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-23 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST24' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST24' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-lists-24 /></div>
         </div>
@@ -116,15 +170,21 @@
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST21' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST21' }" />
+        </div>
         <div class="card"><vb-widgets-lists-21 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST21V1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST21V1' }" />
+        </div>
         <div class="card"><vb-widgets-lists-21v1 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'LIST21V2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'LIST21V2' }" />
+        </div>
         <div class="card"><vb-widgets-lists-21v2 /></div>
       </div>
     </div>

@@ -3,25 +3,33 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Simple Email' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Simple Email' }" />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-emails-1 /></div>
         </div>
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Email w/ Header' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Email w/ Header' }" />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-emails-2 /></div>
         </div>
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Ecommerce Email' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Ecommerce Email' }" />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-emails-3 /></div>
         </div>
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Email w/ Action' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Email w/ Action' }" />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-emails-4 /></div>

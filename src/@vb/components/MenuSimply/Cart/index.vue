@@ -1,9 +1,5 @@
 <template>
-  <a-dropdown
-    :trigger="['click']"
-    placement="bottomLeft"
-    @visibleChange="addCount"
-  >
+  <a-dropdown :trigger="['click']" placement="bottomLeft" @visibleChange="addCount">
     <div :class="$style.dropdown">
       <a-badge :count="count">
         <i class="fe fe-shopping-cart" :class="$style.icon" />
@@ -42,5 +38,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -13,10 +13,7 @@
           wrote this issue 12 days ago · 0 comments
         </div>
       </div>
-      <a
-        className="btn btn-success align-self-start text-nowrap"
-        href="javascript: void(0)"
-      >
+      <a className="btn btn-success align-self-start text-nowrap" href="javascript: void(0)">
         New Issue
       </a>
     </div>

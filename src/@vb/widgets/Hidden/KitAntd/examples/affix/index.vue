@@ -5,7 +5,7 @@
         type="primary"
         @click="
           () => {
-            top += 10;
+            top += 10
           }
         "
         >Affix top</a-button
@@ -17,7 +17,7 @@
         type="primary"
         @click="
           () => {
-            bottom += 10;
+            bottom += 10
           }
         "
         >Affix bottom</a-button

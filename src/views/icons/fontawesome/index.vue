@@ -5,7 +5,11 @@
         <div class="card-placeholder">
           <div class="card-header">
             <vb-headers-heading-3
-              :data="{ title: 'Fontawesome', button: 'Go to Docs', url: 'http://fontawesome.io/' }"
+              :data="{
+                title: 'Fontawesome',
+                button: 'Go to Docs',
+                url: 'http://fontawesome.io/',
+              }"
             />
           </div>
         </div>

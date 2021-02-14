@@ -8,11 +8,7 @@
         <div class="font-weight-bold text-dark">Jamie Rockstar</div>
         <div class="text-muted">Backoffice Agent</div>
       </div>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-outline-primary align-self-end"
-        >Follow</a
-      >
+      <a href="javascript: void(0);" class="btn btn-outline-primary align-self-end">Follow</a>
     </li>
     <li :class="$style.item">
       <div :class="$style.itemPic">
@@ -22,11 +18,7 @@
         <div class="font-weight-bold text-dark">Katie Banks</div>
         <div class="text-muted">Support Agent</div>
       </div>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-outline-primary align-self-end"
-        >Follow</a
-      >
+      <a href="javascript: void(0);" class="btn btn-outline-primary align-self-end">Follow</a>
     </li>
     <li :class="$style.item">
       <div :class="$style.itemPic">
@@ -36,11 +28,7 @@
         <div class="font-weight-bold text-dark">Jessey Kim</div>
         <div class="text-muted">Administrator</div>
       </div>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-outline-primary align-self-end"
-        >Follow</a
-      >
+      <a href="javascript: void(0);" class="btn btn-outline-primary align-self-end">Follow</a>
     </li>
     <li :class="$style.item">
       <div :class="$style.itemPic">
@@ -50,11 +38,7 @@
         <div class="font-weight-bold text-dark">Sam Piterson</div>
         <div class="text-muted">Technical Assistant</div>
       </div>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-outline-primary align-self-end"
-        >Follow</a
-      >
+      <a href="javascript: void(0);" class="btn btn-outline-primary align-self-end">Follow</a>
     </li>
     <li :class="$style.item">
       <div :class="$style.itemPic">
@@ -64,11 +48,7 @@
         <div class="font-weight-bold text-dark">Mary Stanform</div>
         <div class="text-muted">Illustrator</div>
       </div>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-outline-primary align-self-end"
-        >Follow</a
-      >
+      <a href="javascript: void(0);" class="btn btn-outline-primary align-self-end">Follow</a>
     </li>
   </ul>
 </template>
@@ -78,5 +58,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

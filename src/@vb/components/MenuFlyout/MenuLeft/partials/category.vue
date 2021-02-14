@@ -10,11 +10,11 @@ export default {
   props: {
     item: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     styles: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
   },
 }

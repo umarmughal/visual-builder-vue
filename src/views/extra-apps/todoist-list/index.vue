@@ -18,7 +18,9 @@
           <div class="card-body"><vb-typography-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Completed' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Completed' }" />
+          </div>
           <div class="card-body"><vb-widgets-lists-27 /></div>
         </div>
         <div class="card">

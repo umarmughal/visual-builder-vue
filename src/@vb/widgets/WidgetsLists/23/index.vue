@@ -39,7 +39,7 @@ export default {
   },
   setup() {
     const activeIndex = ref(0)
-    const setActiveItem = (index) => {
+    const setActiveItem = index => {
       activeIndex.value = index
     }
 
@@ -52,5 +52,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

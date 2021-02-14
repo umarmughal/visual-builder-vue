@@ -12,7 +12,7 @@
         @change="handleChange"
         @select-change="handleSelectChange"
         @scroll="handleScroll"
-        :render="(item) => item.title"
+        :render="item => item.title"
         :disabled="disabled"
       />
       <a-switch
@@ -39,9 +39,7 @@ export default {
       })
     }
 
-    const oriTargetKeys = mockData
-      .filter(item => +item.key % 3 > 1)
-      .map(item => item.key)
+    const oriTargetKeys = mockData.filter(item => +item.key % 3 > 1).map(item => item.key)
     return {
       mockData,
       targetKeys: oriTargetKeys,

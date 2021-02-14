@@ -6,9 +6,7 @@
     <div class="mb-4">
       <a-table :columns="columns" :data-source="data" :pagination="false">
         <template #description="{ text }">
-          <a href="javascript: void(0);" class="btn btn-sm btn-light">{{
-            text
-          }}</a>
+          <a href="javascript: void(0);" class="btn btn-sm btn-light">{{ text }}</a>
         </template>
         <template #quantity="{ text: value }">
           <a-input-number size="small" :min="1" :default-value="+value" />
@@ -98,12 +96,12 @@
             <i class="fa fa-cc-amex text-default" />
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
           </p>
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
           </p>
         </div>
       </div>
@@ -121,11 +119,7 @@
         Grand Total:
         <strong class="font-size-36">$5,757.00</strong>
       </p>
-      <a
-        href="javascript: void(0);"
-        class="btn btn-lg btn-success width-200 mb-2"
-        >Order Now</a
-      >
+      <a href="javascript: void(0);" class="btn btn-lg btn-success width-200 mb-2">Order Now</a>
     </div>
   </div>
 </template>

@@ -6,9 +6,7 @@
     <div class="mb-5">
       <a-tabs default-active-key="1" @change="callback">
         <a-tab-pane tab="Tab 1" key="1">Content of Tab Pane 1</a-tab-pane>
-        <a-tab-pane tab="Tab 2" key="2" force-render
-          >Content of Tab Pane 2</a-tab-pane
-        >
+        <a-tab-pane tab="Tab 2" key="2" force-render>Content of Tab Pane 2</a-tab-pane>
         <a-tab-pane tab="Tab 3" key="3">Content of Tab Pane 3</a-tab-pane>
       </a-tabs>
     </div>
@@ -28,8 +26,7 @@
 export default {
   name: 'KitAntdTabsExample',
   data() {
-    return {
-    }
+    return {}
   },
   methods: {
     callback(key) {

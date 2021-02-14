@@ -9,9 +9,7 @@
           <div class="mb-5">
             <div class="row">
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-primary rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-primary rounded p-3 text-white">
                   .bg-primary
                   <br />
                   .text-primary
@@ -20,9 +18,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-default rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-default rounded p-3 text-white">
                   .bg-default
                   <br />
                   .text-default
@@ -31,9 +27,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-secondary rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-secondary rounded p-3 text-white">
                   .bg-secondary
                   <br />
                   .text-secondary
@@ -42,9 +36,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-success rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-success rounded p-3 text-white">
                   .bg-success
                   <br />
                   .text-success
@@ -53,9 +45,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-danger rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-danger rounded p-3 text-white">
                   .bg-danger
                   <br />
                   .text-danger
@@ -64,9 +54,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-warning rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-warning rounded p-3 text-white">
                   .bg-warning
                   <br />
                   .text-warning
@@ -75,9 +63,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-info rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-info rounded p-3 text-white">
                   .bg-info
                   <br />
                   .text-info
@@ -95,9 +81,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-dark rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-dark rounded p-3 text-white">
                   .bg-dark
                   <br />
                   .text-dark
@@ -115,9 +99,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-blue rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-blue rounded p-3 text-white">
                   .bg-blue
                   <br />
                   .text-blue
@@ -126,9 +108,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-blue-light rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-blue-light rounded p-3 text-white">
                   .bg-blue-light
                   <br />
                   .text-blue-light
@@ -137,9 +117,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-red rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-red rounded p-3 text-white">
                   .bg-red
                   <br />
                   .text-red
@@ -157,9 +135,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-orange rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-orange rounded p-3 text-white">
                   .bg-orange
                   <br />
                   .text-orange
@@ -195,9 +171,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-gray-4 rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-gray-4 rounded p-3 text-white">
                   .bg-gray-4
                   <br />
                   .text-gray-4
@@ -206,9 +180,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-gray-5 rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-gray-5 rounded p-3 text-white">
                   .bg-gray-5
                   <br />
                   .text-gray-5
@@ -217,9 +189,7 @@
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="height-100 font-size-12 mb-3 bg-gray-6 rounded p-3 text-white"
-                >
+                <div class="height-100 font-size-12 mb-3 bg-gray-6 rounded p-3 text-white">
                   .bg-gray-6
                   <br />
                   .text-gray-6
@@ -254,9 +224,7 @@
                     <code>.text-default</code>
                   </td>
                   <td>
-                    <span class="text-default"
-                      >Set Default color to element</span
-                    >
+                    <span class="text-default">Set Default color to element</span>
                   </td>
                 </tr>
                 <tr>
@@ -264,9 +232,7 @@
                     <code>.text-primary</code>
                   </td>
                   <td>
-                    <span class="text-primary"
-                      >Set Primary color to element</span
-                    >
+                    <span class="text-primary">Set Primary color to element</span>
                   </td>
                 </tr>
                 <tr>
@@ -274,9 +240,7 @@
                     <code>.text-secondary</code>
                   </td>
                   <td>
-                    <span class="text-secondary"
-                      >Set Secondary color to element</span
-                    >
+                    <span class="text-secondary">Set Secondary color to element</span>
                   </td>
                 </tr>
                 <tr>
@@ -284,9 +248,7 @@
                     <code>.text-success</code>
                   </td>
                   <td>
-                    <span class="text-success"
-                      >Set Success color to element</span
-                    >
+                    <span class="text-success">Set Success color to element</span>
                   </td>
                 </tr>
                 <tr>
@@ -302,9 +264,7 @@
                     <code>.text-warning</code>
                   </td>
                   <td>
-                    <span class="text-warning"
-                      >Set Warning color to element</span
-                    >
+                    <span class="text-warning">Set Warning color to element</span>
                   </td>
                 </tr>
                 <tr>

@@ -6,7 +6,9 @@
           <div class="card-body"><vb-widgets-general-10v1 /></div>
         </div>
         <div class="card">
-          <div class="card-body text-white bg-primary rounded"><vb-widgets-general-12v1 /></div>
+          <div class="card-body text-white bg-primary rounded">
+            <vb-widgets-general-12v1 />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-widgets-general-1 /></div>
@@ -19,10 +21,15 @@
         <div class="card card-top card-top-primary">
           <div class="card-header">
             <vb-headers-heading-2
-              :data="{ title: '@mary.ableton (Mary Stanform)', description: '17,256 followers' }"
+              :data="{
+                title: '@mary.ableton (Mary Stanform)',
+                description: '17,256 followers',
+              }"
             />
           </div>
-          <div class="card-header py-0"><vb-headers-card-header-tabbed-6 /></div>
+          <div class="card-header py-0">
+            <vb-headers-card-header-tabbed-6 />
+          </div>
           <div class="card-body"><vb-widgets-general-15 /></div>
           <div class="card-body"><vb-app-partials-wp-write /></div>
         </div>

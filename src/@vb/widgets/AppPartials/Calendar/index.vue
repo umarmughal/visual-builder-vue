@@ -50,13 +50,13 @@
   </div>
 </template>
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref } from 'vue'
 export default defineComponent({
   setup() {
-    const value = ref();
+    const value = ref()
 
     const getListData = value => {
-      let listData;
+      let listData
 
       switch (value.date()) {
         case 8:
@@ -69,8 +69,8 @@ export default defineComponent({
               type: 'success',
               content: 'This is usual event.',
             },
-          ];
-          break;
+          ]
+          break
 
         case 10:
           listData = [
@@ -86,8 +86,8 @@ export default defineComponent({
               type: 'error',
               content: 'This is error event.',
             },
-          ];
-          break;
+          ]
+          break
 
         case 15:
           listData = [
@@ -115,29 +115,29 @@ export default defineComponent({
               type: 'error',
               content: 'This is error event 4.',
             },
-          ];
-          break;
+          ]
+          break
 
         default:
       }
 
-      return listData || [];
-    };
+      return listData || []
+    }
 
     const getMonthData = value => {
       if (value.month() === 8) {
-        return 1394;
+        return 1394
       }
-    };
+    }
 
     return {
       value,
       getListData,
       getMonthData,
-    };
+    }
   },
-});
+})
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

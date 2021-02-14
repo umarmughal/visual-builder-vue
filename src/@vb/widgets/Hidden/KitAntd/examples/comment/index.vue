@@ -24,9 +24,7 @@
                 @click="dislike"
               />
             </a-tooltip>
-            <span style="padding-left: '8px'; cursor: 'auto'">{{
-              dislikes
-            }}</span>
+            <span style="padding-left: '8px'; cursor: 'auto'">{{ dislikes }}</span>
           </span>
           <span>Reply to</span>
         </template>
@@ -41,9 +39,9 @@
         </template>
         <template #content>
           <p>
-            We supply a series of design principles, practical patterns and high
-            quality design resources (Sketch and Axure), to help people create
-            their product prototypes beautifully and efficiently.
+            We supply a series of design principles, practical patterns and high quality design
+            resources (Sketch and Axure), to help people create their product prototypes beautifully
+            and efficiently.
           </p>
         </template>
         <template #autdatetimehor>
@@ -72,8 +70,8 @@
         </template>
         <template #content>
           <p>
-            We supply a series of design principles, practical patterns and high
-            quality design resources (Sketch and Axure).
+            We supply a series of design principles, practical patterns and high quality design
+            resources (Sketch and Axure).
           </p>
         </template>
         <a-comment>
@@ -91,8 +89,8 @@
           </template>
           <template #content>
             <p>
-              We supply a series of design principles, practical patterns and
-              high quality design resources (Sketch and Axure).
+              We supply a series of design principles, practical patterns and high quality design
+              resources (Sketch and Axure).
             </p>
           </template>
         </a-comment>

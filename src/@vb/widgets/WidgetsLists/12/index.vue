@@ -9,10 +9,7 @@
           <tbody>
             <tr>
               <td class="text-nowrap">
-                <div
-                  class="mr-3"
-                  :class="[$style.donut, $style.danger]"
-                />
+                <div class="mr-3" :class="[$style.donut, $style.danger]" />
                 California
               </td>
               <td class="text-right">
@@ -21,10 +18,7 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div
-                  class="mr-3"
-                  :class="[$style.donut, $style.primary]"
-                />
+                <div class="mr-3" :class="[$style.donut, $style.primary]" />
                 Texas
               </td>
               <td class="text-right">
@@ -33,10 +27,7 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div
-                  class="mr-3"
-                  :class="[$style.donut, $style.success]"
-                />
+                <div class="mr-3" :class="[$style.donut, $style.success]" />
                 Wyoming
               </td>
               <td class="text-right">
@@ -45,10 +36,7 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div
-                  class="mr-3"
-                  :class="[$style.donut, $style.info]"
-                />
+                <div class="mr-3" :class="[$style.donut, $style.info]" />
                 Florida
               </td>
               <td class="text-right">
@@ -57,10 +45,7 @@
             </tr>
             <tr>
               <td class="text-nowrap">
-                <div
-                  class="mr-3"
-                  :class="[$style.donut, $style.orange]"
-                />
+                <div class="mr-3" :class="[$style.donut, $style.orange]" />
                 New York
               </td>
               <td class="text-right">
@@ -93,5 +78,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

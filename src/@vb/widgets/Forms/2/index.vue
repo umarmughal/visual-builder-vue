@@ -6,11 +6,7 @@
     @finishFailed="handleFinishFailed"
   >
     <a-form-item>
-      <a-input
-        v-model:value="formState.user"
-        placeholder="Coins Amount"
-        addon-before="$"
-      />
+      <a-input v-model:value="formState.user" placeholder="Coins Amount" addon-before="$" />
     </a-form-item>
     <a-form-item>
       <a-input
@@ -28,27 +24,27 @@
   </a-form>
 </template>
 <script>
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive } from 'vue'
 export default defineComponent({
   setup() {
     const formState = reactive({
       user: '',
       password: '',
-    });
+    })
 
     const handleFinish = values => {
-      console.log(values, formState);
-    };
+      console.log(values, formState)
+    }
 
     const handleFinishFailed = errors => {
-      console.log(errors);
-    };
+      console.log(errors)
+    }
 
     return {
       formState,
       handleFinish,
       handleFinishFailed,
-    };
+    }
   },
-});
+})
 </script>

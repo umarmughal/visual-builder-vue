@@ -12,9 +12,7 @@
       <li>4096MB Memory</li>
       <li>8 GB Storage</li>
     </ul>
-    <a class="btn btn-white width-100" href="javascript: void(0);"
-      >Get Access</a
-    >
+    <a class="btn btn-white width-100" href="javascript: void(0);">Get Access</a>
   </div>
 </template>
 <script>

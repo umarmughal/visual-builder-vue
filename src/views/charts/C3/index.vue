@@ -5,7 +5,11 @@
         <div class="card-placeholder">
           <div class="card-header">
             <vb-headers-heading-3
-              :data="{ title: 'C3', button: 'Go to Docs', url: 'https://c3js.org/' }"
+              :data="{
+                title: 'C3',
+                button: 'Go to Docs',
+                url: 'https://c3js.org/',
+              }"
             />
           </div>
         </div>
@@ -14,53 +18,77 @@
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Simple Line' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Simple Line' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-1 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Step' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Step' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-3 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Scatter' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Scatter' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-5 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Stacked Bar' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Stacked Bar' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-7 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Sub Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Sub Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-9 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Pie Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Pie Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-11 /></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Spline' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Spline' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Area' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Area' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-4 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Bar' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Bar' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-6 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Combination' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Combination' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-8 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Zoom' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Zoom' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-10 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Donut Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Donut Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-c3-12 /></div>
         </div>
       </div>

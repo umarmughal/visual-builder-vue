@@ -1,10 +1,6 @@
 <template>
   <div class="table-responsive text-nowrap">
-    <a-table
-      :columns="columns"
-      :data-source="data"
-      :scroll="{ x: 1500, y: 300 }"
-    >
+    <a-table :columns="columns" :data-source="data" :scroll="{ x: 1500, y: 300 }">
       <template #action>
         <a>action</a>
       </template>
@@ -12,7 +8,7 @@
   </div>
 </template>
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 const columns = [
   {
     title: 'Full Name',
@@ -84,8 +80,8 @@ const columns = [
       customRender: 'action',
     },
   },
-];
-const data = [];
+]
+const data = []
 
 for (let i = 0; i < 100; i++) {
   data.push({
@@ -93,7 +89,7 @@ for (let i = 0; i < 100; i++) {
     name: `Edrward ${i}`,
     age: 32,
     address: `London Park no. ${i}`,
-  });
+  })
 }
 
 export default defineComponent({
@@ -101,7 +97,7 @@ export default defineComponent({
     return {
       data,
       columns,
-    };
+    }
   },
-});
+})
 </script>

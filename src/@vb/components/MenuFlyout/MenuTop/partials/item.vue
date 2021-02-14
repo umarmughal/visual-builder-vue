@@ -5,11 +5,7 @@
       [styles.air__menuTop__item__active]: item.key === activeItem,
     }"
   >
-    <router-link
-      v-if="item.url"
-      :to="item.url"
-      :class="styles.air__menuTop__link"
-    >
+    <router-link v-if="item.url" :to="item.url" :class="styles.air__menuTop__link">
       <i
         v-if="item.icon"
         :class="{
@@ -18,17 +14,11 @@
         }"
       />
       <span>{{ item.title }}</span>
-      <span
-        v-if="item.count"
-        class="badge text-white bg-blue-light float-right mt-1 px-2"
-        >{{ item.count }}</span
-      >
+      <span v-if="item.count" class="badge text-white bg-blue-light float-right mt-1 px-2">{{
+        item.count
+      }}</span>
     </router-link>
-    <a
-      v-if="!item.url"
-      href="javascript: void(0);"
-      :class="styles.air__menuTop__link"
-    >
+    <a v-if="!item.url" href="javascript: void(0);" :class="styles.air__menuTop__link">
       <i
         v-if="item.icon"
         :class="{
@@ -37,11 +27,9 @@
         }"
       />
       <span>{{ item.title }}</span>
-      <span
-        v-if="item.count"
-        class="badge text-white bg-blue-light float-right mt-1 px-2"
-        >{{ item.count }}</span
-      >
+      <span v-if="item.count" class="badge text-white bg-blue-light float-right mt-1 px-2">{{
+        item.count
+      }}</span>
     </a>
   </li>
 </template>
@@ -52,11 +40,11 @@ export default {
   props: {
     item: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     styles: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     activeItem: {
       type: String,

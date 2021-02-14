@@ -15,20 +15,14 @@
     <div class="row">
       <div class="col-lg-12">
         <a-form-item label="Address">
-          <a-input
-            v-model:value="formState.address"
-            placeholder="1234 Main St."
-          />
+          <a-input v-model:value="formState.address" placeholder="1234 Main St." />
         </a-form-item>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <a-form-item label="Address 2">
-          <a-input
-            v-model:value="formState.address2"
-            placeholder="Apartment, studio, or floor"
-          />
+          <a-input v-model:value="formState.address2" placeholder="Apartment, studio, or floor" />
         </a-form-item>
       </div>
     </div>
@@ -64,8 +58,8 @@
               Click or drag file to this area to upload
             </p>
             <p class="ant-upload-hint">
-              Support for a single or bulk upload. Strictly prohibit from
-              uploading company data or other band files
+              Support for a single or bulk upload. Strictly prohibit from uploading company data or
+              other band files
             </p>
           </a-upload-dragger>
         </a-form-item>
@@ -75,8 +69,7 @@
       <div class="col-lg-12">
         <a-form-item>
           <a-checkbox v-model:checked="formState.agree"
-            >I CONSENT TO HAVING SELLPIXELS.COM COLLECT MY PERSONAL
-            DETAILS.</a-checkbox
+            >I CONSENT TO HAVING SELLPIXELS.COM COLLECT MY PERSONAL DETAILS.</a-checkbox
           >
         </a-form-item>
       </div>
@@ -86,7 +79,7 @@
 </template>
 <script>
 import { InboxOutlined } from '@ant-design/icons-vue'
-import { defineComponent, reactive, toRaw } from 'vue';
+import { defineComponent, reactive, toRaw } from 'vue'
 
 const options = [
   {
@@ -121,7 +114,7 @@ const options = [
       },
     ],
   },
-];
+]
 
 export default defineComponent({
   components: {
@@ -137,17 +130,17 @@ export default defineComponent({
       city: [],
       zip: '',
       agree: false,
-    });
+    })
 
     const onSubmit = () => {
-      console.log('submit!', toRaw(formState));
-    };
+      console.log('submit!', toRaw(formState))
+    }
 
     return {
       formState,
       onSubmit,
       options,
-    };
+    }
   },
-});
+})
 </script>

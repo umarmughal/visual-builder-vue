@@ -22,15 +22,8 @@
               >
             </a-alert>
           </div>
-          <div
-            ref="tooltip"
-            class="text-gray-5 font-size-28 text-center"
-            :class="$style.tooltip"
-          >
-            <div
-              ref="tooltipLabel"
-              class="font-size-14 font-weight-bold text-dark"
-            />
+          <div ref="tooltip" class="text-gray-5 font-size-28 text-center" :class="$style.tooltip">
+            <div ref="tooltipLabel" class="font-size-14 font-weight-bold text-dark" />
             <div ref="tooltipValue" class="font-size-14 text-dark" />
           </div>
         </div>
@@ -44,5 +37,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

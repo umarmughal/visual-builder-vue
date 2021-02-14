@@ -13,9 +13,8 @@
           <div class="text-success ml-auto">Active</div>
         </div>
         <p class="mb-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ...
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been the industry&apos;s standard dummy text ...
         </p>
       </li>
       <li :class="$style.item">
@@ -30,9 +29,8 @@
           <div class="text-danger ml-auto">Suspended</div>
         </div>
         <p class="mb-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ...
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been the industry&apos;s standard dummy text ...
         </p>
       </li>
     </ul>
@@ -44,5 +42,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -5,7 +5,7 @@
     </h5>
     <div class="mb-5">
       <a-input-number :min="1" :max="10" v-model="value" @change="onChange" />
-      value：{{value}}
+      value：{{ value }}
     </div>
   </div>
 </template>

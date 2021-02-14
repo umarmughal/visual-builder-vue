@@ -32,18 +32,14 @@
           </tbody>
         </table>
         <div style="padding: 40px 40px 20px; background: rgb(255, 255, 255)">
-          <table
-            cellpadding="0"
-            cellspacing="0"
-            style="width: 100%; border: 0px"
-          >
+          <table cellpadding="0" cellspacing="0" style="width: 100%; border: 0px">
             <tbody>
               <tr>
                 <td>
                   <p>Hi there,</p>
                   <p>
-                    Sometimes you just want to send a simple HTML email with a
-                    simple design and clear call to action.
+                    Sometimes you just want to send a simple HTML email with a simple design and
+                    clear call to action.
                   </p>
                   <a
                     style="
@@ -58,9 +54,8 @@
                     >Call To Action</a
                   >
                   <p>
-                    This is a really simple email template. It's sole purpose is
-                    to get the recipient to click the button with no
-                    distractions.
+                    This is a really simple email template. It's sole purpose is to get the
+                    recipient to click the button with no distractions.
                   </p>
                   <p>Good luck! Hope it works.</p>
                 </td>
@@ -77,10 +72,8 @@
           "
         >
           <p>
-            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't
-            like these emails?
-            <a style="color: rgb(160, 155, 185); text-decoration: underline"
-              >Unsubscribe</a
+            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't like these emails?
+            <a style="color: rgb(160, 155, 185); text-decoration: underline">Unsubscribe</a
             ><br />Powered by Visual Builder
           </p>
         </div>

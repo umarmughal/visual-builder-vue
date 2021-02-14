@@ -11,18 +11,14 @@
       </template>
       <span v-if="activeItem">
         <li :class="$style.breadcrumb">
-          <span
-            :class="[$style.breadcrumbLink, $style.breadcrumbLink__current]"
-          >
+          <span :class="[$style.breadcrumbLink, $style.breadcrumbLink__current]">
             {{ activeItem.title }}
           </span>
         </li>
       </span>
     </ul>
     <div :class="$style.divider" class="mr-4 d-none d-xl-block" />
-    <p
-      class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block"
-    >
+    <p class="color-gray-4 text-uppercase font-size-18 mb-0 mr-4 d-none d-xl-block">
       INV-00125
     </p>
     <button
@@ -109,7 +105,7 @@ export default {
       breadcrumb.value = getPath(menuData, routePath.value)
     })
 
-    watch(routePath, (routePath) => breadcrumb.value = getPath(menuData, routePath))
+    watch(routePath, routePath => (breadcrumb.value = getPath(menuData, routePath)))
 
     return {
       breadcrumb,
@@ -120,5 +116,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -1,16 +1,8 @@
 <template>
   <div>
-    <a
-      v-if="!myOpenOrders.loaded"
-      href="javascript: void(0);"
-      @click="handleMyOpenOrders"
-    >
+    <a v-if="!myOpenOrders.loaded" href="javascript: void(0);" @click="handleMyOpenOrders">
       <a-spin :spinning="myOpenOrders.loading">
-        <a-alert
-          class="pt-4 pb-4"
-          message="Click to view open order details"
-          type="info"
-        />
+        <a-alert class="pt-4 pb-4" message="Click to view open order details" type="info" />
       </a-spin>
     </a>
     <div v-if="myOpenOrders.loaded" class="table-responsive text-nowrap">
@@ -21,12 +13,9 @@
         size="small"
       >
         <template #type="{ text: value }">
-          <span
-            :style="
-              value === 'SELL' ? { color: '#f75535' } : { color: '#00a45b' }
-            "
-            >{{ value }}</span
-          >
+          <span :style="value === 'SELL' ? { color: '#f75535' } : { color: '#00a45b' }">{{
+            value
+          }}</span>
         </template>
       </a-table>
     </div>

@@ -18,11 +18,7 @@
         <div class="text-dark font-size-18 font-weight-bold mr-auto">
           Support Chat
         </div>
-        <button
-          type="button"
-          class="btn btn-link p-0 border-0"
-          @click="toggleSupportChat()"
-        >
+        <button type="button" class="btn btn-link p-0 border-0" @click="toggleSupportChat()">
           <i class="fe fe-x-square font-size-21 align-middle text-gray-6" />
         </button>
       </div>
@@ -41,7 +37,7 @@ export default {
   },
   computed: mapState(['settings']),
   methods: {
-    toggleSupportChat: function () {
+    toggleSupportChat: function() {
       const setting = 'isSupportChatOpen'
       const value = !this.settings[setting]
       this.$store.commit('CHANGE_SETTING', { setting, value })
@@ -51,5 +47,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

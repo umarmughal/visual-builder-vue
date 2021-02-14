@@ -14,7 +14,9 @@
           </div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Basic Usage' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Basic Usage' }" />
+          </div>
           <div class="card-body"><vb-tables-antd-3 /></div>
         </div>
         <div class="card">

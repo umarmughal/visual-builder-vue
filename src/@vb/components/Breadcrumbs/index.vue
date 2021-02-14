@@ -60,7 +60,7 @@ export default {
       breadcrumb.value = getPath(menuData, routePath.value)
     })
 
-    watch(routePath, (routePath) => breadcrumb.value = getPath(menuData, routePath))
+    watch(routePath, routePath => (breadcrumb.value = getPath(menuData, routePath)))
 
     return {
       breadcrumb,
@@ -71,5 +71,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

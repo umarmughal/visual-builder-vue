@@ -1,10 +1,5 @@
 <template>
-  <a-form
-    :model="formState"
-    :label-col="labelCol"
-    :wrapper-col="wrapperCol"
-    label-align="left"
-  >
+  <a-form :model="formState" :label-col="labelCol" :wrapper-col="wrapperCol" label-align="left">
     <a-form-item label="Full name">
       <a-input v-model:value="formState.name" placeholder="Your Fullname..." />
     </a-form-item>
@@ -12,24 +7,16 @@
       <a-input v-model:value="formState.email" placeholder="Your Fullname..." />
     </a-form-item>
     <a-form-item label="Budget">
-      <a-input
-        v-model:value="formState.budget"
-        addon-before="$"
-        placeholder="Budget"
-      />
+      <a-input v-model:value="formState.budget" addon-before="$" placeholder="Budget" />
     </a-form-item>
     <a-form-item label="Amount">
-      <a-slider
-        v-model:value="formState.amount"
-        :marks="marks"
-        tooltip-visible
-      />
+      <a-slider v-model:value="formState.amount" :marks="marks" tooltip-visible />
     </a-form-item>
   </a-form>
   <button type="submit" class="btn btn-success px-5">Send Data</button>
 </template>
 <script>
-import { defineComponent, reactive, toRaw } from 'vue';
+import { defineComponent, reactive, toRaw } from 'vue'
 const marks = {
   0: '0',
   10: '10',
@@ -42,7 +29,7 @@ const marks = {
   80: '80',
   90: '90',
   100: '100',
-};
+}
 
 export default defineComponent({
   setup() {
@@ -51,11 +38,11 @@ export default defineComponent({
       email: '',
       budget: '',
       amount: 0,
-    });
+    })
 
     const onSubmit = () => {
-      console.log('submit!', toRaw(formState));
-    };
+      console.log('submit!', toRaw(formState))
+    }
 
     return {
       labelCol: {
@@ -67,7 +54,7 @@ export default defineComponent({
       formState,
       onSubmit,
       marks,
-    };
+    }
   },
-});
+})
 </script>

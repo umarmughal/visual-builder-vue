@@ -8,7 +8,9 @@
       </div>
       <div class="col-lg-9 col-md-12">
         <div class="card card-top card-top-primary">
-          <div class="card-header py-0"><vb-headers-card-header-tabbed-6 /></div>
+          <div class="card-header py-0">
+            <vb-headers-card-header-tabbed-6 />
+          </div>
           <div class="card-body"><vb-tables-antd-1 /></div>
         </div>
       </div>

@@ -4,18 +4,14 @@
       <template v-for="(item, index) in renderedFlyoutItems" :key="index">
         <div
           :style="{
-            left: `${
-              item.itemDimensions.left + item.itemDimensions.width - 10
-            }px`,
+            left: `${item.itemDimensions.left + item.itemDimensions.width - 10}px`,
             top: `${item.itemDimensions.top}px`,
           }"
           :class="{
             [$style.air__menuFlyout]: true,
             [$style.air__menuFlyoutLeft]: settings.menuLayoutType === 'left',
-            [$style.air__menuFlyout__black]:
-              settings.flyoutMenuColor === 'dark',
-            [$style.air__menuFlyout__white]:
-              settings.flyoutMenuColor === 'white',
+            [$style.air__menuFlyout__black]: settings.flyoutMenuColor === 'dark',
+            [$style.air__menuFlyout__white]: settings.flyoutMenuColor === 'white',
             [$style.air__menuFlyout__gray]: settings.flyoutMenuColor === 'gray',
           }"
         >
@@ -24,15 +20,8 @@
             @mouseenter="handleFlyoutContainerOver(item.key)"
             @mouseleave="handleFlyoutOut(item.key)"
           >
-            <template
-              v-for="(menuItem, menuItemIndex) in item.items"
-              :key="menuItemIndex"
-            >
-              <item
-                :item="menuItem"
-                :styles="$style"
-                :active-item="activeItem"
-              />
+            <template v-for="(menuItem, menuItemIndex) in item.items" :key="menuItemIndex">
+              <item :item="menuItem" :styles="$style" :active-item="activeItem" />
             </template>
           </ul>
         </div>
@@ -51,14 +40,11 @@
         [$style.air__menuLeft__white]: settings.menuColor === 'white',
         [$style.air__menuLeft__gray]: settings.menuColor === 'gray',
         [$style.air__menuFlyout__black]:
-          settings.flyoutMenuColor === 'dark' &&
-          settings.flyoutMenuType !== 'default',
+          settings.flyoutMenuColor === 'dark' && settings.flyoutMenuType !== 'default',
         [$style.air__menuFlyout__white]:
-          settings.flyoutMenuColor === 'white' &&
-          settings.flyoutMenuType !== 'default',
+          settings.flyoutMenuColor === 'white' && settings.flyoutMenuType !== 'default',
         [$style.air__menuFlyout__gray]:
-          settings.flyoutMenuColor === 'gray' &&
-          settings.flyoutMenuType !== 'default',
+          settings.flyoutMenuColor === 'gray' && settings.flyoutMenuType !== 'default',
       }"
     >
       <div :class="$style.air__menuLeft__outer">
@@ -116,11 +102,7 @@
           </div>
         </div>
         <a href="javascript: void(0);" :class="$style.air__menuLeft__user">
-          <a-avatar
-            shape="square"
-            size="large"
-            :class="$style.air__menuLeft__user__avatar"
-          >
+          <a-avatar shape="square" size="large" :class="$style.air__menuLeft__user__avatar">
             <template #icon><UserOutlined /></template>
           </a-avatar>
           <div :class="$style.air__menuLeft__user__name">David Beckham</div>
@@ -148,12 +130,7 @@
                   :handle-flyout-over="handleFlyoutOver"
                   :handle-flyout-out="handleFlyoutOut"
                 />
-                <category
-                  v-if="item.category"
-                  :key="index"
-                  :item="item"
-                  :styles="$style"
-                />
+                <category v-if="item.category" :key="index" :item="item" :styles="$style" />
               </template>
             </ul>
             <div :class="$style.air__menuLeft__banner">
@@ -205,7 +182,12 @@ export default {
     const settings = computed(() => store.getters.settings)
     const pathname = computed(() => route.path)
     const flyoutActive = computed(() => {
-      return (settings.value.flyoutMenuType === 'flyout' || settings.value.flyoutMenuType === 'compact' || settings.value.isMenuCollapsed) && !settings.value.isMobileView
+      return (
+        (settings.value.flyoutMenuType === 'flyout' ||
+          settings.value.flyoutMenuType === 'compact' ||
+          settings.value.isMenuCollapsed) &&
+        !settings.value.isMobileView
+      )
     })
 
     const toggleMobileMenu = () => {
@@ -226,7 +208,7 @@ export default {
       store.commit('CHANGE_SETTING', { setting, value })
     }
 
-    const handleSubmenuClick = (key) => {
+    const handleSubmenuClick = key => {
       const currentKey = activeSubmenu.value
       if (flyoutActive.value) {
         return
@@ -243,7 +225,8 @@ export default {
           }
           return flattenedItems
         }, [])
-      const selectedItem = _.find(flattenItems(menuData.value, 'children'), ['url', pathname.value]) || {}
+      const selectedItem =
+        _.find(flattenItems(menuData.value, 'children'), ['url', pathname.value]) || {}
       const selectedSubmenu = menuData.value.reduce((key, parent) => {
         if (Array.isArray(parent.children)) {
           parent.children.map(child => {
@@ -276,7 +259,7 @@ export default {
       }
     }
 
-    const handleFlyoutOut = (key) => {
+    const handleFlyoutOut = key => {
       if (flyoutActive.value) {
         flyoutTimers.value[key] = setTimeout(() => {
           const updatedFlyoutItems = Object.assign({}, renderedFlyoutItems.value)
@@ -288,7 +271,7 @@ export default {
       }
     }
 
-    const handleFlyoutContainerOver = (key) => {
+    const handleFlyoutContainerOver = key => {
       clearInterval(flyoutTimers.value[key])
     }
 
@@ -316,5 +299,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

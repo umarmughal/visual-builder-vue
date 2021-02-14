@@ -10,7 +10,7 @@
       <div class="mb-4">
         <a-radio-group
           :value="settings.authProvider"
-          @change="(e) => changeAuthProvider(e.target.value)"
+          @change="e => changeAuthProvider(e.target.value)"
         >
           <a-radio value="jwt">JWT</a-radio>
           <a-radio value="firebase">Firebase</a-radio>
@@ -28,18 +28,9 @@
           <a-input v-model:value="loginForm.email" placeholder="Email" />
         </a-form-item>
         <a-form-item name="password">
-          <a-input
-            v-model:value="loginForm.password"
-            placeholder="Password"
-            type="password"
-          />
+          <a-input v-model:value="loginForm.password" placeholder="Password" type="password" />
         </a-form-item>
-        <a-button
-          type="primary"
-          html-type="submit"
-          class="text-center w-100"
-          :loading="loading"
-        >
+        <a-button type="primary" html-type="submit" class="text-center w-100" :loading="loading">
           <strong>Sign in</strong>
         </a-button>
       </a-form>
@@ -66,7 +57,13 @@ export default {
     const settings = computed(() => store.getters.settings)
     const loading = computed(() => store.getters['user/user'].loading)
     const rules = {
-      email: [{ required: true, message: 'Please input your email!', trigger: 'change' }],
+      email: [
+        {
+          required: true,
+          message: 'Please input your email!',
+          trigger: 'change',
+        },
+      ],
       password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
     }
     const loginForm = reactive({
@@ -74,13 +71,13 @@ export default {
       password: 'VisualBuilder',
     })
 
-    const changeAuthProvider = (value) => {
+    const changeAuthProvider = value => {
       store.commit('CHANGE_SETTING', { setting: 'authProvider', value })
     }
-    const handleFinish = (values) => {
+    const handleFinish = values => {
       store.dispatch('user/LOGIN', { payload: values })
     }
-    const handleFinishFailed = (errors) => {
+    const handleFinishFailed = errors => {
       console.log(errors)
     }
 
@@ -126,5 +123,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "@/@vb/components/Auth/style.module.scss";
+@import '@/@vb/components/Auth/style.module.scss';
 </style>

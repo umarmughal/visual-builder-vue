@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Pricing Tables' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Pricing Tables' }" />
+          </div>
         </div>
       </div>
     </div>

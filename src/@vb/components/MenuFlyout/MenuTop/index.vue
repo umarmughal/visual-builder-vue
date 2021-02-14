@@ -4,18 +4,14 @@
       <template v-for="(item, index) in renderedFlyoutItems" :key="index">
         <div
           :style="{
-            left: `${
-              item.itemDimensions.left + item.itemDimensions.width / 2
-            }px`,
+            left: `${item.itemDimensions.left + item.itemDimensions.width / 2}px`,
             top: `${item.itemDimensions.top + item.itemDimensions.height}px`,
           }"
           :class="{
             [$style.air__menuFlyout]: true,
             [$style.air__menuFlyoutTop]: settings.menuLayoutType === 'top',
-            [$style.air__menuFlyout__black]:
-              settings.flyoutMenuColor === 'dark',
-            [$style.air__menuFlyout__white]:
-              settings.flyoutMenuColor === 'white',
+            [$style.air__menuFlyout__black]: settings.flyoutMenuColor === 'dark',
+            [$style.air__menuFlyout__white]: settings.flyoutMenuColor === 'white',
             [$style.air__menuFlyout__gray]: settings.flyoutMenuColor === 'gray',
           }"
         >
@@ -24,15 +20,8 @@
             @mouseenter="handleFlyoutContainerOver(item.key)"
             @mouseleave="handleFlyoutOut(item.key)"
           >
-            <template
-              v-for="(menuItem, menuItemIndex) in item.items"
-              :key="menuItemIndex"
-            >
-              <item
-                :item="menuItem"
-                :styles="$style"
-                :active-item="activeItem"
-              />
+            <template v-for="(menuItem, menuItemIndex) in item.items" :key="menuItemIndex">
+              <item :item="menuItem" :styles="$style" :active-item="activeItem" />
             </template>
           </ul>
         </div>
@@ -51,14 +40,11 @@
         [$style.air__menuTop__white]: settings.menuColor === 'white',
         [$style.air__menuTop__gray]: settings.menuColor === 'gray',
         [$style.air__menuFlyout__black]:
-          settings.flyoutMenuColor === 'dark' &&
-          settings.menuType !== 'default',
+          settings.flyoutMenuColor === 'dark' && settings.menuType !== 'default',
         [$style.air__menuFlyout__white]:
-          settings.flyoutMenuColor === 'white' &&
-          settings.menuType !== 'default',
+          settings.flyoutMenuColor === 'white' && settings.menuType !== 'default',
         [$style.air__menuFlyout__gray]:
-          settings.flyoutMenuColor === 'gray' &&
-          settings.menuType !== 'default',
+          settings.flyoutMenuColor === 'gray' && settings.menuType !== 'default',
       }"
     >
       <div :class="$style.air__menuTop__outer">
@@ -187,7 +173,7 @@ export default {
       store.commit('CHANGE_SETTING', { setting, value })
     }
 
-    const handleSubmenuClick = (key) => {
+    const handleSubmenuClick = key => {
       const currentKey = activeSubmenu.value
       if (flyoutActive.value) {
         return
@@ -204,7 +190,8 @@ export default {
           }
           return flattenedItems
         }, [])
-      const selectedItem = _.find(flattenItems(menuData.value, 'children'), ['url', pathname.value]) || {}
+      const selectedItem =
+        _.find(flattenItems(menuData.value, 'children'), ['url', pathname.value]) || {}
       const selectedSubmenu = menuData.value.reduce((key, parent) => {
         if (Array.isArray(parent.children)) {
           parent.children.map(child => {
@@ -237,7 +224,7 @@ export default {
       }
     }
 
-    const handleFlyoutOut = (key) => {
+    const handleFlyoutOut = key => {
       if (flyoutActive.value) {
         flyoutTimers.value[key] = setTimeout(() => {
           const updatedFlyoutItems = Object.assign({}, renderedFlyoutItems.value)
@@ -249,7 +236,7 @@ export default {
       }
     }
 
-    const handleFlyoutContainerOver = (key) => {
+    const handleFlyoutContainerOver = key => {
       clearInterval(flyoutTimers.value[key])
     }
 
@@ -277,5 +264,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

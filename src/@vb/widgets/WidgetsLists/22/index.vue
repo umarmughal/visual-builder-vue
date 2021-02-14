@@ -19,9 +19,7 @@
           }"
           @click="setActiveItem(index)"
         >
-          <div
-            class="vb__utils__avatar vb__utils__avatar--size46 mr-3 flex-shrink-0"
-          >
+          <div class="vb__utils__avatar vb__utils__avatar--size46 mr-3 flex-shrink-0">
             <img :src="item.avatar" :alt="item.name" />
           </div>
           <div :class="$style.info" class="flex-grow-1">
@@ -32,11 +30,7 @@
               {{ item.name }}
             </div>
           </div>
-          <div
-            v-if="!item.unread"
-            :class="$style.unread"
-            class="flex-shrink-0 align-self-start"
-          >
+          <div v-if="!item.unread" :class="$style.unread" class="flex-shrink-0 align-self-start">
             <div class="badge badge-success">{{ item.unread }}</div>
           </div>
         </a>
@@ -56,7 +50,7 @@ export default {
   },
   setup() {
     const activeIndex = ref(0)
-    const setActiveItem = (index) => {
+    const setActiveItem = index => {
       activeIndex.value = index
     }
 
@@ -69,5 +63,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

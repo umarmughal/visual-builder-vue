@@ -25,8 +25,7 @@
         <template #description>
           <p>
             Success Description
-            <span style="color: red">Success</span> Description Success
-            Description
+            <span style="color: red">Success</span> Description Success Description
           </p>
         </template>
       </a-alert>

@@ -104,8 +104,14 @@ export default {
     }
 
     const setViewPort = (isMobileView = false, isTabletView = false) => {
-      store.commit('CHANGE_SETTING', { setting: 'isMobileView', value: isMobileView })
-      store.commit('CHANGE_SETTING', { setting: 'isTabletView', value: isTabletView })
+      store.commit('CHANGE_SETTING', {
+        setting: 'isMobileView',
+        value: isMobileView,
+      })
+      store.commit('CHANGE_SETTING', {
+        setting: 'isTabletView',
+        value: isTabletView,
+      })
     }
 
     // resize viewport events (commit toggleMenu, etc...)
@@ -125,20 +131,27 @@ export default {
         prev: {
           mobile: isMobile,
           tablet: isTablet,
-          desktop: !(isMobile) && !(isTablet),
+          desktop: !isMobile && !isTablet,
         },
       }
       // desktop
-      if (state.next.desktop && ((state.next.desktop !== state.prev.desktop) || firstLoad)) {
+      if (state.next.desktop && (state.next.desktop !== state.prev.desktop || firstLoad)) {
         setViewPort(false, false)
       }
       // tablet & collapse menu
-      if (state.next.tablet && !state.next.mobile && ((state.next.tablet !== state.prev.tablet) || firstLoad)) {
+      if (
+        state.next.tablet &&
+        !state.next.mobile &&
+        (state.next.tablet !== state.prev.tablet || firstLoad)
+      ) {
         setViewPort(false, true)
-        store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value: true })
+        store.commit('CHANGE_SETTING', {
+          setting: 'isMenuCollapsed',
+          value: true,
+        })
       }
       // mobile
-      if (state.next.mobile && ((state.next.mobile !== state.prev.mobile) || firstLoad)) {
+      if (state.next.mobile && (state.next.mobile !== state.prev.mobile || firstLoad)) {
         setViewPort(true, false)
       }
     }
@@ -184,5 +197,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

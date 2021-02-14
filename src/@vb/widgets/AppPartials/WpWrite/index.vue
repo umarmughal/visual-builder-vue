@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="d-flex align-items-center flex-wrap border-bottom mb-3 pb-3">
-      <div
-        class="vb__utils__avatar vb__utils__avatar--size64 mr-3 mb-3 flex-shrink-0"
-      >
+      <div class="vb__utils__avatar vb__utils__avatar--size64 mr-3 mb-3 flex-shrink-0">
         <img src="resources/images/avatars/5.jpg" alt="Mary Stanform" />
       </div>
       <div class="mb-3">

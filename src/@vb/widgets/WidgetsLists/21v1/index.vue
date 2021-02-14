@@ -12,9 +12,7 @@
       <li>512MB Memory</li>
       <li>2 GB Storage</li>
     </ul>
-    <a class="btn btn-primary width-100" href="javascript: void(0);"
-      >Get Access</a
-    >
+    <a class="btn btn-primary width-100" href="javascript: void(0);">Get Access</a>
   </div>
 </template>
 <script>

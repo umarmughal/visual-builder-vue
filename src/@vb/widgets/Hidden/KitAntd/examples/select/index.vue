@@ -5,11 +5,7 @@
     </h5>
     <div class="mb-5">
       <div class="d-inline-block mb-3 mr-3">
-        <a-select
-          default-value="lucy"
-          style="width: 120px"
-          @change="handleChange"
-        >
+        <a-select default-value="lucy" style="width: 120px" @change="handleChange">
           <a-select-option value="jack">Jack</a-select-option>
           <a-select-option value="lucy">Lucy</a-select-option>
           <a-select-option value="disabled" disabled>Disabled</a-select-option>
@@ -17,11 +13,7 @@
         </a-select>
       </div>
       <div class="d-inline-block mb-3 mr-3">
-        <a-select
-          default-value="lucy"
-          style="width: 200px"
-          @change="handleChange"
-        >
+        <a-select default-value="lucy" style="width: 200px" @change="handleChange">
           <a-select-opt-group>
             <template #label>
               <span> <a-icon type="user" />Manager </span>

@@ -79,7 +79,7 @@ export default {
           h('p', 'some messages...some messages...'),
           h('p', 'some messages...some messages...'),
         ]),
-        onOk() { },
+        onOk() {},
       })
     },
 

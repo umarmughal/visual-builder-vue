@@ -25,9 +25,7 @@
         <a-avatar>USER</a-avatar>
       </div>
       <div class="d-inline-block mr-4">
-        <a-avatar
-          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-        />
+        <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
       </div>
       <div class="d-inline-block mr-4">
         <a-avatar style="color: #f56a00; background-color: #fde3cf">U</a-avatar>

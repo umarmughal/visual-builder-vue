@@ -16,9 +16,7 @@
             :placeholder="`Search ${column.dataIndex}`"
             :value="selectedKeys[0]"
             style="width: 188px; margin-bottom: 8px; display: block"
-            @change="
-              (e) => setSelectedKeys(e.target.value ? [e.target.value] : [])
-            "
+            @change="e => setSelectedKeys(e.target.value ? [e.target.value] : [])"
             @pressEnter="handleSearch(selectedKeys, confirm, column.dataIndex)"
           />
           <a-button
@@ -30,11 +28,7 @@
             <template #icon><SearchOutlined /></template>
             Search
           </a-button>
-          <a-button
-            size="small"
-            style="width: 90px"
-            @click="handleReset(clearFilters)"
-          >
+          <a-button size="small" style="width: 90px" @click="handleReset(clearFilters)">
             Reset
           </a-button>
         </div>
@@ -67,8 +61,8 @@
   </div>
 </template>
 <script>
-import { SearchOutlined } from '@ant-design/icons-vue';
-import { defineComponent, reactive, ref } from 'vue';
+import { SearchOutlined } from '@ant-design/icons-vue'
+import { defineComponent, reactive, ref } from 'vue'
 const data = [
   {
     key: '1',
@@ -94,7 +88,7 @@ const data = [
     age: 32,
     address: 'London No. 2 Lake Park',
   },
-];
+]
 
 export default defineComponent({
   components: {
@@ -104,9 +98,9 @@ export default defineComponent({
     const state = reactive({
       searchText: '',
       searchedColumn: '',
-    });
+    })
 
-    const searchInput = ref();
+    const searchInput = ref()
 
     const columns = [
       {
@@ -119,13 +113,16 @@ export default defineComponent({
           customRender: 'customRender',
         },
         onFilter: (value, record) =>
-          record.name.toString().toLowerCase().includes(value.toLowerCase()),
+          record.name
+            .toString()
+            .toLowerCase()
+            .includes(value.toLowerCase()),
         onFilterDropdownVisibleChange: visible => {
           if (visible) {
             setTimeout(() => {
-              console.log(searchInput.value);
-              searchInput.value.focus();
-            }, 0);
+              console.log(searchInput.value)
+              searchInput.value.focus()
+            }, 0)
           }
         },
       },
@@ -139,12 +136,15 @@ export default defineComponent({
           customRender: 'customRender',
         },
         onFilter: (value, record) =>
-          record.age.toString().toLowerCase().includes(value.toLowerCase()),
+          record.age
+            .toString()
+            .toLowerCase()
+            .includes(value.toLowerCase()),
         onFilterDropdownVisibleChange: visible => {
           if (visible) {
             setTimeout(() => {
-              searchInput.value.focus();
-            });
+              searchInput.value.focus()
+            })
           }
         },
       },
@@ -158,28 +158,31 @@ export default defineComponent({
           customRender: 'customRender',
         },
         onFilter: (value, record) =>
-          record.address.toString().toLowerCase().includes(value.toLowerCase()),
+          record.address
+            .toString()
+            .toLowerCase()
+            .includes(value.toLowerCase()),
         onFilterDropdownVisibleChange: visible => {
           if (visible) {
             setTimeout(() => {
-              searchInput.value.focus();
-            });
+              searchInput.value.focus()
+            })
           }
         },
       },
-    ];
+    ]
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
-      confirm();
-      console.log(selectedKeys[0]);
-      state.searchText = selectedKeys[0];
-      state.searchedColumn = dataIndex;
-    };
+      confirm()
+      console.log(selectedKeys[0])
+      state.searchText = selectedKeys[0]
+      state.searchedColumn = dataIndex
+    }
 
     const handleReset = clearFilters => {
-      clearFilters();
-      state.searchText = '';
-    };
+      clearFilters()
+      state.searchText = ''
+    }
 
     return {
       data,
@@ -189,9 +192,9 @@ export default defineComponent({
       searchText: '',
       searchInput: null,
       searchedColumn: '',
-    };
+    }
   },
-});
+})
 </script>
 <style scoped>
 .highlight {

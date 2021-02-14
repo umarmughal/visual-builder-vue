@@ -76,11 +76,11 @@ export default {
         if (str.indexOf('?') >= 0) {
           queryParams = JSON.parse(
             '{"' +
-            decodeURI(subs)
-              .replace(/"/g, '\\"')
-              .replace(/&/g, '","')
-              .replace(/=/g, '":"') +
-            '"}',
+              decodeURI(subs)
+                .replace(/"/g, '\\"')
+                .replace(/&/g, '","')
+                .replace(/=/g, '":"') +
+              '"}',
           )
         }
       }

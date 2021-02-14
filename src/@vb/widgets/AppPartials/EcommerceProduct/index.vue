@@ -20,10 +20,7 @@
               :key="index"
               href="javascript: void(0);"
               @click="setImage(index)"
-              :class="[
-                index === activeImgIndex ? 'border-primary' : '',
-                $style.thumb,
-              ]"
+              :class="[index === activeImgIndex ? 'border-primary' : '', $style.thumb]"
               class="width-100 height-100 border mr-2 mb-2"
             >
               <img :src="image" alt="Product" />
@@ -37,8 +34,8 @@
           </div>
           <div class="pb-3 mb-4 border-bottom">
             <a href="javascript:void(0);" class="text-blue font-size-18">
-              TP-Link AC1750 Smart WiFi Router - Dual Band Gigabit Wireless
-              Internet Routers for Home
+              TP-Link AC1750 Smart WiFi Router - Dual Band Gigabit Wireless Internet Routers for
+              Home
             </a>
           </div>
           <div class="mb-4 width-300">
@@ -64,18 +61,16 @@
           </a-tabs>
           <div class="card-body px-0">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged.
             </p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type.
             </p>
           </div>
         </div>
@@ -98,12 +93,12 @@ export default {
     const favorite = ref(true)
     const activeImgIndex = ref(0)
 
-    const toggleFavorite = (event) => {
+    const toggleFavorite = event => {
       event.preventDefault()
       favorite.value = !favorite.value
     }
 
-    const setImage = (index) => {
+    const setImage = index => {
       activeImgIndex.value = index
     }
 
@@ -118,5 +113,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

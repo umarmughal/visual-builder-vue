@@ -29,8 +29,8 @@
         </p>
         <p class="ant-upload-text">Click or drag file to this area to upload</p>
         <p class="ant-upload-hint">
-          Support for a single or bulk upload. Strictly prohibit from uploading
-          company data or other band files
+          Support for a single or bulk upload. Strictly prohibit from uploading company data or
+          other band files
         </p>
       </a-upload-dragger>
     </a-form-item>
@@ -47,7 +47,7 @@
 <script>
 import { quillEditor } from 'vue3-quill'
 import { InboxOutlined } from '@ant-design/icons-vue'
-import { defineComponent, reactive, toRaw } from 'vue';
+import { defineComponent, reactive, toRaw } from 'vue'
 
 export default defineComponent({
   components: {
@@ -64,16 +64,16 @@ export default defineComponent({
       city: [],
       zip: '',
       agree: false,
-    });
+    })
 
     const onSubmit = () => {
-      console.log('submit!', toRaw(formState));
-    };
+      console.log('submit!', toRaw(formState))
+    }
 
     return {
       formState,
       onSubmit,
-    };
+    }
   },
-});
+})
 </script>

@@ -6,8 +6,8 @@
         <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
-        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut
-        labore et dolore magna elit enim at minim veniam quis nostrud
+        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut labore et dolore magna
+        elit enim at minim veniam quis nostrud
       </div>
     </li>
     <li :class="$style.item">
@@ -23,8 +23,7 @@
         <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
-        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut
-        labore et dolore
+        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut labore et dolore
       </div>
     </li>
     <li :class="$style.item">
@@ -33,8 +32,8 @@
         <div :class="[$style.donut, $style.danger]" class="mr-3" />
       </div>
       <div>
-        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut
-        labore et dolore magna elit enim at minim veniam quis nostrud
+        Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut labore et dolore magna
+        elit enim at minim veniam quis nostrud
       </div>
     </li>
   </ul>
@@ -45,5 +44,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

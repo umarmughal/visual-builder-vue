@@ -36,26 +36,17 @@
               <template #overlay>
                 <a-menu>
                   <a-menu-item>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="http://www.alipay.com/"
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/"
                       >1st menu item</a
                     >
                   </a-menu-item>
                   <a-menu-item>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="http://www.taobao.com/"
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/"
                       >2nd menu item</a
                     >
                   </a-menu-item>
                   <a-menu-item>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="http://www.tmall.com/"
+                    <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/"
                       >3rd menu item</a
                     >
                   </a-menu-item>
@@ -72,10 +63,7 @@
         </h5>
         <div class="mb-5">
           <a-dropdown :trigger="['contextmenu']">
-            <div
-              class="bg-light"
-              style="text-align: center; height: 200px; line-height: 200px"
-            >
+            <div class="bg-light" style="text-align: center; height: 200px; line-height: 200px">
               Right Click on Me
             </div>
             <template #overlay>
@@ -96,14 +84,7 @@ export default {
   name: 'KitAntdDropdownExample',
   data() {
     return {
-      placements: [
-        'bottomLeft',
-        'bottomCenter',
-        'bottomRight',
-        'topLeft',
-        'topCenter',
-        'topRight',
-      ],
+      placements: ['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight'],
     }
   },
 }

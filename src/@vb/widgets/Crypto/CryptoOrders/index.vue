@@ -24,19 +24,11 @@
         <div :class="$style.form">
           <a-form layout="vertical">
             <a-form-item>
-              <a-radio-group
-                default-value="buy"
-                style="width: 100%"
-                @change="toggleOrderType"
-              >
-                <a-radio-button
-                  value="buy"
-                  style="width: 50%; text-align: center"
+              <a-radio-group default-value="buy" style="width: 100%" @change="toggleOrderType">
+                <a-radio-button value="buy" style="width: 50%; text-align: center"
                   >BUY</a-radio-button
                 >
-                <a-radio-button
-                  value="sell"
-                  style="width: 50%; text-align: center"
+                <a-radio-button value="sell" style="width: 50%; text-align: center"
                   >SELL</a-radio-button
                 >
               </a-radio-group>
@@ -45,12 +37,8 @@
               <span :class="$style.formLabel">ORDER TYPE</span>
               <a-form-item>
                 <a-select default-value="limit">
-                  <a-select-option value="limit"
-                    >Limit (Default)</a-select-option
-                  >
-                  <a-select-option value="conditional"
-                    >Conditional</a-select-option
-                  >
+                  <a-select-option value="limit">Limit (Default)</a-select-option>
+                  <a-select-option value="conditional">Conditional</a-select-option>
                 </a-select>
               </a-form-item>
               <span :class="$style.formLabel">QUANTITY (BTC)</span>
@@ -68,12 +56,8 @@
               <span :class="$style.formLabel">TIME IN FORCE</span>
               <a-form-item>
                 <a-select default-value="good">
-                  <a-select-option value="good"
-                    >Good &#39;Til Cancelled (Default)</a-select-option
-                  >
-                  <a-select-option value="immediate"
-                    >Immediate or Cancel</a-select-option
-                  >
+                  <a-select-option value="good">Good &#39;Til Cancelled (Default)</a-select-option>
+                  <a-select-option value="immediate">Immediate or Cancel</a-select-option>
                 </a-select>
               </a-form-item>
               <button class="btn btn-success" type="button" style="width: 100%">
@@ -96,12 +80,8 @@
               <span :class="$style.formLabel">ORDER TYPE</span>
               <a-form-item>
                 <a-select default-value="limit">
-                  <a-select-option value="limit"
-                    >Limit (Default)</a-select-option
-                  >
-                  <a-select-option value="conditional"
-                    >Conditional</a-select-option
-                  >
+                  <a-select-option value="limit">Limit (Default)</a-select-option>
+                  <a-select-option value="conditional">Conditional</a-select-option>
                 </a-select>
               </a-form-item>
               <span :class="$style.formLabel">QUANTITY (BTC)</span>
@@ -119,12 +99,8 @@
               <span :class="$style.formLabel">TIME IN FORCE</span>
               <a-form-item>
                 <a-select default-value="good">
-                  <a-select-option value="good"
-                    >Good &#39;Til Cancelled (Default)</a-select-option
-                  >
-                  <a-select-option value="immediate"
-                    >Immediate or Cancel</a-select-option
-                  >
+                  <a-select-option value="good">Good &#39;Til Cancelled (Default)</a-select-option>
+                  <a-select-option value="immediate">Immediate or Cancel</a-select-option>
                 </a-select>
               </a-form-item>
               <button class="btn btn-danger" type="button" style="width: 100%">
@@ -458,7 +434,7 @@ export default {
   setup() {
     const orderType = ref('buy')
 
-    const toggleOrderType = (e) => {
+    const toggleOrderType = e => {
       orderType.value = e.target.value
     }
 
@@ -475,5 +451,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -27,7 +27,9 @@
           <div class="card-body"><vb-typography-2 /></div>
         </div>
         <div class="card bg-light">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Tinted' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Tinted' }" />
+          </div>
           <div class="card-body"><vb-typography-2 /></div>
         </div>
       </div>
@@ -45,7 +47,9 @@
           <div class="card-body"><vb-typography-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'With Footer' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'With Footer' }" />
+          </div>
           <div class="card-body"><vb-typography-2 /></div>
           <div class="card-footer">
             <vb-headers-card-footer

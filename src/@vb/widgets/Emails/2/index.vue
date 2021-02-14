@@ -33,11 +33,7 @@
           </tbody>
         </table>
         <div style="padding: 40px 40px 20px; background: rgb(255, 255, 255)">
-          <table
-            cellpadding="0"
-            cellspacing="0"
-            style="width: 100%; border: 0px"
-          >
+          <table cellpadding="0" cellspacing="0" style="width: 100%; border: 0px">
             <tbody>
               <tr>
                 <td>
@@ -51,8 +47,8 @@
                     Password Reset
                   </h5>
                   <p>
-                    Seems like you forgot your password for Clean UI KIT Pro. If
-                    this is true, click below to reset your password.
+                    Seems like you forgot your password for Clean UI KIT Pro. If this is true, click
+                    below to reset your password.
                   </p>
                   <div style="text-align: center">
                     <a
@@ -69,8 +65,7 @@
                     >
                   </div>
                   <p>
-                    If you did not forgot your password you can safely ignore
-                    his email.
+                    If you did not forgot your password you can safely ignore his email.
                   </p>
                   <p>Regards,<br />Sellpixels.com</p>
                 </td>
@@ -87,10 +82,8 @@
           "
         >
           <p>
-            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't
-            like these emails?
-            <a style="color: rgb(160, 155, 185); text-decoration: underline"
-              >Unsubscribe</a
+            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't like these emails?
+            <a style="color: rgb(160, 155, 185); text-decoration: underline">Unsubscribe</a
             ><br />Powered by Visual Builder
           </p>
         </div>

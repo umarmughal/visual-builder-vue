@@ -54,7 +54,7 @@ export default {
     const settings = computed(() => store.getters.settings)
     const language = computed(() => store.getters.settings.locale.substr(0, 2))
 
-    const selectLocale = (item) => {
+    const selectLocale = item => {
       const setting = 'locale'
       store.commit('CHANGE_SETTING', { setting, value: item.key })
     }
@@ -70,5 +70,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

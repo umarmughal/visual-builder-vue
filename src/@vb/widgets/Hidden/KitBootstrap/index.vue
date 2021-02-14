@@ -6,11 +6,7 @@
         :key="item.name"
         type="button"
         class="btn btn-light mr-2 mb-2"
-        :class="[
-          selectedExampleIndex === index
-            ? 'bg-primary text-white'
-            : 'text-primary',
-        ]"
+        :class="[selectedExampleIndex === index ? 'bg-primary text-white' : 'text-primary']"
         @click="setExample(index)"
       >
         {{ item.name }}
@@ -20,11 +16,7 @@
       <div class="card-header border-bottom">
         <h5>
           <strong class="mr-3">{{ example.name }}</strong>
-          <a
-            :href="example.link"
-            target="_blank"
-            class="btn btn-sm btn-light mr-3"
-          >
+          <a :href="example.link" target="_blank" class="btn btn-sm btn-light mr-3">
             Documentation
             <i class="fe fe-external-link ml-2"></i>
           </a>
@@ -120,7 +112,7 @@ export default {
     'vb-bootstrap-toast-example': VbBootstrapToastExample,
     'vb-bootstrap-tooltip-example': VbBootstrapTooltipExample,
   },
-  data: function () {
+  data: function() {
     const selectedExampleIndex = 0
     const example = data[selectedExampleIndex]
 
@@ -131,7 +123,7 @@ export default {
     }
   },
   methods: {
-    setExample: function (index) {
+    setExample: function(index) {
       this.selectedExampleIndex = index
       this.example = data[index]
     },

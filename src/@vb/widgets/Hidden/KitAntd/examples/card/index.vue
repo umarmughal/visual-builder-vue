@@ -46,10 +46,7 @@
                 <a-icon type="edit" />
                 <a-icon type="ellipsis" />
               </template>
-              <a-card-meta
-                title="Card title"
-                description="This is the description"
-              >
+              <a-card-meta title="Card title" description="This is the description">
                 <template #avatar>
                   <a-avatar
                     src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
@@ -59,10 +56,7 @@
             </a-card>
           </div>
           <div class="mb-3">
-            <a-card
-              style="width: 300px; margin-top: 16px"
-              :loading="true"
-              title="Card title"
+            <a-card style="width: 300px; margin-top: 16px" :loading="true" title="Card title"
               >whatever content</a-card
             >
           </div>

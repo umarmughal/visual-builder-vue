@@ -44,7 +44,8 @@ export default {
     },
     name: {
       type: String,
-      default: 'TP-Link AC1750 Smart WiFi Router - Dual Band Gigabit Wireless Internet Routers for Home',
+      default:
+        'TP-Link AC1750 Smart WiFi Router - Dual Band Gigabit Wireless Internet Routers for Home',
     },
     price: {
       type: String,
@@ -55,13 +56,13 @@ export default {
       default: '199.99',
     },
   },
-  data: function () {
+  data: function() {
     return {
       favorite: this.isFavorite,
     }
   },
   methods: {
-    toggleFavorite: function (event) {
+    toggleFavorite: function(event) {
       event.preventDefault()
       this.favorite = !this.favorite
     },
@@ -69,5 +70,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -66,7 +66,11 @@
         <div class="card-placeholder">
           <div class="card-header">
             <vb-headers-heading-3
-              :data="{ title: 'Your Cards (3)', button: 'View All', url: 'https://google.com' }"
+              :data="{
+                title: 'Your Cards (3)',
+                button: 'View All',
+                url: 'https://google.com',
+              }"
             />
           </div>
         </div>
@@ -94,7 +98,11 @@
         <div class="card-placeholder">
           <div class="card-header">
             <vb-headers-heading-3
-              :data="{ title: 'Your accounts', button: 'View All', url: 'https://google.com' }"
+              :data="{
+                title: 'Your accounts',
+                button: 'View All',
+                url: 'https://google.com',
+              }"
             />
           </div>
         </div>

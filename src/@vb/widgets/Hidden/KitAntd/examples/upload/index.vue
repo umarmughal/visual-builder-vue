@@ -11,9 +11,7 @@
         :headers="headers"
         @change="handleChange"
       >
-        <a-button>
-          <a-icon type="upload" />Click to Upload
-        </a-button>
+        <a-button> <a-icon type="upload" />Click to Upload </a-button>
       </a-upload>
     </div>
     <h5 class="mb-3">
@@ -31,8 +29,8 @@
         </p>
         <p class="ant-upload-text">Click or drag file to this area to upload</p>
         <p class="ant-upload-hint">
-          Support for a single or bulk upload. Strictly prohibit from uploading company data or other
-          band files
+          Support for a single or bulk upload. Strictly prohibit from uploading company data or
+          other band files
         </p>
       </a-upload-dragger>
     </div>

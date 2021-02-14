@@ -10,7 +10,7 @@
       href="javascript: void(0);"
       :class="styles.air__menuTop__link"
       @click="() => handleSubmenuClick(item.key)"
-      @mouseenter="(event) => handleFlyoutOver(event, item.key, item.children)"
+      @mouseenter="event => handleFlyoutOver(event, item.key, item.children)"
       @mouseleave="handleFlyoutOut(item.key)"
     >
       <i
@@ -20,11 +20,9 @@
         }"
       />
       <span>{{ item.title }}</span>
-      <span
-        v-if="item.count"
-        class="badge text-white bg-blue-light float-right mt-1 px-2"
-        >{{ item.count }}</span
-      >
+      <span v-if="item.count" class="badge text-white bg-blue-light float-right mt-1 px-2">{{
+        item.count
+      }}</span>
     </a>
     <ul :class="styles.air__menuTop__list">
       <template v-for="(menuItem, index) in item.children">
@@ -49,11 +47,11 @@ export default {
   props: {
     item: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     styles: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     activeSubmenu: {
       type: String,
@@ -65,15 +63,15 @@ export default {
     },
     handleSubmenuClick: {
       type: Function,
-      default: () => { },
+      default: () => {},
     },
     handleFlyoutOver: {
       type: Function,
-      default: () => { },
+      default: () => {},
     },
     handleFlyoutOut: {
       type: Function,
-      default: () => { },
+      default: () => {},
     },
   },
 }

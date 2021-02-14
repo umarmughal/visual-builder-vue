@@ -6,11 +6,7 @@
         :key="item.name"
         type="button"
         class="btn btn-light mr-2 mb-2"
-        :class="[
-          selectedExampleIndex === index
-            ? 'bg-primary text-white'
-            : 'text-primary',
-        ]"
+        :class="[selectedExampleIndex === index ? 'bg-primary text-white' : 'text-primary']"
         @click="setExample(index)"
       >
         {{ item.name }}
@@ -151,7 +147,7 @@ export default {
     'kit-antd-backtop-example': KitAntdBackTopExample,
     'kit-antd-divider-example': KitAntdDividerExample,
   },
-  data: function () {
+  data: function() {
     const selectedExampleIndex = 0
     const example = data[selectedExampleIndex]
 
@@ -162,7 +158,7 @@ export default {
     }
   },
   methods: {
-    setExample: function (index) {
+    setExample: function(index) {
       this.selectedExampleIndex = index
       this.example = data[index]
     },

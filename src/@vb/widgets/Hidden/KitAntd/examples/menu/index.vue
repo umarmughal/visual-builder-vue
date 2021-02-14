@@ -5,12 +5,8 @@
     </h5>
     <div class="mb-5">
       <a-menu v-model="current" mode="horizontal">
-        <a-menu-item key="mail">
-          <a-icon type="mail" />Navigation One
-        </a-menu-item>
-        <a-menu-item key="app" disabled>
-          <a-icon type="appstore" />Navigation Two
-        </a-menu-item>
+        <a-menu-item key="mail"> <a-icon type="mail" />Navigation One </a-menu-item>
+        <a-menu-item key="app" disabled> <a-icon type="appstore" />Navigation Two </a-menu-item>
         <a-sub-menu>
           <template #title>
             <span class="submenu-title-wrapper">
@@ -38,12 +34,8 @@
     </h5>
     <div class="mb-5">
       <a-menu style="width: 256px" mode="vertical">
-        <a-menu-item key="1">
-          <a-icon type="mail" />Navigation One
-        </a-menu-item>
-        <a-menu-item key="2">
-          <a-icon type="calendar" />Navigation Two
-        </a-menu-item>
+        <a-menu-item key="1"> <a-icon type="mail" />Navigation One </a-menu-item>
+        <a-menu-item key="2"> <a-icon type="calendar" />Navigation Two </a-menu-item>
         <a-sub-menu key="sub1">
           <template #title>
             <span>

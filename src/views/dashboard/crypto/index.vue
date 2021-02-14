@@ -14,7 +14,9 @@
           <div class="card-body"><vb-crypto-crypto-chart /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Order Book' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Order Book' }" />
+          </div>
           <div class="card-body"><vb-crypto-crypto-orders /></div>
         </div>
         <div class="card">

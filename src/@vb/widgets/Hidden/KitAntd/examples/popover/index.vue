@@ -11,12 +11,7 @@
         </template>
         <a-button type="primary">Default Popover</a-button>
       </a-popover>
-      <a-popover
-        title="Title"
-        placement="topLeft"
-        arrow-point-at-center
-        class="mr-3 mb-3"
-      >
+      <a-popover title="Title" placement="topLeft" arrow-point-at-center class="mr-3 mb-3">
         <template #content>
           <p>Content</p>
           <p>Content</p>

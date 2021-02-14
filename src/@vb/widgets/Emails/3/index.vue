@@ -33,11 +33,7 @@
           </tbody>
         </table>
         <div style="padding: 40px 40px 20px; background: rgb(255, 255, 255)">
-          <table
-            cellpadding="0"
-            cellspacing="0"
-            style="width: 100%; border: 0px"
-          >
+          <table cellpadding="0" cellspacing="0" style="width: 100%; border: 0px">
             <tbody>
               <tr>
                 <td>
@@ -51,9 +47,7 @@
                     Thanks for Purchase!
                   </h2>
                   <p>
-                    <span style="color: rgb(160, 155, 185)"
-                      >Monday, Dec 28 2015 at 4:13 PM</span
-                    >
+                    <span style="color: rgb(160, 155, 185)">Monday, Dec 28 2015 at 4:13 PM</span>
                   </p>
                   <br />
                   <h5
@@ -65,11 +59,7 @@
                   >
                     Your Order #00002345
                   </h5>
-                  <table
-                    cellpadding="0"
-                    cellspacing="0"
-                    style="width: 100%; border: 0px"
-                  >
+                  <table cellpadding="0" cellspacing="0" style="width: 100%; border: 0px">
                     <tbody>
                       <tr>
                         <td
@@ -271,9 +261,7 @@
                             border-top: 3px solid rgb(81, 77, 106);
                           "
                         >
-                          <span style="font-size: 18px; font-weight: bold"
-                            >Total</span
-                          >
+                          <span style="font-size: 18px; font-weight: bold">Total</span>
                         </td>
                         <td
                           style="
@@ -292,9 +280,7 @@
                             border-top: 3px solid rgb(81, 77, 106);
                           "
                         >
-                          <span style="font-size: 18px; font-weight: bold"
-                            >$ 876.96</span
-                          >
+                          <span style="font-size: 18px; font-weight: bold">$ 876.96</span>
                         </td>
                       </tr>
                     </tbody>
@@ -309,11 +295,7 @@
                   >
                     Your Details
                   </h5>
-                  <table
-                    cellpadding="0"
-                    cellspacing="0"
-                    style="width: 100%; border: 0px"
-                  >
+                  <table cellpadding="0" cellspacing="0" style="width: 100%; border: 0px">
                     <tbody>
                       <tr>
                         <td
@@ -334,8 +316,7 @@
                             border-top: 1px solid rgb(217, 215, 224);
                           "
                         >
-                          Tony Stark<br />22 23rd Street<br />San Francisco<br />CA
-                          94107
+                          Tony Stark<br />22 23rd Street<br />San Francisco<br />CA 94107
                         </td>
                       </tr>
                       <tr>
@@ -388,10 +369,8 @@
           "
         >
           <p>
-            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't
-            like these emails?
-            <a style="color: rgb(160, 155, 185); text-decoration: underline"
-              >Unsubscribe</a
+            Sellpixels.com LTD., Abbey Road, San Francisco CA 94102<br />Don't like these emails?
+            <a style="color: rgb(160, 155, 185); text-decoration: underline">Unsubscribe</a
             ><br />Powered by Visual Builder
           </p>
         </div>

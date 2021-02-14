@@ -7,30 +7,17 @@
             <strong>Headings</strong>
           </h5>
           <p class="text-muted">
-            All HTML headings, <code>&lt;h1&gt;</code> through
-            <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through
-            <code>.h6</code> classes are also available, for when you want to
-            match the font styling of a heading but still want your text to be
+            All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are
+            available. <code>.h1</code> through <code>.h6</code> classes are also available, for
+            when you want to match the font styling of a heading but still want your text to be
             displayed inline
           </p>
-          <h1>
-            h1. Bootstrap heading <span class="badge badge-default">LABEL</span>
-          </h1>
-          <h2>
-            h2. Bootstrap heading <span class="badge badge-primary">LABEL</span>
-          </h2>
-          <h3>
-            h3. Bootstrap heading <span class="badge badge-info">LABEL</span>
-          </h3>
-          <h4>
-            h4. Bootstrap heading <span class="badge badge-danger">LABEL</span>
-          </h4>
-          <h5>
-            h5. Bootstrap heading <span class="badge badge-success">LABEL</span>
-          </h5>
-          <h6>
-            h6. Bootstrap heading <span class="badge badge-warning">LABEL</span>
-          </h6>
+          <h1>h1. Bootstrap heading <span class="badge badge-default">LABEL</span></h1>
+          <h2>h2. Bootstrap heading <span class="badge badge-primary">LABEL</span></h2>
+          <h3>h3. Bootstrap heading <span class="badge badge-info">LABEL</span></h3>
+          <h4>h4. Bootstrap heading <span class="badge badge-danger">LABEL</span></h4>
+          <h5>h5. Bootstrap heading <span class="badge badge-success">LABEL</span></h5>
+          <h6>h6. Bootstrap heading <span class="badge badge-warning">LABEL</span></h6>
         </div>
       </div>
       <div class="col-lg-6">
@@ -82,12 +69,11 @@
             <strong>Body Copy</strong>
           </h5>
           <p>
-            Bootstrap&apos;s global default <code>font-size</code> is
-            <strong>1rem</strong>, with a<code>line-height</code> of
-            <strong>1.5</strong>. This is applied to the
+            Bootstrap&apos;s global default <code>font-size</code> is <strong>1rem</strong>, with
+            a<code>line-height</code> of <strong>1.5</strong>. This is applied to the
             <code>&lt;body&gt;</code> and all paragraphs. In addition,
-            <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half
-            their computed line-height (1rem by default)
+            <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed
+            line-height (1rem by default)
           </p>
         </div>
       </div>
@@ -97,8 +83,7 @@
             <strong>Highlight</strong>
           </h5>
           <p>
-            For highlighting a run of text due to its relevance in another
-            context, use the
+            For highlighting a run of text due to its relevance in another context, use the
             <code>&lt;mark&gt;</code> tag. Like this:
           </p>
           <p>You can use the mark tag to <mark>highlight</mark> text</p>
@@ -110,8 +95,8 @@
             <strong>Addresses</strong>
           </h5>
           <p>
-            Present contact information for the nearest ancestor or the entire
-            body of work. Preserve formatting by ending all lines with
+            Present contact information for the nearest ancestor or the entire body of work.
+            Preserve formatting by ending all lines with
             <code>&lt;br&gt;</code>
           </p>
           <address>
@@ -185,8 +170,8 @@
             <strong>Lists - Unstyled</strong>
           </h5>
           <p class="text-muted">
-            Remove the default default styles and left margin on list items.
-            Apply to each nested lists if you need
+            Remove the default default styles and left margin on list items. Apply to each nested
+            lists if you need
           </p>
           <ul class="list-unstyled">
             <li>Lorem ipsum dolor sit amet</li>
@@ -304,8 +289,7 @@
             <strong>Horizontal Description</strong>
           </h5>
           <p class="text-muted">
-            Use the well as a simple effect on an element to give it an inset
-            effect
+            Use the well as a simple effect on an element to give it an inset effect
           </p>
           <dl class="row">
             <dt class="col-sm-3">Description lists</dt>
@@ -315,8 +299,7 @@
 
             <dt class="col-sm-3">Euismod</dt>
             <dd class="col-sm-9">
-              Vestibulum id ligula porta felis euismod semper eget lacinia odio
-              sem nec elit.
+              Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
             </dd>
             <dd class="col-sm-9 offset-sm-3">
               Donec id elit non mi porta gravida at eget metus.
@@ -329,8 +312,8 @@
 
             <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
             <dd class="col-sm-9">
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-              nibh, ut fermentum massa justo sit amet risus.
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+              massa justo sit amet risus.
             </dd>
 
             <dt class="col-sm-3">Malesuada porta</dt>
@@ -348,22 +331,19 @@
         </h5>
         <p class="text-muted">
           Add a
-          <code>&lt;footer class=&quot;blockquote-footer&quot;&gt;</code> for
-          identifying the source. Wrap the name of the source work in
-          <code>&lt;cite&gt;</code>.
+          <code>&lt;footer class=&quot;blockquote-footer&quot;&gt;</code> for identifying the
+          source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
         </p>
         <div class="row">
           <div class="col-lg-10 mb-2">
             <blockquote class="blockquote">
               <p class="mb-0">
-                Led cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
-                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. at
-                nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                Fusce nec tellus sed augue semper porta. Mauris massa.
-                Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu
-                ad litora torquent per conubia nostra, per inceptos himenaeos.
-                Curabitur sodales ligula in libero. Sed dignissim lacinia
-                nunc.sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
+                Led cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                Duis sagittis ipsum. Praesent mauris. at nibh elementum imperdiet. Duis sagittis
+                ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+                Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent
+                per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
+                dignissim lacinia nunc.sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
                 nibh elementum imperdiet
               </p>
               <footer class="blockquote-footer">
@@ -376,14 +356,12 @@
           <div class="col-lg-10 offset-lg-2">
             <blockquote class="blockquote blockquote-reverse">
               <p class="mb-0">
-                Led cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
-                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. at
-                nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                Fusce nec tellus sed augue semper porta. Mauris massa.
-                Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu
-                ad litora torquent per conubia nostra, per inceptos himenaeos.
-                Curabitur sodales ligula in libero. Sed dignissim lacinia
-                nunc.sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
+                Led cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+                Duis sagittis ipsum. Praesent mauris. at nibh elementum imperdiet. Duis sagittis
+                ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+                Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent
+                per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
+                dignissim lacinia nunc.sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
                 nibh elementum imperdiet
               </p>
               <footer class="blockquote-footer">

@@ -7,12 +7,7 @@
     </div>
     <div class="d-inline-flex align-items-center">
       <a-dropdown placement="bottomRight" :trigger="['click']">
-        <a
-          class="nav-link dropdown-toggle"
-          href="javascript: void(0);"
-          role="button"
-          >Dropdown</a
-        >
+        <a class="nav-link dropdown-toggle" href="javascript: void(0);" role="button">Dropdown</a>
         <template #overlay>
           <a-menu>
             <a-menu-item>

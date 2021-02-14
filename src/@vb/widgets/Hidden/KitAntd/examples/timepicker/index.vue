@@ -4,10 +4,7 @@
       <strong>Basic</strong>
     </h5>
     <div class="mb-5">
-      <a-time-picker
-        @change="onChange"
-        :default-open-value="moment('00:00:00', 'HH:mm:ss')"
-      />
+      <a-time-picker @change="onChange" :default-open-value="moment('00:00:00', 'HH:mm:ss')" />
     </div>
   </div>
 </template>

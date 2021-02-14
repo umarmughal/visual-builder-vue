@@ -1,8 +1,6 @@
 <template>
   <div class="d-flex flex-nowrap align-items-start">
-    <div
-      class="mr-4 flex-shrink-0 align-self-start vb__utils__avatar vb__utils__avatar--size64"
-    >
+    <div class="mr-4 flex-shrink-0 align-self-start vb__utils__avatar vb__utils__avatar--size64">
       <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
     </div>
     <div class="flex-grow-1">
@@ -17,11 +15,7 @@
           </div>
           <div class="nav-item dropdown">
             <a-dropdown placement="bottomRight" :trigger="['click']">
-              <a
-                class="nav-link dropdown-toggle pt-sm-0"
-                href="javascript: void(0);"
-                >Actions</a
-              >
+              <a class="nav-link dropdown-toggle pt-sm-0" href="javascript: void(0);">Actions</a>
               <template #overlay>
                 <a-menu>
                   <a-menu-item>
@@ -46,9 +40,7 @@
           Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
           <br />incididunt ut labore et dolore magna elit
         </div>
-        <div
-          class="d-flex flex-wrap justify-content-start align-items-start mb-3"
-        >
+        <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
           <a class="text-blue mr-3" href="javascript: void(0);">
             <i class="fe fe-heart mr-1" /> 61 Likes
           </a>
@@ -75,9 +67,7 @@
               </div>
               <div class="nav-item dropdown">
                 <a-dropdown placement="bottomRight" :trigger="['click']">
-                  <a
-                    class="nav-link dropdown-toggle pt-sm-0"
-                    href="javascript: void(0);"
+                  <a class="nav-link dropdown-toggle pt-sm-0" href="javascript: void(0);"
                     >Actions</a
                   >
                   <template #overlay>
@@ -104,9 +94,7 @@
               Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
               <br />incididunt ut labore et dolore magna elit
             </div>
-            <div
-              class="d-flex flex-wrap justify-content-start align-items-start mb-3"
-            >
+            <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-heart mr-1" /> 61 Likes
               </a>
@@ -135,9 +123,7 @@
               </div>
               <div class="nav-item dropdown">
                 <a-dropdown placement="bottomRight" :trigger="['click']">
-                  <a
-                    class="nav-link dropdown-toggle pt-sm-0"
-                    href="javascript: void(0);"
+                  <a class="nav-link dropdown-toggle pt-sm-0" href="javascript: void(0);"
                     >Actions</a
                   >
                   <template #overlay>
@@ -164,9 +150,7 @@
               Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
               <br />incididunt ut labore et dolore magna elit
             </div>
-            <div
-              class="d-flex flex-wrap justify-content-start align-items-start mb-3"
-            >
+            <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-heart mr-1" /> 61 Likes
               </a>
@@ -195,9 +179,7 @@
               </div>
               <div class="nav-item dropdown">
                 <a-dropdown placement="bottomRight" :trigger="['click']">
-                  <a
-                    class="nav-link dropdown-toggle pt-sm-0"
-                    href="javascript: void(0);"
+                  <a class="nav-link dropdown-toggle pt-sm-0" href="javascript: void(0);"
                     >Actions</a
                   >
                   <template #overlay>
@@ -224,9 +206,7 @@
               Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
               <br />incididunt ut labore et dolore magna elit
             </div>
-            <div
-              class="d-flex flex-wrap justify-content-start align-items-start mb-3"
-            >
+            <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-heart mr-1" /> 61 Likes
               </a>
@@ -255,9 +235,7 @@
               </div>
               <div class="nav-item dropdown">
                 <a-dropdown placement="bottomRight" :trigger="['click']">
-                  <a
-                    class="nav-link dropdown-toggle pt-sm-0"
-                    href="javascript: void(0);"
+                  <a class="nav-link dropdown-toggle pt-sm-0" href="javascript: void(0);"
                     >Actions</a
                   >
                   <template #overlay>
@@ -284,9 +262,7 @@
               Lorem ipsum dolor sit amit,consectetur eiusmdd tempory
               <br />incididunt ut labore et dolore magna elit
             </div>
-            <div
-              class="d-flex flex-wrap justify-content-start align-items-start mb-3"
-            >
+            <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-heart mr-1" /> 61 Likes
               </a>

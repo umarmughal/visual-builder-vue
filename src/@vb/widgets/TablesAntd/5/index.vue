@@ -63,7 +63,7 @@ const columns = [
     sorter: (a, b) => a.address.length - b.address.length,
     sortDirections: ['descend', 'ascend'],
   },
-];
+]
 const data = [
   {
     key: '1',
@@ -95,14 +95,14 @@ export default {
   name: 'TablesAntdCustomFilter',
   setup() {
     const onChange = (pagination, filters, sorter) => {
-      console.log('params', pagination, filters, sorter);
-    };
+      console.log('params', pagination, filters, sorter)
+    }
 
     return {
       data,
       columns,
       onChange,
-    };
+    }
   },
 }
 </script>

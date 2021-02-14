@@ -7,10 +7,7 @@
     <div v-for="item in data" :key="item.id">
       <a href="#" class="clearfix" :class="$style.item">
         <div :class="$style.image">
-          <img
-            :src="`/resources/images/products/${item.img}`"
-            :alt="item.title"
-          />
+          <img :src="`/resources/images/products/${item.img}`" :alt="item.title" />
         </div>
         <div :class="$style.info">
           <div :class="$style.title">{{ item.title }}</div>
@@ -29,10 +26,7 @@
       </a>
     </div>
     <div :class="$style.footer">
-      <button
-        type="button"
-        class="btn btn-primary text-center d-block width-100p"
-      >
+      <button type="button" class="btn btn-primary text-center d-block width-100p">
         <i class="fe fe-shopping-cart" />
         Checkout
       </button>
@@ -92,5 +86,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

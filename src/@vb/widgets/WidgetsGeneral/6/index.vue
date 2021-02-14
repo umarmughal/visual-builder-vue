@@ -1,12 +1,6 @@
 <template>
-  <div
-    class="pt-3"
-    :class="$style.container"
-  >
-    <div
-      class="bg-danger"
-      :class="$style.status"
-    />
+  <div class="pt-3" :class="$style.container">
+    <div class="bg-danger" :class="$style.status" />
     <div class="d-flex flex-nowrap align-items-center pb-3 pl-4 pr-4">
       <div class="mr-auto">
         <div class="text-uppercase font-weight-bold font-size-24 text-dark">
@@ -20,10 +14,7 @@
         <i class="fe fe-arrow-right-circle font-size-40" />
       </div>
     </div>
-    <div
-      class="py-3 pl-4"
-      :class="$style.footer"
-    >
+    <div class="py-3 pl-4" :class="$style.footer">
       To DigitalOcean Cloud Hosting, Winnetka, LA
     </div>
   </div>
@@ -34,5 +25,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

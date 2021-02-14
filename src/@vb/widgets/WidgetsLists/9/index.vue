@@ -12,8 +12,8 @@
         </div>
         <div>
           <div>
-            <strong class="text-primary">Bitcoin</strong> lorem Ipsum is simply
-            dummy text of the printing and...
+            <strong class="text-primary">Bitcoin</strong> lorem Ipsum is simply dummy text of the
+            printing and...
           </div>
           <div class="text-muted">Deposited</div>
         </div>
@@ -29,8 +29,8 @@
         </div>
         <div>
           <div>
-            <strong class="text-primary">Litecoint</strong> lorem Ipsum is
-            simply dummy text of the printing and...
+            <strong class="text-primary">Litecoint</strong> lorem Ipsum is simply dummy text of the
+            printing and...
           </div>
           <div class="text-muted">Deposited by PayPal</div>
         </div>
@@ -45,10 +45,7 @@
           <i :class="$style.itemIcon" class="text-danger fe fe-grid" />
         </div>
         <div>
-          <div>
-            <strong>Dash</strong> lorem Ipsum is simply dummy text of the
-            printing and...
-          </div>
+          <div><strong>Dash</strong> lorem Ipsum is simply dummy text of the printing and...</div>
           <div class="text-muted">To Dash adress</div>
         </div>
       </li>
@@ -63,8 +60,7 @@
         </div>
         <div>
           <div>
-            <strong>Bitcoin</strong> lorem Ipsum is simply dummy text of the
-            printing and...
+            <strong>Bitcoin</strong> lorem Ipsum is simply dummy text of the printing and...
           </div>
           <div class="text-muted">Deposited</div>
         </div>
@@ -80,8 +76,7 @@
         </div>
         <div>
           <div>
-            <strong>Litecoin</strong> lorem Ipsum is simply dummy text of the
-            printing and...
+            <strong>Litecoin</strong> lorem Ipsum is simply dummy text of the printing and...
           </div>
           <div class="text-muted">Deposited by PayPal</div>
         </div>
@@ -95,5 +90,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

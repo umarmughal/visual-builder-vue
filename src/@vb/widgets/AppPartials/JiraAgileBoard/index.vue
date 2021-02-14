@@ -2,24 +2,16 @@
   <div>
     <div class="d-flex align-items-center mb-4">
       <div class="vb__utils__avatarGroup mr-4 flex-shrink-0">
-        <div
-          class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
-        >
+        <div class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded">
           <img src="resources/images/avatars/1.jpg" alt="Mary Stanform" />
         </div>
-        <div
-          class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
-        >
+        <div class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded">
           <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
         </div>
-        <div
-          class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
-        >
+        <div class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded">
           <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
         </div>
-        <div
-          class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded"
-        >
+        <div class="vb__utils__avatar vb__utils__avatar--size46 vb__utils__avatar--rounded">
           <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
         </div>
         <button class="vb__utils__avatarGroupAdd">
@@ -33,12 +25,7 @@
       <div class="col-lg-3 col-md-6">
         <div :class="$style.column" class="card bg-light py-3 px-2">
           <h3 class="font-weight-bold text-dark font-size-18 mb-3">Backlog</h3>
-          <draggable
-            v-model="backlog"
-            item-key="id"
-            group="board"
-            style="min-height: 500px"
-          >
+          <draggable v-model="backlog" item-key="id" group="board" style="min-height: 500px">
             <template #item="{ element: item }">
               <div :class="$style.card">
                 <div :class="$style.content">
@@ -56,9 +43,7 @@
                       class="font-size-30 flex-shrink-0 fe"
                     ></i>
                   </div>
-                  <div class="text-gray-5 mb-2">
-                    Deadline {{ item.deadline }}
-                  </div>
+                  <div class="text-gray-5 mb-2">Deadline {{ item.deadline }}</div>
                   <div class="d-flex align-items-center flex-wrap pb-2">
                     <div
                       class="vb__utils__avatar vb__utils__avatar--rounded vb__utils__avatar--size27 flex-shrink-0 mr-2"
@@ -78,12 +63,7 @@
       <div class="col-lg-3 col-md-6">
         <div :class="$style.column" class="card bg-light py-3 px-2">
           <h3 class="font-weight-bold text-dark font-size-18 mb-3">To Do</h3>
-          <draggable
-            v-model="todo"
-            item-key="id"
-            group="board"
-            style="min-height: 500px"
-          >
+          <draggable v-model="todo" item-key="id" group="board" style="min-height: 500px">
             <template #item="{ element: item }">
               <div :class="$style.card">
                 <div :class="$style.content">
@@ -101,9 +81,7 @@
                       class="font-size-30 flex-shrink-0 fe"
                     ></i>
                   </div>
-                  <div class="text-gray-5 mb-2">
-                    Deadline {{ item.deadline }}
-                  </div>
+                  <div class="text-gray-5 mb-2">Deadline {{ item.deadline }}</div>
                   <div class="d-flex align-items-center flex-wrap pb-2">
                     <div
                       class="vb__utils__avatar vb__utils__avatar--rounded vb__utils__avatar--size27 flex-shrink-0 mr-2"
@@ -125,12 +103,7 @@
           <h3 class="font-weight-bold text-dark font-size-18 mb-3">
             In Progress
           </h3>
-          <draggable
-            v-model="progress"
-            item-key="id"
-            group="board"
-            style="min-height: 500px"
-          >
+          <draggable v-model="progress" item-key="id" group="board" style="min-height: 500px">
             <template #item="{ element: item }">
               <div :class="$style.card">
                 <div :class="$style.content">
@@ -148,9 +121,7 @@
                       class="font-size-30 flex-shrink-0 fe"
                     ></i>
                   </div>
-                  <div class="text-gray-5 mb-2">
-                    Deadline {{ item.deadline }}
-                  </div>
+                  <div class="text-gray-5 mb-2">Deadline {{ item.deadline }}</div>
                   <div class="d-flex align-items-center flex-wrap pb-2">
                     <div
                       class="vb__utils__avatar vb__utils__avatar--rounded vb__utils__avatar--size27 flex-shrink-0 mr-2"
@@ -172,12 +143,7 @@
           <h3 class="font-weight-bold text-dark font-size-18 mb-3">
             Completed
           </h3>
-          <draggable
-            v-model="completed"
-            item-key="id"
-            group="board"
-            style="min-height: 500px"
-          >
+          <draggable v-model="completed" item-key="id" group="board" style="min-height: 500px">
             <template #item="{ element: item }">
               <div :class="$style.card">
                 <div :class="$style.content">
@@ -195,9 +161,7 @@
                       class="font-size-30 flex-shrink-0 fe"
                     ></i>
                   </div>
-                  <div class="text-gray-5 mb-2">
-                    Deadline {{ item.deadline }}
-                  </div>
+                  <div class="text-gray-5 mb-2">Deadline {{ item.deadline }}</div>
                   <div class="d-flex align-items-center flex-wrap pb-2">
                     <div
                       class="vb__utils__avatar vb__utils__avatar--rounded vb__utils__avatar--size27 flex-shrink-0 mr-2"
@@ -242,5 +206,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

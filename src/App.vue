@@ -26,7 +26,7 @@ export default {
     // watch page title change
     watch(
       [logo, routeTitle],
-      ([logo, routeTitle]) => document.title = `${logo} | ${routeTitle}` || `${logo}`,
+      ([logo, routeTitle]) => (document.title = `${logo} | ${routeTitle}` || `${logo}`),
     )
 
     // initial auth check
@@ -35,9 +35,11 @@ export default {
     })
 
     // redirect if authorized and current page is login
-    watch(authorized, (authorized) => {
+    watch(authorized, authorized => {
       if (authorized) {
-        const query = qs.parse(currentRoute.value.fullPath.split('?')[1], { ignoreQueryPrefix: true })
+        const query = qs.parse(currentRoute.value.fullPath.split('?')[1], {
+          ignoreQueryPrefix: true,
+        })
         router.push(query.redirect || '/')
       }
     })

@@ -8,7 +8,11 @@
           </div>
           <div class="card-body">
             <vb-controls-button-2
-              :data="{ title: 'New Request', icon: 'fe fe-plus-circle', type: 'primary' }"
+              :data="{
+                title: 'New Request',
+                icon: 'fe fe-plus-circle',
+                type: 'primary',
+              }"
             />
           </div>
           <div class="card-body"><vb-typography-2 /></div>

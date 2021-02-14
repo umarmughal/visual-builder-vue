@@ -17,15 +17,9 @@
         <h5 class="mb-3">
           <strong>Customized</strong>
         </h5>
-        <a-auto-complete
-          style="width: 200px"
-          @search="handleSearchCustom"
-          placeholder="input here"
-        >
+        <a-auto-complete style="width: 200px" @search="handleSearchCustom" placeholder="input here">
           <template #dataSource>
-            <a-select-option v-for="email in result" :key="email">{{
-              email
-            }}</a-select-option>
+            <a-select-option v-for="email in result" :key="email">{{ email }}</a-select-option>
           </template>
         </a-auto-complete>
       </div>

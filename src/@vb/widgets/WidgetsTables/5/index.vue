@@ -62,7 +62,7 @@ const columns = [
 
 export default {
   name: 'VbTable5',
-  data: function () {
+  data: function() {
     return {
       columns,
       data,

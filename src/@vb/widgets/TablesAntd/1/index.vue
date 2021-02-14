@@ -9,13 +9,7 @@
       }"
     >
       <template #favorites="{ text: value }">
-        <i
-          :class="[
-            value
-              ? 'icmn-star-full text-warning'
-              : 'icmn-star-full text-default',
-          ]"
-        />
+        <i :class="[value ? 'icmn-star-full text-warning' : 'icmn-star-full text-default']" />
       </template>
       <template #from="{ text }">
         <a href="javascript: void(0);">{{ text }}</a>
@@ -61,7 +55,7 @@ const columns = [
 export default {
   setup() {
     const selectedRowKeys = ref([])
-    const onSelectChange = (keys) => {
+    const onSelectChange = keys => {
       selectedRowKeys.value = keys
     }
 

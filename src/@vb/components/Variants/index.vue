@@ -29,10 +29,7 @@
           <h6 class="mb-3">
             <strong>Visual Builder Style</strong>
           </h6>
-          <a-radio-group
-            :default-value="version"
-            @change="changeSettingEvent($event, 'version')"
-          >
+          <a-radio-group :default-value="version" @change="changeSettingEvent($event, 'version')">
             <a-radio-button :value="'fluent'">Fluent</a-radio-button>
             <a-radio-button :value="'clean'">Clean</a-radio-button>
             <a-radio-button :value="'air'">Air</a-radio-button>
@@ -44,10 +41,7 @@
           <h6 class="mb-3">
             <strong>Theme</strong>
           </h6>
-          <a-radio-group
-            :default-value="theme"
-            @change="changeSettingEvent($event, 'theme')"
-          >
+          <a-radio-group :default-value="theme" @change="changeSettingEvent($event, 'theme')">
             <a-radio-button :value="'default'">Light</a-radio-button>
             <a-radio-button :value="'dark'">Dark</a-radio-button>
           </a-radio-group>
@@ -72,7 +66,10 @@ export default {
     const variant = ref('default')
 
     const closeModal = () => {
-      store.commit('CHANGE_SETTING', { setting: 'isPreselectedOpen', value: false })
+      store.commit('CHANGE_SETTING', {
+        setting: 'isPreselectedOpen',
+        value: false,
+      })
     }
 
     const changeSettingEvent = (e, setting) => {
@@ -80,7 +77,7 @@ export default {
       store.commit('CHANGE_SETTING', { setting, value })
     }
 
-    const applyVariant = (key) => {
+    const applyVariant = key => {
       variant.value = key
       const payload = JSON.parse(JSON.stringify(themes[key]))
       if (theme.value === 'dark') {
@@ -89,7 +86,7 @@ export default {
       store.commit('CHANGE_SETTING_BULK', payload)
     }
 
-    watch(preselectedVariant, (preselectedVariant) => {
+    watch(preselectedVariant, preselectedVariant => {
       applyVariant(preselectedVariant)
     })
 
@@ -109,5 +106,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

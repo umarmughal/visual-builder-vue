@@ -18,11 +18,7 @@
     </div>
     <div class="py-3 border-bottom">
       <div class="font-weight-bold mb-2">Notifications</div>
-      <a
-        href="#"
-        onClick="javascript: void(0)"
-        class="btn btn-light text-blue mb-2"
-      >
+      <a href="#" onClick="javascript: void(0)" class="btn btn-light text-blue mb-2">
         Subscribe
       </a>
       <div>You’re not receiving notifications from this thread.</div>

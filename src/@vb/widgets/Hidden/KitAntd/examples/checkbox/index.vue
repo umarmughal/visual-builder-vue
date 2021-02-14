@@ -5,25 +5,13 @@
         <h5 class="mb-3">
           <strong>Checkbox Group</strong>
         </h5>
-        <a-checkbox-group
-          :options="plainOptions"
-          v-model="value"
-          @change="onChange"
-        />
+        <a-checkbox-group :options="plainOptions" v-model="value" @change="onChange" />
         <br />
         <br />
-        <a-checkbox-group
-          :options="plainOptions"
-          :default-value="['Apple']"
-          @change="onChange"
-        />
+        <a-checkbox-group :options="plainOptions" :default-value="['Apple']" @change="onChange" />
         <br />
         <br />
-        <a-checkbox-group
-          :options="options"
-          :value="['Pear']"
-          @change="onChange"
-        />
+        <a-checkbox-group :options="options" :value="['Pear']" @change="onChange" />
         <br />
         <br />
         <a-checkbox-group

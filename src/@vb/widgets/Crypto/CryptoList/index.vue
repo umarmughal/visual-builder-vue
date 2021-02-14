@@ -57,10 +57,7 @@
           8.26
         </span>
       </a>
-      <a
-        href="javascript: void(0);"
-        :class="[$style.listItem, $style.listItemNegative]"
-      >
+      <a href="javascript: void(0);" :class="[$style.listItem, $style.listItemNegative]">
         <span :class="$style.listPercents">
           <span>-22.9%</span>
           0.00016985
@@ -70,10 +67,7 @@
           5.20
         </span>
       </a>
-      <a
-        href="javascript: void(0);"
-        :class="[$style.listItem, $style.listItemNegative]"
-      >
+      <a href="javascript: void(0);" :class="[$style.listItem, $style.listItemNegative]">
         <span :class="$style.listPercents">
           <span>-12.3%</span>
           0.00016985
@@ -93,10 +87,7 @@
           5.64
         </span>
       </a>
-      <a
-        href="javascript: void(0);"
-        :class="[$style.listItem, $style.listItemNegative]"
-      >
+      <a href="javascript: void(0);" :class="[$style.listItem, $style.listItemNegative]">
         <span :class="$style.listPercents">
           <span>-4.2%</span>
           0.00035685
@@ -106,10 +97,7 @@
           6.36
         </span>
       </a>
-      <a
-        href="javascript: void(0);"
-        :class="[$style.listItem, $style.listItemNegative]"
-      >
+      <a href="javascript: void(0);" :class="[$style.listItem, $style.listItemNegative]">
         <span :class="$style.listPercents">
           <span>-1.7%</span>
           0.00000985
@@ -119,10 +107,7 @@
           6.35
         </span>
       </a>
-      <a
-        href="javascript: void(0);"
-        :class="[$style.listItem, $style.listItemNegative]"
-      >
+      <a href="javascript: void(0);" :class="[$style.listItem, $style.listItemNegative]">
         <span :class="$style.listPercents">
           <span>-2.8%</span>
           0.00000152
@@ -137,5 +122,5 @@
 </template>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

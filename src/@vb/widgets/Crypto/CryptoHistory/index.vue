@@ -15,12 +15,9 @@
         </a>
       </template>
       <template #type="{ text: value }">
-        <span
-          :style="
-            value === 'SELL' ? { color: '#f75535' } : { color: '#00a45b' }
-          "
-          >{{ value }}</span
-        >
+        <span :style="value === 'SELL' ? { color: '#f75535' } : { color: '#00a45b' }">{{
+          value
+        }}</span>
       </template>
     </a-table>
   </div>

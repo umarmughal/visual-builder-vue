@@ -15,11 +15,7 @@
     <a-tooltip placement="bottom">
       <template #title> Bookmarks </template>
       <span :class="$style.item">
-        <a-dropdown
-          :visible="dropdownVisible"
-          :trigger="['click']"
-          placement="bottomLeft"
-        >
+        <a-dropdown :visible="dropdownVisible" :trigger="['click']" placement="bottomLeft">
           <div :class="$style.dropdown" @click="toggleDropdown">
             <i class="fe fe-star" :class="$style.icon" />
           </div>
@@ -38,17 +34,14 @@
                   <div class="height-200">
                     <perfect-scrollbar :style="{ height: '100%' }">
                       <div class="px-2 pb-2">
-                        <template
-                          v-for="item in filteredPagesList"
-                          :key="item.key"
-                        >
+                        <template v-for="item in filteredPagesList" :key="item.key">
                           <router-link :to="item.url" :class="$style.link">
                             <div
                               :class="{
                                 [$style.setIcon]: true,
                                 [$style.setIconActive]: item.isActive,
                               }"
-                              @click="(e) => setFav(e, item)"
+                              @click="e => setFav(e, item)"
                             >
                               <i class="fe fe-star" />
                             </div>
@@ -62,9 +55,7 @@
                     </perfect-scrollbar>
                   </div>
                   <div class="p-2">
-                    <a-button type="primary" @click="toggleDropdown"
-                      >Close</a-button
-                    >
+                    <a-button type="primary" @click="toggleDropdown">Close</a-button>
                   </div>
                 </div>
               </div>
@@ -99,7 +90,8 @@ export default {
             if (item.category) {
               return flattenedItems
             }
-            if (item.key === 'nestedItem1' || item.disabled) { // skip unwanted items
+            if (item.key === 'nestedItem1' || item.disabled) {
+              // skip unwanted items
               return flattenedItems
             }
             if (Array.isArray(item[key])) {
@@ -179,5 +171,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

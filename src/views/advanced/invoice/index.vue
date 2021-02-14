@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Invoice' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Invoice' }" />
+          </div>
         </div>
         <div class="card">
           <div class="card-body"><vb-widgets-tables-8 /></div>

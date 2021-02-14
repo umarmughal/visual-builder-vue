@@ -1,10 +1,7 @@
 <template>
   <div>
     <div class="mb-2" :class="$style.textDivider">
-      <h4
-        class="font-size-24 font-weight-bold"
-        :class="$style.textDividerContent"
-      >
+      <h4 class="font-size-24 font-weight-bold" :class="$style.textDividerContent">
         Waiting actions
       </h4>
     </div>
@@ -25,9 +22,7 @@
           <span class="font-weight-bold">{{ text }}</span>
         </template>
         <template #users="{ text: users }">
-          <div
-            :class="[users.length ? '' : 'd-none', 'vb__utils__avatarGroup']"
-          >
+          <div :class="[users.length ? '' : 'd-none', 'vb__utils__avatarGroup']">
             <div
               v-for="user in users"
               :key="user"
@@ -89,7 +84,7 @@ const columns = [
 
 export default {
   name: 'VbTable7',
-  data: function () {
+  data: function() {
     return {
       columns,
       data,
@@ -104,5 +99,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -37,7 +37,9 @@
           <div class="card-body"><vb-typography-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header py-0"><vb-headers-card-header-tabbed-6 /></div>
+          <div class="card-header py-0">
+            <vb-headers-card-header-tabbed-6 />
+          </div>
           <div class="card-body"><vb-typography-2 /></div>
         </div>
       </div>

@@ -18,21 +18,29 @@
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Line Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Line Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-chartjs-1 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Radar Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Radar Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-chartjs-3 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Pie Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Pie Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-chartjs-5 /></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Bar Chart' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Bar Chart' }" />
+          </div>
           <div class="card-body"><vb-charts-chartjs-2 /></div>
         </div>
         <div class="card">

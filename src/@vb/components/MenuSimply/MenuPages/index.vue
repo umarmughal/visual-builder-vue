@@ -23,9 +23,7 @@
               </template>
               <template v-for="subItem in item.children" :key="subItem.key">
                 <a-menu-item>
-                  <router-link :to="subItem.url">{{
-                    subItem.title
-                  }}</router-link>
+                  <router-link :to="subItem.url">{{ subItem.title }}</router-link>
                 </a-menu-item>
               </template>
             </a-sub-menu>
@@ -64,5 +62,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

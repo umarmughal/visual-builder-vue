@@ -15,9 +15,7 @@
             :placeholder="`Search ${column.dataIndex}`"
             :value="selectedKeys[0]"
             style="width: 188px; margin-bottom: 8px; display: block"
-            @change="
-              (e) => setSelectedKeys(e.target.value ? [e.target.value] : [])
-            "
+            @change="e => setSelectedKeys(e.target.value ? [e.target.value] : [])"
             @pressEnter="() => handleSearch(selectedKeys, confirm)"
           />
           <a-button
@@ -27,19 +25,13 @@
             @click="() => handleSearch(selectedKeys, confirm)"
             >Search</a-button
           >
-          <a-button
-            size="small"
-            style="width: 90px"
-            @click="() => handleReset(clearFilters)"
+          <a-button size="small" style="width: 90px" @click="() => handleReset(clearFilters)"
             >Reset</a-button
           >
         </div>
       </template>
       <template #filterIcon="{ text: filtered }">
-        <a-icon
-          type="search"
-          :style="{ color: filtered ? '#108ee9' : undefined }"
-        />
+        <a-icon type="search" :style="{ color: filtered ? '#108ee9' : undefined }" />
       </template>
       <template #customer="{ text }">
         <span v-if="searchText">
@@ -58,9 +50,7 @@
           </template>
         </span>
         <template v-else>
-          <a class="btn btn-sm btn-light" href="javascript: void(0);">{{
-            text
-          }}</a>
+          <a class="btn btn-sm btn-light" href="javascript: void(0);">{{ text }}</a>
         </template>
       </template>
       <template #progress="{ text: bar }">
@@ -76,9 +66,7 @@
         <span class="font-weight-bold">{{ text }}</span>
       </template>
       <template #id="{ text }">
-        <a href="javascript: void(0);" class="btn btn-sm btn-light">{{
-          text
-        }}</a>
+        <a href="javascript: void(0);" class="btn btn-sm btn-light">{{ text }}</a>
       </template>
       <template #total="{ text }">
         <span>${{ text }}</span>
@@ -187,7 +175,7 @@ export default {
       searchText.value = selectedKeys[0]
     }
 
-    const handleReset = (clearFilters) => {
+    const handleReset = clearFilters => {
       clearFilters()
       searchText.value = ''
     }

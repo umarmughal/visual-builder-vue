@@ -63,10 +63,7 @@
           </div>
           <div class="d-none d-sm-block">
             <span class="mr-2">Don't have an account?</span>
-            <router-link
-              to="/auth/register"
-              class="font-size-16 vb__utils__link"
-            >
+            <router-link to="/auth/register" class="font-size-16 vb__utils__link">
               Sign up
             </router-link>
           </div>
@@ -104,19 +101,11 @@
           </ul>
           <div class="text-center">
             Copyright © {{ new Date().getFullYear() }}
-            <a
-              href="https://sellpixels.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com" target="_blank" rel="noopener noreferrer">
               Sellpixels.com
             </a>
             |
-            <a
-              href="https://sellpixels.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com/privacy" target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
           </div>
@@ -139,5 +128,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

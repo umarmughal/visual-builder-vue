@@ -4,9 +4,7 @@
       <span>
         <i v-if="menuInfo.icon" :class="[styles.icon, menuInfo.icon]" />
         <span :class="styles.title">{{ menuInfo.title }}</span>
-        <span v-if="menuInfo.count" class="badge badge-success ml-2">{{
-          menuInfo.count
-        }}</span>
+        <span v-if="menuInfo.count" class="badge badge-success ml-2">{{ menuInfo.count }}</span>
       </span>
     </template>
     <template v-for="item in menuInfo.children">
@@ -16,12 +14,7 @@
         :menu-info="item"
         :styles="styles"
       />
-      <sub-menu
-        v-if="item.children"
-        :key="item.key"
-        :menu-info="item"
-        :styles="styles"
-      />
+      <sub-menu v-if="item.children" :key="item.key" :menu-info="item" :styles="styles" />
     </template>
   </a-sub-menu>
 </template>
@@ -38,11 +31,11 @@ export default {
     ...Menu.SubMenu.props,
     menuInfo: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
     styles: {
       type: Object,
-      default: () => { },
+      default: () => {},
     },
   },
 }

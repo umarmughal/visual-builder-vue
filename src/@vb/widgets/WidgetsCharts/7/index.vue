@@ -31,7 +31,7 @@
 import data from './data.json'
 export default {
   name: 'VbChart7',
-  data: function () {
+  data: function() {
     const columns = [
       {
         title: 'Action name',

@@ -44,11 +44,7 @@
       </div>
     </div>
     <div :class="$style.navigation">
-      <a-menu
-        :mode="'horizontal'"
-        :selected-keys="selectedKeys"
-        @click="handleClick"
-      >
+      <a-menu :mode="'horizontal'" :selected-keys="selectedKeys" @click="handleClick">
         <template v-for="item in menuData">
           <template v-if="!item.roles || item.roles.includes(user.role)">
             <item
@@ -57,12 +53,7 @@
               :menu-info="item"
               :styles="$style"
             />
-            <sub-menu
-              v-if="item.children"
-              :key="item.key"
-              :menu-info="item"
-              :styles="$style"
-            />
+            <sub-menu v-if="item.children" :key="item.key" :menu-info="item" :styles="$style" />
           </template>
         </template>
       </a-menu>
@@ -99,16 +90,19 @@ export default {
       store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value })
     }
 
-    const handleClick = (e) => {
+    const handleClick = e => {
       if (e.key === 'settings') {
-        store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
+        store.commit('CHANGE_SETTING', {
+          setting: 'isSettingsOpen',
+          value: true,
+        })
         return
       }
       localStore.set('app.menu.selectedKeys', [e.key])
       selectedKeys.value = [e.key]
     }
 
-    const handleOpenChange = (openKeys) => {
+    const handleOpenChange = openKeys => {
       localStore.set('app.menu.openedKeys', openKeys)
       openKeys.value = openKeys
     }
@@ -136,7 +130,7 @@ export default {
     })
 
     watch(pathname, () => setSelectedKeys())
-    watch(isMenuCollapsed, () => openKeys.value = [])
+    watch(isMenuCollapsed, () => (openKeys.value = []))
 
     return {
       menuData,
@@ -153,5 +147,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

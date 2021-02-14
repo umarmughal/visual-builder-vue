@@ -2,55 +2,77 @@
   <div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART1' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-1 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART2' }" />
+        </div>
         <div class="card"><vb-widgets-charts-2 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART9' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART9' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-9 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART5' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART5' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-5 /></div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART10' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART10' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-10 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART6' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART6' }" />
+        </div>
         <div class="card"><vb-widgets-charts-6 /></div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-3 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 4' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 4' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-4 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 4-2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 4-2' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-4v2 /></div>
         </div>
       </div>
       <div class="col-lg-3 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 4-1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 4-1' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-4v1 /></div>
         </div>
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 4-3' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 4-3' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-4v3 /></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 7' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 7' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-7 /></div>
         </div>
@@ -58,13 +80,17 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 3' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 3' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-3 /></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 8' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 8' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-8 /></div>
         </div>
@@ -72,27 +98,37 @@
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 11' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 11' }" />
+        </div>
         <div class="card"><vb-widgets-charts-11 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 11-1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 11-1' }" />
+        </div>
         <div class="card"><vb-widgets-charts-11v1 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 11-2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 11-2' }" />
+        </div>
         <div class="card"><vb-widgets-charts-11v2 /></div>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 12' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 12' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-12 /></div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 12-1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 12-1' }" />
+        </div>
         <div class="card">
           <div class="card-body"><vb-widgets-charts-12v1 /></div>
         </div>
@@ -100,15 +136,21 @@
     </div>
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 13' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 13' }" />
+        </div>
         <div class="card"><vb-widgets-charts-13 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 13-1' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 13-1' }" />
+        </div>
         <div class="card"><vb-widgets-charts-13v1 /></div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="card-placeholder"><vb-headers-tag :data="{ title: 'CHART / 13-2' }" /></div>
+        <div class="card-placeholder">
+          <vb-headers-tag :data="{ title: 'CHART / 13-2' }" />
+        </div>
         <div class="card"><vb-widgets-charts-13v2 /></div>
       </div>
     </div>

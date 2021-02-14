@@ -9,16 +9,12 @@
       <div class="row">
         <div class="col-md-8">
           <p>
-            <strong
-              >Visual Builder is the best solution for your next big
-              app!</strong
-            >
+            <strong>Visual Builder is the best solution for your next big app!</strong>
           </p>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industrys standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and scrambled it to make a type specimen book.
           </p>
           <a
             href="https://visualbuilder.cloud"
@@ -59,19 +55,11 @@
           <br />
           <p class="mb-0">
             Copyright © {{ new Date().getFullYear() }}
-            <a
-              href="https://sellpixels.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com" target="_blank" rel="noopener noreferrer">
               Sellpixels.com
             </a>
             |
-            <a
-              href="https://sellpixels.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com/privacy" target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
           </p>
@@ -97,5 +85,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

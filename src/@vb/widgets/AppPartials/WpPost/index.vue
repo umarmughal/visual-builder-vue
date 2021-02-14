@@ -1,10 +1,7 @@
 <template>
   <div>
     <div className="mb-2">
-      <a
-        href="javascript: void(0);"
-        className="text-dark font-size-24 font-weight-bold"
-      >
+      <a href="javascript: void(0);" className="text-dark font-size-24 font-weight-bold">
         [Feature Request] How to enable custom font that comes from svg #2460
       </a>
     </div>
@@ -39,23 +36,20 @@
         alt="Sea"
       />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil laborum
-        est perferendis consectetur corporis esse labore minima molestias,
-        exercitationem consequuntur! Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Nihil laborum est perferendis consectetur corporis
-        esse labore minima molestias, exercitationem consequuntur! Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Nihil laborum est
-        perferendis consectetur corporis esse labore minima molestias,
-        exercitationem consequuntur! Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Nihil laborum est perferendis consectetur corporis
-        esse labore minima molestias, exercitationem consequuntur!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil laborum est perferendis
+        consectetur corporis esse labore minima molestias, exercitationem consequuntur! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Nihil laborum est perferendis consectetur
+        corporis esse labore minima molestias, exercitationem consequuntur! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Nihil laborum est perferendis consectetur corporis esse
+        labore minima molestias, exercitationem consequuntur! Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Nihil laborum est perferendis consectetur corporis esse labore
+        minima molestias, exercitationem consequuntur!
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil laborum
-        est perferendis consectetur corporis esse labore minima molestias,
-        exercitationem consequuntur! Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Nihil laborum est perferendis consectetur corporis
-        esse labore minima molestias, exercitationem consequuntur!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil laborum est perferendis
+        consectetur corporis esse labore minima molestias, exercitationem consequuntur! Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit. Nihil laborum est perferendis consectetur
+        corporis esse labore minima molestias, exercitationem consequuntur!
       </p>
     </div>
   </div>

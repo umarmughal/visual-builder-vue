@@ -3,26 +3,38 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Form Examples' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Form Examples' }" />
+          </div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Basic Form' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Basic Form' }" />
+          </div>
           <div class="card-body"><vb-forms-1 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Inline Form' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Inline Form' }" />
+          </div>
           <div class="card-body"><vb-forms-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Two Columns' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Two Columns' }" />
+          </div>
           <div class="card-body"><vb-forms-3 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Validation' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Validation' }" />
+          </div>
           <div class="card-body"><vb-forms-4 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Add Post' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Add Post' }" />
+          </div>
           <div class="card-body"><vb-forms-5 /></div>
         </div>
       </div>

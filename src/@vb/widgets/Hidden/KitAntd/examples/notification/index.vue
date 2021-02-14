@@ -4,9 +4,13 @@
       <strong>Basic</strong>
     </h5>
     <div class="mb-5">
-      <a-button @click="() => openNotificationWithIcon('success')" class="mb-3 mr-3">Success</a-button>
+      <a-button @click="() => openNotificationWithIcon('success')" class="mb-3 mr-3"
+        >Success</a-button
+      >
       <a-button @click="() => openNotificationWithIcon('info')" class="mb-3 mr-3">Info</a-button>
-      <a-button @click="() => openNotificationWithIcon('warning')" class="mb-3 mr-3">Warning</a-button>
+      <a-button @click="() => openNotificationWithIcon('warning')" class="mb-3 mr-3"
+        >Warning</a-button
+      >
       <a-button @click="() => openNotificationWithIcon('error')" class="mb-3 mr-3">Error</a-button>
     </div>
   </div>

@@ -65,9 +65,7 @@
       <perfect-scrollbar :style="{ height: '100%' }">
         <a-menu
           v-model:open-keys="openKeys"
-          :inline-collapsed="
-            settings.isMobileView ? false : settings.isMenuCollapsed
-          "
+          :inline-collapsed="settings.isMobileView ? false : settings.isMenuCollapsed"
           :mode="'inline'"
           :selected-keys="selectedKeys"
           :inline-indent="15"
@@ -88,12 +86,7 @@
                 :menu-info="item"
                 :styles="$style"
               />
-              <sub-menu
-                v-if="item.children"
-                :key="item.key"
-                :menu-info="item"
-                :styles="$style"
-              />
+              <sub-menu v-if="item.children" :key="item.key" :menu-info="item" :styles="$style" />
             </template>
           </template>
         </a-menu>
@@ -141,16 +134,19 @@ export default {
       store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value })
     }
 
-    const handleClick = (e) => {
+    const handleClick = e => {
       if (e.key === 'settings') {
-        store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
+        store.commit('CHANGE_SETTING', {
+          setting: 'isSettingsOpen',
+          value: true,
+        })
         return
       }
       localStore.set('app.menu.selectedKeys', [e.key])
       selectedKeys.value = [e.key]
     }
 
-    const handleOpenChange = (openKeys) => {
+    const handleOpenChange = openKeys => {
       localStore.set('app.menu.openedKeys', openKeys)
       openKeys.value = openKeys
     }
@@ -178,7 +174,7 @@ export default {
     })
 
     watch(pathname, () => setSelectedKeys())
-    watch(isMenuCollapsed, () => openKeys.value = [])
+    watch(isMenuCollapsed, () => (openKeys.value = []))
 
     return {
       menuData,
@@ -195,5 +191,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

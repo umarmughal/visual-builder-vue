@@ -64,7 +64,7 @@ const columns = [
 
 export default {
   name: 'VbTable4',
-  data: function () {
+  data: function() {
     return {
       columns,
       data,
@@ -73,5 +73,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

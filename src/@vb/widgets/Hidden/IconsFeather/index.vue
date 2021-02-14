@@ -18,7 +18,7 @@
 <script>
 import icons from './data.json'
 export default {
-  data: function () {
+  data: function() {
     return {
       icons,
     }

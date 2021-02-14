@@ -10,9 +10,11 @@
       <a-form-item v-bind="formItemLayout" label="Select" has-feedback>
         <a-select
           v-decorator="[
-          'select',
-          {rules: [{ required: true, message: 'Please select your country!' }]}
-        ]"
+            'select',
+            {
+              rules: [{ required: true, message: 'Please select your country!' }],
+            },
+          ]"
           placeholder="Please select a country"
         >
           <a-select-option value="china">China</a-select-option>
@@ -23,9 +25,17 @@
       <a-form-item v-bind="formItemLayout" label="Select[multiple]">
         <a-select
           v-decorator="[
-          'select-multiple', {
-            rules: [{ required: true, message: 'Please select your favourite colors!', type: 'array' }],
-          }]"
+            'select-multiple',
+            {
+              rules: [
+                {
+                  required: true,
+                  message: 'Please select your favourite colors!',
+                  type: 'array',
+                },
+              ],
+            },
+          ]"
           mode="multiple"
           placeholder="Please select favourite colors"
         >
@@ -69,7 +79,7 @@
 
       <a-form-item v-bind="formItemLayout" label="Checkbox.Group">
         <a-checkbox-group
-          v-decorator="['checkbox-group', {initialValue: ['A', 'B']}]"
+          v-decorator="['checkbox-group', { initialValue: ['A', 'B'] }]"
           style="width: 100%;"
         >
           <a-row>
@@ -93,7 +103,7 @@
       </a-form-item>
 
       <a-form-item v-bind="formItemLayout" label="Rate">
-        <a-rate v-decorator="['rate', {initialValue: 3.5}]" allow-half />
+        <a-rate v-decorator="['rate', { initialValue: 3.5 }]" allow-half />
       </a-form-item>
 
       <a-form-item
@@ -102,34 +112,40 @@
         extra="longgggggggggggggggggggggggggggggggggg"
       >
         <a-upload
-          v-decorator="['upload', {
-          valuePropName: 'fileList',
-          getValueFromEvent: normFile,
-        }]"
+          v-decorator="[
+            'upload',
+            {
+              valuePropName: 'fileList',
+              getValueFromEvent: normFile,
+            },
+          ]"
           name="logo"
           action="/upload.do"
           list-type="picture"
         >
-          <a-button>
-            <a-icon type="upload" />Click to upload
-          </a-button>
+          <a-button> <a-icon type="upload" />Click to upload </a-button>
         </a-upload>
       </a-form-item>
 
       <a-form-item v-bind="formItemLayout" label="Dragger">
         <div class="dropbox">
           <a-upload-dragger
-            v-decorator="['dragger', {
-            valuePropName: 'fileList',
-            getValueFromEvent: normFile,
-          }]"
+            v-decorator="[
+              'dragger',
+              {
+                valuePropName: 'fileList',
+                getValueFromEvent: normFile,
+              },
+            ]"
             name="files"
             action="/upload.do"
           >
             <p class="ant-upload-drag-icon">
               <a-icon type="inbox" />
             </p>
-            <p class="ant-upload-text">Click or drag file to this area to upload</p>
+            <p class="ant-upload-text">
+              Click or drag file to this area to upload
+            </p>
             <p class="ant-upload-hint">Support for a single or bulk upload.</p>
           </a-upload-dragger>
         </div>

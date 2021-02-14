@@ -10,7 +10,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Choose an Image' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Choose an Image' }" />
+          </div>
         </div>
       </div>
     </div>
@@ -24,7 +26,9 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card-placeholder">
-          <div class="card-header"><vb-headers-heading :data="{ title: 'Choose Plan' }" /></div>
+          <div class="card-header">
+            <vb-headers-heading :data="{ title: 'Choose Plan' }" />
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +41,11 @@
         <div class="card card-top card-top-primary">
           <div class="card-body">
             <vb-controls-button-3
-              :data="{ mainTitle: 'Update', mainType: 'primary', additionalTitle: 'Cancel' }"
+              :data="{
+                mainTitle: 'Update',
+                mainType: 'primary',
+                additionalTitle: 'Cancel',
+              }"
             />
           </div>
         </div>

@@ -4,12 +4,10 @@
       <template #default="{ node, path, tree }">
         <span class="tree-node-item">
           <button type="button" @click="tree.toggleFold(node, path)">
-            {{ node.$folded ? "+" : "-" }}
+            {{ node.$folded ? '+' : '-' }}
           </button>
           <div class="tree-node-content">
-            <a-checkbox :default-checked="node.$checked">{{
-              node.name
-            }}</a-checkbox>
+            <a-checkbox :default-checked="node.$checked">{{ node.name }}</a-checkbox>
           </div>
         </span>
       </template>

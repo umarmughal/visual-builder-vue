@@ -45,13 +45,10 @@ export default {
     locale.value = settingsLocale.value
 
     // watch locale settings change and apply
-    watch(
-      settingsLocale,
-      (settingsLocale) => {
-        locale.value = settingsLocale
-        localeAntd.value = locales[settingsLocale].localeAntd
-      },
-    )
+    watch(settingsLocale, settingsLocale => {
+      locale.value = settingsLocale
+      localeAntd.value = locales[settingsLocale].localeAntd
+    })
 
     return {
       localeAntd,

@@ -24,11 +24,15 @@
           <div class="card-body"><vb-charts-chartistjs-1 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Line' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Line' }" />
+          </div>
           <div class="card-body"><vb-charts-chartistjs-3 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Scatter' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Scatter' }" />
+          </div>
           <div class="card-body"><vb-charts-chartistjs-5 /></div>
         </div>
         <div class="card">
@@ -38,11 +42,15 @@
           <div class="card-body"><vb-charts-chartistjs-7 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Stacked Bar' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Stacked Bar' }" />
+          </div>
           <div class="card-body"><vb-charts-chartistjs-9 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Simple Pie' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Simple Pie' }" />
+          </div>
           <div class="card-body"><vb-charts-chartistjs-11 /></div>
         </div>
       </div>
@@ -54,7 +62,9 @@
           <div class="card-body"><vb-charts-chartistjs-2 /></div>
         </div>
         <div class="card">
-          <div class="card-header"><vb-headers-card-header :data="{ title: 'Area' }" /></div>
+          <div class="card-header">
+            <vb-headers-card-header :data="{ title: 'Area' }" />
+          </div>
           <div class="card-body"><vb-charts-chartistjs-4 /></div>
         </div>
         <div class="card">

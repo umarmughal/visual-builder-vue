@@ -14,18 +14,18 @@ export default {
 }
 </script>
 <style scoped>
-  #components-back-top-demo-custom .ant-back-top {
-    bottom: 100px;
-    z-index: 100000;
-  }
-  #components-back-top-demo-custom .ant-back-top-inner {
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    border-radius: 4px;
-    background-color: #1088e9;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-  }
+#components-back-top-demo-custom .ant-back-top {
+  bottom: 100px;
+  z-index: 100000;
+}
+#components-back-top-demo-custom .ant-back-top-inner {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  background-color: #1088e9;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
 </style>

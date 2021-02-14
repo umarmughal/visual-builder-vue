@@ -1,10 +1,7 @@
 <template>
   <div>
     <div class="mb-2" :class="$style.textDivider">
-      <h4
-        class="font-size-24 font-weight-bold"
-        :class="$style.textDividerContent"
-      >
+      <h4 class="font-size-24 font-weight-bold" :class="$style.textDividerContent">
         Waiting actions
       </h4>
     </div>
@@ -82,7 +79,7 @@ const columns = [
 ]
 export default {
   name: 'VbChart8',
-  data: function () {
+  data: function() {
     return {
       tableData,
       selectedRowKeys: [],
@@ -97,5 +94,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

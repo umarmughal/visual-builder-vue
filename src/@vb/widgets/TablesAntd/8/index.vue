@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 const columns = [
   {
     title: 'Name',
@@ -93,7 +93,7 @@ const columns = [
     width: 80,
     fixed: 'right',
   },
-];
+]
 const data = [...Array(100)].map((_, i) => ({
   key: i,
   name: 'John Brown',
@@ -104,13 +104,13 @@ const data = [...Array(100)].map((_, i) => ({
   companyAddress: 'Lake Street 42',
   companyName: 'SoftLake Co',
   gender: 'M',
-}));
+}))
 export default defineComponent({
   setup() {
     return {
       data,
       columns,
-    };
+    }
   },
-});
+})
 </script>

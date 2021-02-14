@@ -23,10 +23,7 @@
                 <h6>
                   <strong>Application Name</strong>
                 </h6>
-                <a-input
-                  :value="settings.logo"
-                  @change="changeSettingEvent($event, 'logo')"
-                />
+                <a-input :value="settings.logo" @change="changeSettingEvent($event, 'logo')" />
               </div>
               <div class="pt-2 mb-2">
                 <h6>
@@ -35,9 +32,7 @@
                 <a-select
                   :default-value="settings.routerAnimation"
                   style="width: 100%"
-                  @change="
-                    (value) => changeSettingValue(value, 'routerAnimation')
-                  "
+                  @change="value => changeSettingValue(value, 'routerAnimation')"
                 >
                   <a-select-option value="none"> None </a-select-option>
                   <a-select-option value="slide-fadein-up">
@@ -57,7 +52,7 @@
                 <a-select
                   :value="settings.locale"
                   style="width: 100%"
-                  @change="(value) => changeSettingValue(value, 'locale')"
+                  @change="value => changeSettingValue(value, 'locale')"
                 >
                   <a-select-option value="en-US">
                     English (en-US)
@@ -87,17 +82,13 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="mb-2">
-                          <a-radio :value="'fluent'"
-                            >Fluent (System Default Font)</a-radio
-                          >
+                          <a-radio :value="'fluent'">Fluent (System Default Font)</a-radio>
                         </div>
                         <div class="mb-2">
                           <a-radio :value="'clean'">Clean (Mukta Font)</a-radio>
                         </div>
                         <div class="mb-2">
-                          <a-radio :value="'air'"
-                            >Air (Source Sans Font)</a-radio
-                          >
+                          <a-radio :value="'air'">Air (Source Sans Font)</a-radio>
                         </div>
                       </div>
                     </div>
@@ -115,12 +106,7 @@
                     <div class="{style.vb__sidebar__fixSwitch}">
                       <a-switch
                         :checked="settings.theme === 'dark'"
-                        @click="
-                          changeSettingValue(
-                            $event ? 'dark' : 'default',
-                            'theme'
-                          )
-                        "
+                        @click="changeSettingValue($event ? 'dark' : 'default', 'theme')"
                       />
                     </div>
                   </div>
@@ -137,9 +123,7 @@
                     <div class="vb__sidebar__fixSwitch">
                       <a-switch
                         :checked="settings.isContentMaxWidth"
-                        @click="
-                          changeSettingSwitch($event, 'isContentMaxWidth')
-                        "
+                        @click="changeSettingSwitch($event, 'isContentMaxWidth')"
                       />
                     </div>
                   </div>
@@ -297,12 +281,7 @@
                   </a-radio-group>
                 </div>
               </div>
-              <div
-                v-if="
-                  settings.layoutMenu === 'classic' ||
-                  settings.layoutMenu === 'flyout'
-                "
-              >
+              <div v-if="settings.layoutMenu === 'classic' || settings.layoutMenu === 'flyout'">
                 <div class="pt-2 mb-2">
                   <h6>
                     <strong>Menu Layout Type</strong>
@@ -354,8 +333,8 @@
               <div
                 v-if="
                   settings.layoutMenu === 'classic' ||
-                  settings.layoutMenu === 'flyout' ||
-                  settings.layoutMenu === 'simply'
+                    settings.layoutMenu === 'flyout' ||
+                    settings.layoutMenu === 'simply'
                 "
               >
                 <div class="pt-2 mb-2">
@@ -380,8 +359,7 @@
               <div v-if="settings.layoutMenu === 'flyout'">
                 <div
                   v-if="
-                    settings.flyoutMenuType === 'flyout' ||
-                    settings.flyoutMenuType === 'compact'
+                    settings.flyoutMenuType === 'flyout' || settings.flyoutMenuType === 'compact'
                   "
                   class="pt-2 mb-2"
                 >
@@ -403,12 +381,7 @@
                   </div>
                 </div>
               </div>
-              <div
-                v-if="
-                  settings.layoutMenu === 'classic' ||
-                  settings.layoutMenu === 'flyout'
-                "
-              >
+              <div v-if="settings.layoutMenu === 'classic' || settings.layoutMenu === 'flyout'">
                 <div class="pt-2 mb-2">
                   <div class="row">
                     <div class="col-auto mr-auto">
@@ -420,9 +393,7 @@
                       <div class="vb__sidebar__fixSwitch">
                         <a-switch
                           :checked="settings.isMenuCollapsed"
-                          @click="
-                            changeSettingSwitch($event, 'isMenuCollapsed')
-                          "
+                          @click="changeSettingSwitch($event, 'isMenuCollapsed')"
                         />
                       </div>
                     </div>
@@ -462,19 +433,12 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  v-if="settings.menuLayoutType === 'left'"
-                  class="pt-2 mb-2"
-                >
+                <div v-if="settings.menuLayoutType === 'left'" class="pt-2 mb-2">
                   <h6>
                     <strong>Menu Width</strong>
                   </h6>
                   <div class="pt-1 clearfix">
-                    <a-slider
-                      v-model:value="settings.leftMenuWidth"
-                      :min="256"
-                      :max="330"
-                    />
+                    <a-slider v-model:value="settings.leftMenuWidth" :min="256" :max="330" />
                   </div>
                 </div>
               </div>
@@ -513,9 +477,7 @@
                     <div class="vb__sidebar__fixSwitch">
                       <a-switch
                         :checked="settings.isTopbarSeparated"
-                        @click="
-                          changeSettingSwitch($event, 'isTopbarSeparated')
-                        "
+                        @click="changeSettingSwitch($event, 'isTopbarSeparated')"
                       />
                     </div>
                   </div>
@@ -665,11 +627,7 @@
         <template #title>
           <span>Settings</span>
         </template>
-        <a
-          href="javascript: void(0);"
-          class="vb__utils__sidebar__button"
-          @click="toggleSettings()"
-        >
+        <a href="javascript: void(0);" class="vb__utils__sidebar__button" @click="toggleSettings()">
           <i class="fe fe-settings" />
         </a>
       </a-tooltip>
@@ -692,12 +650,7 @@
         <a
           href="javascript: void(0);"
           class="vb__utils__sidebar__button"
-          @click="
-            changeSettingValue(
-              settings.theme === 'default' ? 'dark' : 'default',
-              'theme'
-            )
-          "
+          @click="changeSettingValue(settings.theme === 'default' ? 'dark' : 'default', 'theme')"
         >
           <i v-if="settings.theme === 'default'" class="fe fe-moon" />
           <i v-if="settings.theme !== 'default'" class="fe fe-sun" />
@@ -712,8 +665,7 @@
           :class="{
             vb__utils__sidebar__button: true,
             vb__utils__sidebar__button__color: true,
-            vb__utils__sidebar__button__color__reset:
-              settings.primaryColor === defaultColor,
+            vb__utils__sidebar__button__color__reset: settings.primaryColor === defaultColor,
           }"
         >
           <button type="button" tabindex="0" @click="resetColor()">
@@ -723,7 +675,7 @@
             id="colorPicker"
             v-model="settings.primaryColor"
             type="color"
-            @change="(e) => selectColor(e.target.value)"
+            @change="e => selectColor(e.target.value)"
           />
           <i class="fe fe-package" />
         </a>
@@ -782,7 +734,7 @@ export default {
         value: !settings.value['isPreselectedOpen'],
       })
     }
-    const selectColor = throttle((color) => {
+    const selectColor = throttle(color => {
       store.commit('SET_PRIMARY_COLOR', { color })
     }, 200)
     const resetColor = () => {
@@ -807,5 +759,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>
