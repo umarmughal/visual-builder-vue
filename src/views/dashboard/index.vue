@@ -1,6 +1,12 @@
 <template>
-  <div>[dashboard]</div>
+  <div>
+    <div />
+  </div>
 </template>
 
 <script>
+export default {
+  name: 'VbDashboard',
+  components: {},
+}
 </script>

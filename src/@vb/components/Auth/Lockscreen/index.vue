@@ -3,27 +3,16 @@
     <div class="card" :class="$style.container">
       <div class="text-dark text-center font-size-32 mb-3">Account Locked</div>
       <div class="text-center">
-        <div
-          class="vb__utils__avatar vb__utils__avatar--size64 d-inline-block mb-2"
-        >
+        <div class="vb__utils__avatar vb__utils__avatar--size64 d-inline-block mb-2">
           <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
         </div>
         <div class="font-size-18 text-dark mb-4">
           <strong>Mary Stanform</strong>
         </div>
       </div>
-      <a-form
-        ref="registerForm"
-        :model="lockscreenForm"
-        :rules="rules"
-        layout="vertical"
-        class="mb-4"
-      >
+      <a-form :model="lockscreenForm" :rules="rules" layout="vertical" class="mb-4">
         <a-form-item name="password">
-          <a-input
-            v-model:value="lockscreenForm.password"
-            placeholder="Password"
-          />
+          <a-input v-model:value="lockscreenForm.password" placeholder="Password" />
         </a-form-item>
         <a-button type="primary" html-type="submit" class="text-center w-100">
           <strong>Unlock Account</strong>
@@ -39,20 +28,25 @@
   </div>
 </template>
 <script>
+import { reactive } from 'vue'
+
 export default {
   name: 'VbLockscreen',
-  data: function () {
+  setup() {
+    const rules = {
+      password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
+    }
+    const lockscreenForm = reactive({
+      password: '',
+    })
+
     return {
-      rules: {
-        password: [{ required: true, message: 'Please input password!', trigger: 'change' }],
-      },
-      lockscreenForm: {
-        password: '',
-      },
+      rules,
+      lockscreenForm,
     }
   },
 }
 </script>
 <style lang="scss" module>
-@import "@/@vb/components/Auth/style.module.scss";
+@import '@/@vb/components/Auth/style.module.scss';
 </style>

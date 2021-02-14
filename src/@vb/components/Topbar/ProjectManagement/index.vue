@@ -2,9 +2,7 @@
   <a-dropdown :trigger="['click']" placement="bottomLeft">
     <div :class="$style.dropdown">
       <i class="fe fe-database" :class="$style.icon" />
-      <span class="d-none d-xl-inline">{{
-        $t("topBar.projectManagement")
-      }}</span>
+      <span class="d-none d-xl-inline">{{ $t('topBar.projectManagement') }}</span>
     </div>
     <template #overlay>
       <a-menu>
@@ -37,5 +35,5 @@
 </template>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -1,10 +1,10 @@
 import mock from '../mock'
 
 const fakeJwt = {
-  sign: (id) => {
+  sign: id => {
     return `${id}.366be641c17cb6d9c5d8944e00bfce3189d8b1515a`
   },
-  verify: (token) => {
+  verify: token => {
     return Number(token.split('.')[0])
   },
 }

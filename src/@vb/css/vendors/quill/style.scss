@@ -3,10 +3,20 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  QUILL */
 
+.ql-container,
+.ql-toolbar {
+  border-color: $border !important;
+}
+
+.ql-editor.ql-blank::before {
+  color: $border !important;
+}
+
 // dark theme
 [data-vb-theme='dark'] {
-  .ql-container, .ql-toolbar {
-    border-color: $dark-gray-4;
+  .ql-container,
+  .ql-toolbar {
+    border-color: $dark-gray-4 !important;
   }
   .ql-editor.ql-blank::before {
     color: $dark-gray-3;

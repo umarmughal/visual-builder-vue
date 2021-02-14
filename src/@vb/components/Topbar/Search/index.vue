@@ -7,17 +7,15 @@
       style="width: 200px"
       @focus="openSearch"
     >
-      <slot name="prefix">
+      <template #prefix>
         <span>
-          <a-icon type="search" style="color: rgba(0, 0, 0, 0.25)" />
+          <search-outlined style="color: rgba(0, 0, 0, 0.25)" />
         </span>
-      </slot>
+      </template>
     </a-input>
-    <div
-      :class="[$style.livesearch, showSearch ? $style.livesearchVisible : '']"
-    >
+    <div :class="[$style.livesearch, showSearch ? $style.livesearchVisible : '']">
       <button :class="$style.close" type="button" @click="closeSearch">
-        <i class="icmn-cross" />
+        <i class="fe fe-x" />
       </button>
       <div class="container-fluid">
         <div :class="$style.wrapper">
@@ -48,8 +46,7 @@
                   <div
                     :class="$style.resultThumb"
                     :style="{
-                      backgroundImage:
-                        'url(\'resources/images/content/photos/1.jpeg\')',
+                      backgroundImage: 'url(\'resources/images/content/photos/1.jpeg\')',
                     }"
                   >
                     #1
@@ -65,8 +62,7 @@
                   <div
                     :class="$style.resultThumb"
                     :style="{
-                      backgroundImage:
-                        'url(\'resources/images/content/photos/2.jpeg\')',
+                      backgroundImage: 'url(\'resources/images/content/photos/2.jpeg\')',
                     }"
                   >
                     #2
@@ -80,8 +76,7 @@
                   <div
                     :class="$style.resultThumb"
                     :style="{
-                      backgroundImage:
-                        'url(\'resources/images/content/photos/3.jpeg\')',
+                      backgroundImage: 'url(\'resources/images/content/photos/3.jpeg\')',
                     }"
                   >
                     #3
@@ -97,8 +92,7 @@
                   <div
                     :class="$style.resultThumb"
                     :style="{
-                      backgroundImage:
-                        'url(\'resources/images/content/photos/4.jpeg\')',
+                      backgroundImage: 'url(\'resources/images/content/photos/4.jpeg\')',
                     }"
                   >
                     #4
@@ -143,27 +137,40 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+import { SearchOutlined } from '@ant-design/icons-vue'
+
 export default {
-  data: function () {
-    return {
-      showSearch: false,
-      searchText: '',
-    }
+  components: {
+    SearchOutlined,
   },
-  methods: {
-    openSearch() {
-      this.showSearch = true
+  setup() {
+    const showSearch = ref(false)
+    const searchText = ref('')
+    const innerInput = ref(null)
+
+    const openSearch = () => {
+      showSearch.value = true
       setTimeout(() => {
-        this.$refs.innerInput.focus()
+        innerInput.value.focus()
       }, 100)
-    },
-    closeSearch() {
-      this.showSearch = false
-    },
+    }
+
+    const closeSearch = () => {
+      showSearch.value = false
+    }
+
+    return {
+      showSearch,
+      searchText,
+      openSearch,
+      closeSearch,
+      innerInput,
+    }
   },
 }
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

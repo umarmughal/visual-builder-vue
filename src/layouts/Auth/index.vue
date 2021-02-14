@@ -1,8 +1,8 @@
 <template>
   <a-layout class="vb__layout">
     <a-layout-content>
-      <!-- <vb-sidebar /> -->
-      <!-- <vb-support-chat /> -->
+      <vb-sidebar />
+      <vb-support-chat />
       <div
         :class="{
           [$style.container]: true,
@@ -63,10 +63,7 @@
           </div>
           <div class="d-none d-sm-block">
             <span class="mr-2">Don't have an account?</span>
-            <router-link
-              to="/auth/register"
-              class="font-size-16 vb__utils__link"
-            >
+            <router-link to="/auth/register" class="font-size-16 vb__utils__link">
               Sign up
             </router-link>
           </div>
@@ -104,19 +101,11 @@
           </ul>
           <div class="text-center">
             Copyright © {{ new Date().getFullYear() }}
-            <a
-              href="https://sellpixels.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com" target="_blank" rel="noopener noreferrer">
               Sellpixels.com
             </a>
             |
-            <a
-              href="https://sellpixels.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://sellpixels.com/privacy" target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
           </div>
@@ -128,16 +117,16 @@
 
 <script>
 import { mapState } from 'vuex'
-// import VbSidebar from '@/@vb/components/Sidebar'
-// import VbSupportChat from '@/@vb/components/SupportChat'
+import VbSidebar from '@/@vb/components/Sidebar'
+import VbSupportChat from '@/@vb/components/SupportChat'
 
 export default {
   name: 'AuthLayout',
-  // components: { VbSidebar, VbSupportChat },
+  components: { VbSidebar, VbSupportChat },
   computed: mapState(['settings']),
 }
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

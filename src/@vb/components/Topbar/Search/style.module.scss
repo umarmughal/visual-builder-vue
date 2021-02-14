@@ -19,15 +19,17 @@
 }
 
 .extInput {
+  transition: none !important;
   input {
     background-color: $gray-1;
+    transition: none !important;
   }
 
   @media screen and (max-width: 620px) {
-    width: 30px !important;
+    width: 38px !important;
     input {
-      width: 30px !important;
-      padding-left: 22px !important;
+      left: -20px;
+      background: transparent !important;
     }
     :global(.ant-input-prefix) {
       left: 11px !important;
@@ -37,7 +39,7 @@
 }
 
 .close {
-  font-size: rem(12);
+  font-size: rem(18);
   color: $default;
   position: absolute;
   top: rem(30);
@@ -75,6 +77,7 @@
 }
 
 .searchInput {
+  color: $black;
   width: 100%;
   border: none;
   font-size: rem(64);
@@ -141,14 +144,15 @@
 }
 
 .result {
+  color: $dark;
   display: block;
   margin-left: rem(70);
-  padding-top: rem(8);
+  padding-top: rem(5);
 }
 
 .resultText {
-  font-weight: 300;
-  font-size: rem(20);
+  font-weight: bold;
+  font-size: rem(17);
   line-height: 1;
 
   @media (max-width: $sm-max-width) {
@@ -162,9 +166,18 @@
 
 // dark theme
 [data-vb-theme='dark'] {
+  .searchInput {
+    color: $white;
+  }
+
+  .result {
+    color: $white;
+  }
+
   .extInput {
+    background-color: $dark-gray-5;
     input {
-      background-color: $dark-gray-4;
+      background-color: $dark-gray-5;
     }
     :global(.anticon) {
       color: $dark-gray-3 !important;

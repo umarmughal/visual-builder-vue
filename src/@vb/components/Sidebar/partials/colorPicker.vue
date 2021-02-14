@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <template
-      v-for="item in colors"
-      :key="item"
-    >
+  <div :class="$style.vb__sidebar__fixColorPicker">
+    <template v-for="item in colors" :key="item">
       <a
         href="javascript: void(0);"
         :class="{
@@ -24,9 +21,18 @@
 <script>
 export default {
   props: {
-    setting: String,
-    value: String,
-    colors: Array,
+    setting: {
+      type: String,
+      default: '',
+    },
+    value: {
+      type: String,
+      default: '',
+    },
+    colors: {
+      type: Array,
+      default: () => [],
+    },
   },
   methods: {
     colorPickerHandler(setting, value) {
@@ -37,5 +43,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "../style.module.scss";
+@import '../style.module.scss';
 </style>

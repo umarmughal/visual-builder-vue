@@ -15,40 +15,33 @@
     <a-tooltip placement="bottom">
       <template #title> Bookmarks </template>
       <span :class="$style.item">
-        <a-dropdown
-          :visible="dropdownVisible"
-          :trigger="['click']"
-          placement="bottomLeft"
-        >
+        <a-dropdown :visible="dropdownVisible" :trigger="['click']" placement="bottomLeft">
           <div :class="$style.dropdown" @click="toggleDropdown">
             <i class="fe fe-star" :class="$style.icon" />
           </div>
-          <slot name="overlay">
+          <template #overlay>
             <div>
               <div class="card vb__utils__shadow width-350">
                 <div class="card-body p-1">
                   <div class="p-2">
                     <a-input
-                      v-model="searchText"
+                      v-model:value="searchText"
                       allow-clear
                       :placeholder="$t('topBar.findPages')"
                       @change="filterPagesList"
                     />
                   </div>
                   <div class="height-200">
-                    <vue-custom-scrollbar :style="{ height: '100%' }">
+                    <perfect-scrollbar :style="{ height: '100%' }">
                       <div class="px-2 pb-2">
-                        <template
-                          v-for="item in filteredPagesList"
-                          :key="item.key"
-                        >
+                        <template v-for="item in filteredPagesList" :key="item.key">
                           <router-link :to="item.url" :class="$style.link">
                             <div
                               :class="{
                                 [$style.setIcon]: true,
                                 [$style.setIconActive]: item.isActive,
                               }"
-                              @click="(e) => setFav(e, item)"
+                              @click="e => setFav(e, item)"
                             >
                               <i class="fe fe-star" />
                             </div>
@@ -59,17 +52,15 @@
                           </router-link>
                         </template>
                       </div>
-                    </vue-custom-scrollbar>
+                    </perfect-scrollbar>
                   </div>
                   <div class="p-2">
-                    <a-button type="primary" @click="toggleDropdown"
-                      >Close</a-button
-                    >
+                    <a-button type="primary" @click="toggleDropdown">Close</a-button>
                   </div>
                 </div>
               </div>
             </div>
-          </slot>
+          </template>
         </a-dropdown>
       </span>
     </a-tooltip>
@@ -77,39 +68,30 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue'
+import { message } from 'ant-design-vue'
 import store from 'store'
-import vueCustomScrollbar from 'vue-custom-scrollbar'
 import { getMenuData } from '@/services/menu'
 
 export default {
-  components: {
-    vueCustomScrollbar,
-  },
-  data: function () {
-    return {
-      dropdownVisible: false,
-      searchText: '',
-      favs: store.get('app.topbar.favs') || [],
-      pagesList: [],
-      menuData: getMenuData,
-      filteredPagesList: [],
-    }
-  },
-  mounted() {
-    this.loadPagesList()
-    this.filterPagesList()
-  },
-  methods: {
-    loadPagesList() {
-      const pagesList = () => {
-        const menuData = this.menuData
+  setup() {
+    const dropdownVisible = ref(false)
+    const searchText = ref('')
+    const favs = ref(store.get('app.topbar.favs') || [])
+    const pagesList = ref([])
+    const filteredPagesList = ref([])
+    const menuData = getMenuData
+
+    const loadPagesList = () => {
+      const getPagesList = () => {
         const _menuData = JSON.parse(JSON.stringify(menuData))
         const flattenItems = (items, key) =>
           items.reduce((flattenedItems, item) => {
             if (item.category) {
               return flattenedItems
             }
-            if (item.key === 'nestedItem1' || item.disabled) { // skip unwanted items
+            if (item.key === 'nestedItem1' || item.disabled) {
+              // skip unwanted items
               return flattenedItems
             }
             if (Array.isArray(item[key])) {
@@ -124,16 +106,15 @@ export default {
           }, [])
         return flattenItems(_menuData, 'children')
       }
-      this.pagesList = pagesList()
-    },
-    filterPagesList() {
-      const pagesList = this.pagesList
-      const favs = this.favs
-      const _searchText = this.searchText ? this.searchText.toUpperCase() : ''
+      pagesList.value = getPagesList()
+    }
+
+    const filterPagesList = () => {
+      const _searchText = searchText.value ? searchText.value.toUpperCase() : ''
       const getFilteredPageList = () => {
         const list = []
-        pagesList.forEach(item => {
-          const isActive = favs.some(child => child.url === item.url)
+        pagesList.value.forEach(item => {
+          const isActive = favs.value.some(child => child.url === item.url)
           if (!item.title.toUpperCase().includes(_searchText) && _searchText) {
             return null
           }
@@ -143,37 +124,52 @@ export default {
         })
         return list
       }
-      this.filteredPagesList = getFilteredPageList()
-    },
-    toggleDropdown() {
-      this.dropdownVisible = !this.dropdownVisible
-    },
-    setFav(e, item) {
+      filteredPagesList.value = getFilteredPageList()
+    }
+
+    const toggleDropdown = () => {
+      dropdownVisible.value = !dropdownVisible.value
+    }
+
+    const setFav = (e, item) => {
       e.preventDefault()
       e.stopPropagation()
-      const favs = this.favs
-      const isActive = favs.some(child => child.url === item.url)
+      const isActive = favs.value.some(child => child.url === item.url)
       if (isActive) {
-        const filtered = favs.filter(child => child.url !== item.url)
+        const filtered = favs.value.filter(child => child.url !== item.url)
         store.set('app.topbar.favs', filtered)
-        this.favs = filtered
-        this.filterPagesList()
+        favs.value = filtered
+        filterPagesList()
         return
       }
-      if (favs.length >= 3) {
-        this.$message.info('Only three pages can be added to your bookmarks.')
+      if (favs.value.length >= 3) {
+        message.info('Only three pages can be added to your bookmarks.')
         return
       }
-      const items = [...favs]
+      const items = [...favs.value]
       items.push(item)
       store.set('app.topbar.favs', items)
-      this.favs = items
-      this.filterPagesList()
-    },
+      favs.value = items
+      filterPagesList()
+    }
+
+    onMounted(loadPagesList)
+    onMounted(filterPagesList)
+
+    return {
+      dropdownVisible,
+      searchText,
+      favs,
+      pagesList,
+      filterPagesList,
+      filteredPagesList,
+      setFav,
+      toggleDropdown,
+    }
   },
 }
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import NProgress from 'nprogress'
 import AuthLayout from '@/layouts/Auth'
 import MainLayout from '@/layouts/Main'
 import store from '@/store'
@@ -12,6 +13,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'home',
+      // VB:REPLACE-NEXT-LINE:ROUTER-REDIRECT
       redirect: '/dashboard',
       component: MainLayout,
       meta: {
@@ -19,13 +22,14 @@ const router = createRouter({
         hidden: true,
       },
       children: [
+        // VB:REPLACE-START:ROUTER-CONFIG
         {
           path: '/dashboard',
-          meta: {
-            title: 'Dashboard',
-          },
+          meta: { title: 'Dashboard' },
           component: () => import('./views/dashboard'),
         },
+
+        // VB:REPLACE-END:ROUTER-CONFIG
       ],
     },
 
@@ -52,6 +56,7 @@ const router = createRouter({
         },
         {
           path: '/auth/login',
+          name: 'login',
           meta: {
             title: 'Sign In',
           },
@@ -83,25 +88,30 @@ const router = createRouter({
 
     // Redirect to 404
     {
-      path: '/:pathMatch(.*)*', redirect: { name: 'route404' },
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'route404' },
     },
   ],
 })
 
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.authRequired)) {
-//     console.log(store.state.user.authorized)
-//     if (!store.state.user.authorized) {
-//       next({
-//         path: '/auth/login',
-//         query: { redirect: to.fullPath },
-//       })
-//     } else {
-//       next()
-//     }
-//   } else {
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  setTimeout(() => {
+    NProgress.done()
+  }, 300)
+
+  if (to.matched.some(record => record.meta.authRequired)) {
+    if (!store.state.user.authorized) {
+      next({
+        path: '/auth/login',
+        query: { redirect: to.fullPath },
+      })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
 
 export default router

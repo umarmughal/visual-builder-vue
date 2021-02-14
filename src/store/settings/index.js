@@ -27,7 +27,7 @@ export default {
       isPreselectedOpen: false,
       preselectedVariant: 'default',
       menuLayoutType: 'left',
-      routerAnimation: 'slide-fadein-up', // none, slide-fadein-up, slide-fadein-right, fadein, zoom-fadein
+      routerAnimation: 'slide-fadein-up',
       menuColor: 'gray',
       authPagesColor: 'gray',
       isAuthTopbar: true,
@@ -56,8 +56,16 @@ export default {
   },
   mutations: {
     CHANGE_SETTING(state, payload) {
-      window.localStorage.setItem(`app.settings.${payload.setting}`, payload.value)
+      store.set(`app.settings.${payload.setting}`, payload.value)
       state[payload.setting] = payload.value
+    },
+    CHANGE_SETTING_BULK(state, payload) {
+      const settings = {}
+      Object.keys(payload).forEach(key => {
+        store.set(`app.settings.${key}`, payload[key])
+        settings[key] = payload[key]
+        state[key] = payload[key]
+      })
     },
     SETUP_URL_SETTINGS(state, payload) {
       let queryParams = payload
@@ -66,7 +74,14 @@ export default {
         const str = payload.redirect
         const subs = str.substring(str.indexOf('?') + 1)
         if (str.indexOf('?') >= 0) {
-          queryParams = JSON.parse('{"' + decodeURI(subs).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}')
+          queryParams = JSON.parse(
+            '{"' +
+              decodeURI(subs)
+                .replace(/"/g, '\\"')
+                .replace(/&/g, '","')
+                .replace(/=/g, '":"') +
+              '"}',
+          )
         }
       }
       delete queryParams.redirect
@@ -85,7 +100,9 @@ export default {
               value = queryParams[key]
               break
           }
-          if (key in state) { state[key] = value }
+          if (key in state) {
+            state[key] = value
+          }
         })
       }
     },
@@ -117,6 +134,6 @@ export default {
   },
   actions: {},
   getters: {
-    state: state => state,
+    settings: state => state,
   },
 }

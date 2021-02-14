@@ -7,10 +7,7 @@
     <div class="font-weight-bold font-size-70 mb-1">
       500 —
     </div>
-    <router-link
-      to="/"
-      class="btn btn-outline-primary width-100"
-    >
+    <router-link to="/" class="btn btn-outline-primary width-100">
       Go Back
     </router-link>
   </div>
