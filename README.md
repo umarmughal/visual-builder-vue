@@ -1,5 +1,5 @@
 ### Visual Builder React (create-react-app) ###
-* https://react.visualbuilder.cloud/
+* https://vue.visualbuilder.cloud/
 * https://v3.vuejs.org/
 
 ### Documentation ###
