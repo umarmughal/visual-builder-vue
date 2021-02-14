@@ -19,16 +19,16 @@ const mapAuthProviders = {
   },
 }
 
-const DEV = process.env.REACT_APP_AUTHENTICATED
+const DEV = process.env.VUE_APP_AUTHENTICATED
   ? {
-      id: '1',
-      name: 'Tom Jones',
-      role: 'admin',
-      email: 'demo@sellpixels.com',
-      avatar: '',
-      authorized: true,
-      accountFetchIsTouched: true,
-    }
+    id: '1',
+    name: 'Tom Jones',
+    role: 'admin',
+    email: 'demo@sellpixels.com',
+    avatar: '',
+    authorized: true,
+    accountFetchIsTouched: true,
+  }
   : {}
 
 export default {
