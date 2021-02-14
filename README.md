@@ -1,24 +1,20 @@
-# hello-vue
+### Visual Builder React (create-react-app) ###
+* https://react.visualbuilder.cloud/
+* https://v3.vuejs.org/
 
-## Project setup
-```
-yarn install
-```
+### Documentation ###
+Please read documentation here https://docs.visualbuilder.cloud
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Quick Start ###
+* Install node.js: https://nodejs.org​
+* Install yarn package manager: https://yarnpkg.com/​
+* Install node modules by running terminal command `yarn install`
+* Run the app `yarn serve`
+* Or build production app `yarn build`
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Full Preview Pages / Import Config ###
+* Run vb-cli by `yarn vb`
+* Select full preview version, this will generate all pages from demo preview
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Support ###
+Use GitHub Issues for tracking bugs and creating new feature requests.
