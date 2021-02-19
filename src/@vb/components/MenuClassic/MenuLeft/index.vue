@@ -97,7 +97,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-sm btn-success btn-rounded px-3"
-            >Buy Bundle</a
+            >Buy Visual Builder</a
           >
         </div>
       </perfect-scrollbar>

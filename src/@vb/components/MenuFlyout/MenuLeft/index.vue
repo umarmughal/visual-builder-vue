@@ -134,15 +134,13 @@
               </template>
             </ul>
             <div :class="$style.air__menuLeft__banner">
-              <p>
-                More components, more styles, more themes, and premium support!
-              </p>
+              <p>More components, more styles, more themes, and premium support!</p>
               <a
-                href="https://themeforest.net/item/air-ui-multi-concept-admin-template/24434456"
+                href="https://themeforest.net/item/clean-ui-react-admin-template/21938700"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-white text-center d-block"
-                >Buy Air UI</a
+                >Buy Visual Builder</a
               >
             </div>
           </div>
